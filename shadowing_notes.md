@@ -292,7 +292,7 @@ She listened to a voicemail, ran through emails and handled customer service iss
 - Second part of what she did on Day 1 morning: she checks Mason a few times, and when orders close in our system she closes them in Mason manually. *(Grunt work.)* She says Mason orders don't close automatically like other customers' do.
 - It is only a few orders, so she does them one by one instead of downloading and uploading a file.
 - **Access path:** she starts from the sales order. She finds the sales order using the customer PO from the customer portal, clicks Invoice at the top (which lists the invoices for that order, usually one), then opens the invoice and copies and pastes from it. Opening the invoice is an extra step compared with copying from the invoice list, *(but that's fine)*.
-- **Method difference, Charmaine vs Suzanne (observation only):** Suzanne works from the invoice side and reaches the invoice directly. Charmaine reaches it through the sales order, which adds steps. *(The notes said "straight like Charmaine"; read as Suzanne. Confirm.)*
+- **Method difference, Charmaine vs Suzanne (observation only):** Suzanne works from the invoice side and reaches the invoice directly. Charmaine reaches it through the sales order, which adds steps.
 
 ### 21. Wayfair deductions: CSV download
 After going through another deduction, she went back in to download the deductions. Wayfair offers a CSV download, so she gets a normal-looking list, unlike the Lowes list from Day 1. She then reviewed it.
