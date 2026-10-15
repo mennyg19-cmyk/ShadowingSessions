@@ -27,7 +27,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Daniel | Works for Tina and Avi G | Builds submission and spec files (e.g. the Wayfair spec sheet). No access to open PO lines or goods in transit. Day 2 PM |
 | Evelyn | Forwards order emails to Justin, sometimes ships replacements, handles the front door | Day 2, observed 9:52 |
 | Avi Altman | Buying team; works for Moshe Aryeh Grossman | Day 2, 10:00. Hard to follow |
-| Moshe Aryeh Grossman | Head of buying. Observer's brother | Works for both Bais Trucking and Achim (buying team). Starts the day cleaning up Bais Trucking in PortPro. Day 2, shadowed (time not given) |
+| Moshe Aryeh Grossman | Head of buying. Observer's brother | Works for both Bais Trucking and Achim (buying team). Starts the day cleaning up Bais Trucking in PortPro. Day 2, shadowed from ~2:15 to 2:20 |
 | Avi Grossman ("Avi G") | Head of sales, and so head of CS questions. Also sort of the CEO's assistant. Observer's brother | Different person from Avi Altman. Escalation target for CS (Nexus tile) and deductions |
 | Baruch Grossman | COO, warehouse. Observer's brother. One of the "brains" behind the operation; a recipient of this report | cc'd on Justin's sample order; cleared app changes |
 | Baruch Salamander | Not the same Baruch. Emails numbers out all day; handles Amazon disputes | Chani doesn't know what he does. Possible shadow |
@@ -183,7 +183,7 @@ Home Depot CS reported a ship-to-store order with 2 items missing. CHUB: multipl
 | 14 | After 13 | Tina | Home Depot mats PowerPoint |
 | | 12:00 to ~1:45 | | Break (not shadowing) |
 | 15 | ~1:45 to 2:00 | Daniel | Building a Wayfair spec sheet from the main product spec sheet |
-| 16 | Time not given | Moshe Aryeh Grossman | Analyzing PortPro load and truck data with ChatGPT via screenshots |
+| 16 | ~2:15 to 2:20 start | Moshe Aryeh Grossman | Analyzing PortPro load and truck data with ChatGPT via screenshots |
 
 Times for #5 to #14 are relative only (the only exact timestamps are 9:52, 10:43 and 12:00).
 
@@ -259,11 +259,13 @@ She'd saved a file into Documents instead of the customers folder; moved it with
 
 **Full chain for ecommerce files so far (Tina and Daniel):** the main product spec sheet → Daniel builds the channel file (Wayfair, Amazon, etc.) → Tina reviews → sent out. Each customer expects a different template, and the work is column mapping plus filling gaps by hand.
 
-### 16. Moshe Aryeh Grossman: PortPro data analyzed with ChatGPT (time not given)
+### 16. Moshe Aryeh Grossman: PortPro data analyzed with ChatGPT (started ~2:15 to 2:20)
 - Works for Bais Trucking and, as the buying team, for Achim. Bais Trucking is Achim's sister company but runs on a different system, PortPro.
 - He now uses ChatGPT to analyze information about his loads and trucks. The process is manual: he takes screenshots of PortPro information, pastes them into ChatGPT, and talks to it. ChatGPT has trouble reading some details from the screenshots.
+- He asks it different kinds of questions, such as driver assignments. One question, as best the observer recalls, was whether drivers assigned to routes could pick up from where they finish dropping off at a nearby location.
+- He doesn't use ChatGPT all the time, only for complicated questions.
 - He talks to it conversationally, as if to a person. *(Funny, but it also shows he's comfortable with it.)*
-- **Observer's view:** an automatic connector between PortPro and ChatGPT would work better than screenshots.
+- *(Observer's side note, not a module: he would benefit from an automatic connector between PortPro and ChatGPT instead of screenshots.)*
 
 ---
 
@@ -298,8 +300,7 @@ She'd saved a file into Documents instead of the customers folder; moved it with
 ---
 
 # Open questions
-- Moshe Aryeh Grossman: what time was this observed? What questions does he ask ChatGPT, and how often? Which PortPro screens and which details does ChatGPT misread? Does PortPro offer an export or API?
-- Is "PortPro to AI connector" its own module, or a case of module 1 (cross-system lookup / match)?
+- Moshe Aryeh Grossman: which PortPro screens and which details does ChatGPT misread? What other complicated questions does he ask besides driver assignments? Does PortPro offer an export or API?
 - Ask Suzanne: is invoice-by-invoice matching her normal method, or was it extra care while being watched?
 - What exactly is Vendo's role?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
@@ -313,4 +314,5 @@ She'd saved a file into Documents instead of the customers folder; moved it with
 - Charmaine's afternoon and Suzanne's morning, to compare morning and afternoon patterns.
 - Sales team and buying team.
 - Audience note: the final report goes to Baruch Grossman and Peleg. Before it goes out, phrase individual-level remarks (speed, talkativeness, "stupid", etc.) as process observations, and decide how to handle observations about named people's mistakes.
+- Word document format: match `reference/Shadowing_Day_Report_2026-10-14_v1.pdf` (the PDF of the Day 1 Word report). Header "Shadowing Day Report, <date> | Page N"; title and subtitle; intro line on `~` estimates and italic asides; "The Day at a Glance" table; one Part per person (systems and tools line, episode table of Time / Episode / Type, then "What happened" with bold-led episode subsections and numbered steps); the observer's own work as a separate Part; Open Items; candidate modules table (# / Module / What it would do / Episodes touched) with a closing next-step line.
 - Word document: to be rebuilt at end of day from this file (Day 1 + Day 2 + modules). Fix "Baruch" → "Baruch Grossman (COO)" in the Day 1 docx.
