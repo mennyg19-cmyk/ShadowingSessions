@@ -9,6 +9,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 - People, companies and systems (glossary)
 - Day 1: Wed Oct 14: Charmaine (CS) AM, Suzanne (AR) PM
 - Day 2: Thu Oct 15: Evelyn, Avi Altman, Tina (AM), Daniel, Moshe Aryeh Grossman, Charmaine (PM)
+- Day 3: Fri Oct 16: Suzanne (AR) morning
 - Candidate pain-point modules (working list)
 - Signals by module
 - Open questions
@@ -37,6 +38,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Jhony | Warehouse, beside/under Keith. Parts and replacements | |
 | Justin | Enters sample orders and orders | |
 | Peleg | Developer / IT. The observer reports to him. With Baruch Grossman, the other "brain" behind the operation; a recipient of this report | Charmaine emailed him about Teams (no reply) |
+| Heshy | Salesman | Day 3: Suzanne leaves him a note when a customer can't pay |
 | David Dweck | Salesman, ext. 123 | Calls Tina and Suzanne |
 | Jamie | Does some sales and designs the soft window side of the company (curtains). Long-time employee | Calls Tina about a new customer and product list |
 | Bais Trucking | Sister company of Achim; runs on a different system (PortPro) | Moshe Aryeh Grossman works for it and for Achim's buying team |
@@ -299,6 +301,60 @@ After going through another deduction, she went back in to download the deductio
 
 ---
 
+# Day 3: Friday, Oct 16
+
+| # | Time | Who | Episode |
+|---|---|---|---|
+| 1 | 9:00 | Suzanne | Sales order: processing fee and credit card payment |
+| 2 | After 1 | Suzanne | Dashboard; credit card notebook |
+| 3 | After 2 | Suzanne | Email and aging report review |
+| 4 | After 3 | Suzanne | Charmaine asks about an account number |
+| 5 | After 4 | Suzanne | Email to a customer about unpaid, skipped invoices |
+| 6 | After 5, to 9:32 | Suzanne | Aging follow-up: call about a June invoice |
+| 7 | After 9:32 | Suzanne | Aging follow-up: next customer |
+
+Only 9:00 and 9:32 are exact times; the other episodes are in order. The observer's estimate is about 5 minutes per call or email. Suzanne said she does this follow-up every week, starting sometime on Thursday and going through Friday.
+
+## Suzanne, AR: Day 3 morning (from 9:00)
+
+**Purpose of the visit:** to see whether her flow in the morning differs from the afternoon on Day 1. What was seen was a different kind of work: customer follow-up on overdue invoices (collections), not the payment entry seen on Day 1.
+**Tools:** F&O (sales orders, dashboard, aging report, customer info, open transactions, balance), a printed aging report, email, phone, a paper credit card notebook.
+
+### 1. Sales order: processing fee and credit card payment (9:00)
+- In a sales order she manually added a processing fee. *(Observer thinks it is for credit card charges; not confirmed.)*
+- She backed out of the order and went back in *(observer: probably a misstep)*, then added the credit card payment: click Header to show the header buttons → Open prices and discounts → select a credit card from the list.
+- This customer changes credit cards often, so sometimes she has to add the new card first.
+
+### 2. Dashboard; credit card notebook
+- She uses her F&O dashboard well; it looks well set up for her.
+- She still keeps a paper notebook of credit card information. Customers sometimes email the card details to her anyway. F&O doesn't save the CVC code, so she has to record it somewhere. *(Observer's flag: card details on paper and in email is a security concern.)*
+
+### 3. Email and aging report review
+She went through emails and checked the aging report. Mostly she was confirming and reading rather than doing: reading, making sure everything is fine, and moving on. *(Observer: looked like inbox cleanup.)*
+
+### 4. Charmaine asks about an account number
+Charmaine interrupted to clarify an account number. Suzanne answered immediately while continuing her own work. *(Observer: Suzanne seems to know account numbers better than Charmaine.)*
+
+### 5. Email to a customer about skipped invoices
+She drafted an email to a customer about skipped invoices they have not paid. She cc'd Avi G, Baruch Salamander, Chani, AP, and one more person the observer couldn't recall (maybe Isaac Grossman; unconfirmed).
+
+### 6. Aging follow-up: June invoice call (to 9:32)
+- The observer realized what she is doing: following up with customers who are behind. She has a printed aging report in front of her and goes down the list.
+- She called a customer and asked for the owner. There is a June invoice they haven't paid. *(Observer's guess, unconfirmed: the credit card charge earlier was part of this follow-up, after the customer said to use the card on file.)*
+- They couldn't pay because the person in charge of checks wasn't in. She wrote a note and told the salesman, Heshy, what happened.
+- It was 9:32 when this call ended.
+
+### 7. Aging follow-up: next customer
+- She checked the open transactions and the balance for the customer. Both were extra clicks at the top of the screen. She then went to customer info to get the phone number and made the call.
+- She writes notes on every customer she follows up with.
+
+### Observer's ideas from this visit (not modules yet)
+- *A dashboard for this work: the aging list with customer phone numbers already on it, and notes added from the same screen, without clicking between screens.*
+- *Automatic emails with the aging attached, like the ones the observer set up on the Tomche Shabbos site.*
+- *Order emails now forwarded by hand to Justin could be forwarded automatically by a bot.* (This task was part of Evelyn's role, see Day 2 #1.)
+
+---
+
 # Candidate pain-point modules (working list)
 
 | # | Module | What it would do |
@@ -314,23 +370,24 @@ After going through another deduction, she went back in to download the deductio
 
 ## Signals by module
 
-| Module | Day 1 | Day 2 |
-|---|---|---|
-| 1. Cross-system match | CHUB / F&O / FedEx / UPS hopping; InOrder phone numbers; searching email for a total | **Tina's low-stock vs open-PO lookup (clearest yet)**; Avi's PortPro → Excel row deletion; Moshe Aryeh Grossman's PortPro screenshots pasted into ChatGPT (misread details) |
-| 2. Retailer / portal handler | Lowes 810, Wayfair, Mason (doesn't auto-close), Home Depot, Lowes pending list | Kohls inventory feed (under 5 → send 0, never omit the line); Amazon returns / disputes via Vendo; **Charmaine's Wayfair deductions (accept or dispute per PO in the portal; CSV export available) and hand-closing Mason orders again** |
-| 3. Intake / routing | Amazon and Kohls customers sent back to retailer; emails forwarded to Evelyn | Evelyn forwards orders to Justin; Jamie → Tina → Daniel by email; Keith → Tina for Amazon return; Charmaine forwards replacement-part request to Jhony |
-| 4. Templates / checklists | 4-minute email; short-pay wording; Nexus reply | Templated prompt copy-pasted; Daniel's sheet reviewed 3x |
-| 5. Payment matching | Most of Suzanne's afternoon | n/a |
-| 6. Open-item tracker | Mason, tariff deduction, $200 short-pay, lost UPS package, Lowes pending list | Returns we shouldn't receive; Avi's unclear dispute list; unresolved Lincoln Supply shipping; Mason orders to be closed after they close in our system |
-| 7. Defaults / validation | Credit-card default; 810 required fields; item line lost without "Add item" | Repeated 3x manual review instead of validation; Daniel reads the whole Wayfair file at the end to check it; Charmaine reviews emails a few times; deduction checking differs by person (Suzanne checks the original invoice, Charmaine accepts Wayfair's figure) |
-| 8. Product data → channel files | n/a | **Daniel's Wayfair sheet (column-to-column copy and paste, dropdown-restricted columns, info read off product images); Tina's Kohls inventory feed, Amazon inventory file and Daniel's submission sheet reviewed 3x; Wayfair listing shows curtain width per panel when 55" is the whole curtain (customer complaint reached Charmaine)** |
+| Module | Day 1 | Day 2 | Day 3 |
+|---|---|---|---|
+| 1. Cross-system match | CHUB / F&O / FedEx / UPS hopping; InOrder phone numbers; searching email for a total | **Tina's low-stock vs open-PO lookup (clearest yet)**; Avi's PortPro → Excel row deletion; Moshe Aryeh Grossman's PortPro screenshots pasted into ChatGPT (misread details) | Suzanne's aging → customer info → phone number; open transactions and balance each behind extra clicks |
+| 2. Retailer / portal handler | Lowes 810, Wayfair, Mason (doesn't auto-close), Home Depot, Lowes pending list | Kohls inventory feed (under 5 → send 0, never omit the line); Amazon returns / disputes via Vendo; **Charmaine's Wayfair deductions (accept or dispute per PO in the portal; CSV export available) and hand-closing Mason orders again** | Credit card added to the sales order via Header → Open prices and discounts; processing fee added by hand |
+| 3. Intake / routing | Amazon and Kohls customers sent back to retailer; emails forwarded to Evelyn | Evelyn forwards orders to Justin; Jamie → Tina → Daniel by email; Keith → Tina for Amazon return; Charmaine forwards replacement-part request to Jhony | Order emails forwarded by hand to Justin (observer: could be forwarded automatically by a bot); Charmaine asks Suzanne for an account number |
+| 4. Templates / checklists | 4-minute email; short-pay wording; Nexus reply | Templated prompt copy-pasted; Daniel's sheet reviewed 3x | Each follow-up call or email ~5 min; email drafted to a customer about skipped invoices; every follow-up gets a written note |
+| 5. Payment matching | Most of Suzanne's afternoon | n/a | n/a (morning was collections follow-up, not payment entry) |
+| 6. Open-item tracker | Mason, tariff deduction, $200 short-pay, lost UPS package, Lowes pending list | Returns we shouldn't receive; Avi's unclear dispute list; unresolved Lincoln Supply shipping; Mason orders to be closed after they close in our system | Weekly Thu to Fri follow-up from a printed aging; notes per customer; salesman (Heshy) told by note; June invoice still open |
+| 7. Defaults / validation | Credit-card default; 810 required fields; item line lost without "Add item" | Repeated 3x manual review instead of validation; Daniel reads the whole Wayfair file at the end to check it; Charmaine reviews emails a few times; deduction checking differs by person (Suzanne checks the original invoice, Charmaine accepts Wayfair's figure) | CVC code not stored by F&O, so card details go in a paper notebook or arrive by email |
+| 8. Product data → channel files | n/a | **Daniel's Wayfair sheet (column-to-column copy and paste, dropdown-restricted columns, info read off product images); Tina's Kohls inventory feed, Amazon inventory file and Daniel's submission sheet reviewed 3x; Wayfair listing shows curtain width per panel when 55" is the whole curtain (customer complaint reached Charmaine)** | n/a |
 
-**Other observations:** Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
+**Other observations:**  Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
 
 ---
 
 # Open questions
 - Moshe Aryeh Grossman: which PortPro screens and which details does ChatGPT misread? What other complicated questions does he ask besides driver assignments? Does PortPro offer an export or API?
+- Day 3: who was the last person cc'd on Suzanne's email about skipped invoices (maybe Isaac Grossman)? What was the processing fee for? Is the follow-up always from a printed aging? Who is Heshy's customer here?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - What exactly is Vendo's role?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
@@ -342,7 +399,7 @@ After going through another deduction, she went back in to download the deductio
 # Shadowing plan
 - Next: Moshe Aryeh Grossman's PortPro cleanup, possibly Baruch Salamander. Done for now: Tina, Daniel, Moshe's ChatGPT use (#16), Charmaine's afternoon.
 - Final report: remove the "ask Suzanne" open item from the Day 1 content; the observer rule is to only ask WHAT.
-- Suzanne's morning (Charmaine's afternoon is done, see #17 to #21), to compare morning and afternoon patterns.
+- Done: Suzanne's morning (Day 3) and Charmaine's afternoon (#17 to #21).
 - Sales team and buying team.
 - Audience note: the final report goes to Baruch Grossman and Peleg. Before it goes out, phrase individual-level remarks (speed, talkativeness, "stupid", etc.) as process observations, and decide how to handle observations about named people's mistakes.
 - Word document format: match `reference/Shadowing_Day_Report_2026-10-14_v1.pdf` (the PDF of the Day 1 Word report). Header "Shadowing Day Report, <date> | Page N"; title and subtitle; intro line on `~` estimates and italic asides; "The Day at a Glance" table; one Part per person (systems and tools line, episode table of Time / Episode / Type, then "What happened" with bold-led episode subsections and numbered steps); the observer's own work as a separate Part; Open Items; candidate modules table (# / Module / What it would do / Episodes touched) with a closing next-step line.
