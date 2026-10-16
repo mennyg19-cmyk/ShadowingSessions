@@ -321,7 +321,7 @@ Only 9:00 and 9:32 are exact times; the other episodes are in order. The observe
 **Tools:** F&O (sales orders, dashboard, aging report, customer info, open transactions, balance), a printed aging report, email, phone, a paper credit card notebook.
 
 ### 1. Sales order: processing fee and credit card payment (9:00)
-- In a sales order she manually added a processing fee. *(Observer thinks it is for credit card charges; not confirmed.)*
+- In a sales order she manually added a processing fee to the invoice first, then charged the credit card. Credit card payments get a processing fee.
 - She backed out of the order and went back in *(observer: probably a misstep)*, then added the credit card payment: click Header to show the header buttons → Open prices and discounts → select a credit card from the list.
 - This customer changes credit cards often, so sometimes she has to add the new card first.
 
@@ -387,7 +387,7 @@ She drafted an email to a customer about skipped invoices they have not paid. Sh
 
 # Open questions
 - Moshe Aryeh Grossman: which PortPro screens and which details does ChatGPT misread? What other complicated questions does he ask besides driver assignments? Does PortPro offer an export or API?
-- Day 3: who was the last person cc'd on Suzanne's email about skipped invoices (maybe Isaac Grossman)? What was the processing fee for? Is the follow-up always from a printed aging? Who is Heshy's customer here?
+- Day 3: who was the last person cc'd on Suzanne's email about skipped invoices (maybe Isaac Grossman)? Is the follow-up always from a printed aging? Who is Heshy's customer here?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - What exactly is Vendo's role?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
