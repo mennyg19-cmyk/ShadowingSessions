@@ -10,7 +10,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 - Day 1: Wed Oct 14: Charmaine (CS) AM, Suzanne (AR) PM
 - Day 2: Thu Oct 15: Evelyn, Avi Altman, Tina (AM), Daniel, Moshe Aryeh Grossman, Charmaine (PM)
 - Day 3: Fri Oct 16: Suzanne (AR) morning
-- Day 4: Mon Oct 19: Chani (AP and office manager) morning
+- Day 4: Mon Oct 19: Chani (AP and office manager), Tina, Daniel, Suzanne
 - Candidate pain-point modules (working list)
 - Signals by module
 - Open questions
@@ -26,7 +26,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Suzanne | AR | Day 1 PM. Works closely with Chani |
 | Chani | AP and office manager | Deposits checks, scans, sends to Suzanne. Day 4: pays vendors by check and ACH |
 | Tina | Ecommerce / inventory feeds and PO follow-up (working label) | Day 2 AM. Faster at computer skills than Charmaine and Suzanne |
-| Daniel | Works for Tina and Avi G | Builds submission and spec files (e.g. the Wayfair spec sheet). No access to open PO lines or goods in transit. Day 2 PM |
+| Daniel | Works for Tina and Avi G | Builds submission and spec files (e.g. the Wayfair spec sheet). No access to open PO lines or goods in transit. Day 2 PM. Day 4: manages content (every new item's content reaches every customer that sells it) and checks that what we say we sell each customer is live on their site |
 | Evelyn | Forwards order emails to Justin, sometimes ships replacements, handles the front door | Day 2, observed 9:52 |
 | Avi Altman | Buying team; works for Moshe Aryeh Grossman | Day 2, 10:00. Hard to follow |
 | Moshe Aryeh Grossman | Head of buying. Observer's brother | Works for both Bais Trucking and Achim (buying team). Starts the day cleaning up Bais Trucking in PortPro. Day 2, shadowed from ~2:15 to 2:30 |
@@ -46,6 +46,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Zundel | Not yet identified | Day 4: recipient of an email from Avi G with credit card bills |
 | Robert | Contact at Contact Electric (assumed) | Day 4: emailed a bill and a set of unpaid invoices |
 | Contact Electric; Chase Card Services | Vendors | Day 4 payments |
+| Dan | Works in IT | Day 4: copied on the OneDrive file-sharing email |
 | Heshy | Salesman | Day 3: Suzanne leaves him a note when a customer can't pay |
 | David Dweck | Salesman, ext. 123 | Calls Tina and Suzanne |
 | Jamie | Does some sales and designs the soft window side of the company (curtains). Long-time employee | Calls Tina about a new customer and product list |
@@ -53,7 +54,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Vendo | Middleman / consulting company between us and Amazon | Exact role unknown. Daniel downloads from their SharePoint; Tina sends files back to them |
 | Lincoln Supply | Customer | Problems with shipping (Day 2) |
 
-**Systems:** F&O (main ERP), CHUB (order/invoice system for Lowes etc.), InOrder (old system, still used for phone numbers), PortPro, DSCO Rithum (Kohls inventory feed), Lowes portal (WebEDI), Wayfair portal, Mason portal, Teams, Excel, email, FedEx and UPS tracking, desk calculator, printed manuals and templates.
+**Systems:** F&O (main ERP), CHUB (order/invoice system for Lowes etc.), InOrder (old system, still used for phone numbers), PortPro, DSCO Rithum (Kohls inventory feed), Retail Link (Walmart portal), Lowes portal (WebEDI), Wayfair portal, Mason portal, Teams, Excel, email, FedEx and UPS tracking, desk calculator, printed manuals and templates.
 
 ---
 
@@ -380,10 +381,18 @@ She drafted an email to a customer about skipped invoices they have not paid. Sh
 | 11 | After 10 | Chani | ACH payments notebook (from Avi Altman's printed email) |
 | 12 | After 11 | Chani | Back to ACH: open transactions vs notebook |
 | 13 | ~10:00 | Chani | Calls Isaac Grossman about putting in ACH |
+| 14 | 11:00 | Tina | Daniel's role (content and listing checks); AI tool question |
+| 15 | After 14 | Tina | Walmart delayed orders: Retail Link |
+| 16 | After 15 | Tina | Monday is cleanup and update-notes day |
+| 17 | After 16 | Tina | Kohls / DSCO pricing exception: debugging |
+| 18 | During 17 | Tina | OneDrive file-sharing problem → email to IT |
+| 19 | 11:50 | Daniel | Home Depot spec sheet |
+| 20 | After 19 | Suzanne | Customer balance: open invoices and a hold on an order |
 
-Exact times: 9:00, 9:36 and ~10:00. Episodes 1 to 8 happened between 9:00 and 9:36, and episodes 10 to 12 between 9:36 and ~10:00; their order is known, their exact times are not.
+Exact times: 9:00, 9:36 and ~10:00. Episodes 1 to 8 happened between 9:00 and 9:36, and episodes 10 to 12 between 9:36 and ~10:00; their order is known, their exact times are not. Between ~10:00 and 11:00 the observer was elsewhere (spoke with Isaac Grossman and Avi G about something else; not shadowing). Tina is observed from 11:00 to 11:50, Daniel from 11:50, and Suzanne after that (start time not given).
 
 ## Chani, AP and Office Manager: Day 4 morning (9:00 to ~10:00)
+*(Episodes 1 to 13.)*
 
 **Tools:** F&O (vendor invoice journal, payment proposal, customers, credit and collection), the regular office printer (inkjet) and check stock, a check deposit scanner, a paper notebook, a large desk calendar, printed emails, Excel, email.
 
@@ -445,6 +454,44 @@ Finishing, she called Isaac Grossman to ask whether she should put in the ACH. T
 
 *(Observation across the morning: much of the work runs through paper: printed emails, written lists and notebook entries, a desk calendar, hand-filled payment slips, and a printed copy of a check.)*
 
+## Tina, Day 4 (11:00 to 11:50)
+
+**Tools:** email, Walmart Retail Link, DSCO Rithum (Kohls), Excel (historical upload files), OneDrive.
+
+### 14. Daniel's role; AI tool question (11:00)
+- Daniel manages content: for every new piece of content we have, he makes sure it reaches every customer that sells that item.
+- Daniel also checks inventory for customers, to make sure that everything we say we are selling them is actually online on the customer's site.
+- Tina started building an AI tool to do this automatically. She then saw that Avi G is working on some kind of AI tool, so she is not sure whether to continue. Left for now. *(Overlapping efforts: see Other observations.)*
+
+### 15. Walmart delayed orders: Retail Link
+- During email cleanup (deleting junk) she got an email from Walmart about delayed orders (the observer thinks it is from a store account).
+- She logged into Retail Link, Walmart's portal. It took a long time to load, then didn't load at all. She logged out and back in, which needed a new OTP.
+- She confirmed the order status on Retail Link and replied to the customer that the order has shipped and is in transit.
+
+### 16. Monday is cleanup day
+More email cleanup. Tina said Monday is her cleanup day and her update-notes day.
+
+### 17. Kohls / DSCO pricing exception: debugging
+- While updating Kohls inventory on DSCO, Daniel hit an exception on a pricing error for one item. Tina is trying to find where it came from so it doesn't revert tomorrow.
+- She checked many historical upload Excel files, including the file from an issue she worked on 3 weeks ago, and could not find the problem there.
+- She then checked the line inventory update history on DSCO to see when the issue first appeared. This was a debugging session of about 10 to 15 minutes by the time the observer noted it. *(Observer wondered whether this time is better spent now or when it happens again.)*
+- **Cause found:** the item's price was changing to more than 2 decimal places.
+- **Still unexplained:** we don't send Kohls pricing daily, only inventory numbers and SKUs, so how did their pricing get updated? She also tried to correct the price by hand on the Kohls portal, and it would not save. *(Observer: the portal's own save failed.)*
+- She put it aside for now.
+
+### 18. OneDrive file-sharing problem
+During this she also had a problem with OneDrive and sharing files with customers. An email about it went to Peleg, Baruch Grossman and Dan (who works in IT). *(Who sent it: see open questions.)*
+
+## Daniel, Day 4 (11:50)
+
+### 19. Home Depot spec sheet
+He was building a spec sheet for Home Depot, the same process as last time: copy, paste, validate, review. The observer then moved to Suzanne.
+
+## Suzanne, Day 4 (after 11:50; start time not given)
+
+### 20. Customer balance
+She was going through emails. She then went Customers → filter → Balance at the top for a customer. They have open invoices and a hold on an order. *(The notes end here.)*
+
 ---
 
 # Candidate pain-point modules (working list)
@@ -464,16 +511,16 @@ Finishing, she called Isaac Grossman to ask whether she should put in the ACH. T
 
 | Module | Day 1 | Day 2 | Day 3 | Day 4 |
 |---|---|---|---|---|
-| 1. Cross-system match | CHUB / F&O / FedEx / UPS hopping; InOrder phone numbers; searching email for a total | **Tina's low-stock vs open-PO lookup (clearest yet)**; Avi's PortPro → Excel row deletion; Moshe Aryeh Grossman's PortPro screenshots pasted into ChatGPT (misread details) | Suzanne's aging → customer info → phone number; open transactions and balance each behind extra clicks | Contact Electric: printed bill vs stack of printed emails; ACH notebook vs a vendor's open transactions; dates copied from email to desk calendar |
-| 2. Retailer / portal handler | Lowes 810, Wayfair, Mason (doesn't auto-close), Home Depot, Lowes pending list | Kohls inventory feed (under 5 → send 0, never omit the line); Amazon returns / disputes via Vendo; **Charmaine's Wayfair deductions (accept or dispute per PO in the portal; CSV export available) and hand-closing Mason orders again** | Credit card added to the sales order via Header → Open prices and discounts; processing fee added by hand | Credit hold release (Customers → Credit and collection → Open credit holds); two old Amazon holds unresolved |
-| 3. Intake / routing | Amazon and Kohls customers sent back to retailer; emails forwarded to Evelyn | Evelyn forwards orders to Justin; Jamie → Tina → Daniel by email; Keith → Tina for Amazon return; Charmaine forwards replacement-part request to Jhony | Order emails forwarded by hand to Justin (observer: could be forwarded automatically by a bot); Charmaine asks Suzanne for an account number | Isaac Grossman's order email forwarded by Chani to Justin (customer and ship-to named in the forward); credit card due dates pass Avi G → Chani → Isaac Grossman, with unclear ownership of the last step; Suzanne's check image emailed to Chani |
-| 4. Templates / checklists | 4-minute email; short-pay wording; Nexus reply | Templated prompt copy-pasted; Daniel's sheet reviewed 3x | Each follow-up call or email ~5 min; email drafted to a customer about skipped invoices; every follow-up gets a written note | Payment slip filled by hand and clipped to each bill; the forward to Justin spells out customer and ship-to each time |
+| 1. Cross-system match | CHUB / F&O / FedEx / UPS hopping; InOrder phone numbers; searching email for a total | **Tina's low-stock vs open-PO lookup (clearest yet)**; Avi's PortPro → Excel row deletion; Moshe Aryeh Grossman's PortPro screenshots pasted into ChatGPT (misread details) | Suzanne's aging → customer info → phone number; open transactions and balance each behind extra clicks | Contact Electric: printed bill vs stack of printed emails; ACH notebook vs a vendor's open transactions; dates copied from email to desk calendar; Tina's historical Excel upload files vs DSCO line update history to trace a price change |
+| 2. Retailer / portal handler | Lowes 810, Wayfair, Mason (doesn't auto-close), Home Depot, Lowes pending list | Kohls inventory feed (under 5 → send 0, never omit the line); Amazon returns / disputes via Vendo; **Charmaine's Wayfair deductions (accept or dispute per PO in the portal; CSV export available) and hand-closing Mason orders again** | Credit card added to the sales order via Header → Open prices and discounts; processing fee added by hand | Credit hold release (Customers → Credit and collection → Open credit holds); two old Amazon holds unresolved; Walmart Retail Link slow, then not loading, OTP again; Kohls portal wouldn't save a price correction |
+| 3. Intake / routing | Amazon and Kohls customers sent back to retailer; emails forwarded to Evelyn | Evelyn forwards orders to Justin; Jamie → Tina → Daniel by email; Keith → Tina for Amazon return; Charmaine forwards replacement-part request to Jhony | Order emails forwarded by hand to Justin (observer: could be forwarded automatically by a bot); Charmaine asks Suzanne for an account number | Isaac Grossman's order email forwarded by Chani to Justin (customer and ship-to named in the forward); credit card due dates pass Avi G → Chani → Isaac Grossman, with unclear ownership of the last step; Suzanne's check image emailed to Chani; Walmart store email to Tina, who checks Retail Link and replies on shipment status |
+| 4. Templates / checklists | 4-minute email; short-pay wording; Nexus reply | Templated prompt copy-pasted; Daniel's sheet reviewed 3x | Each follow-up call or email ~5 min; email drafted to a customer about skipped invoices; every follow-up gets a written note | Payment slip filled by hand and clipped to each bill; the forward to Justin spells out customer and ship-to each time; Daniel's Home Depot spec sheet again: copy, paste, validate, review |
 | 5. Payment matching | Most of Suzanne's afternoon | n/a | n/a (morning was collections follow-up, not payment entry) | n/a (vendor side, not customer payments) |
-| 6. Open-item tracker | Mason, tariff deduction, $200 short-pay, lost UPS package, Lowes pending list | Returns we shouldn't receive; Avi's unclear dispute list; unresolved Lincoln Supply shipping; Mason orders to be closed after they close in our system | Weekly Thu to Fri follow-up from a printed aging; notes per customer; salesman (Heshy) told by note; June invoice still open | Credit holds open over a year; nothing paid to Contact Electric since April; Lincoln orders waiting on payment; desk calendar and notebook used as the reminder list |
-| 7. Defaults / validation | Credit-card default; 810 required fields; item line lost without "Add item" | Repeated 3x manual review instead of validation; Daniel reads the whole Wayfair file at the end to check it; Charmaine reviews emails a few times; deduction checking differs by person (Suzanne checks the original invoice, Charmaine accepts Wayfair's figure) | CVC code not stored by F&O, so card details go in a paper notebook or arrive by email | Payment proposal selects every line and sets the method automatically; she unticks all but what she wants and changes the method (e.g. check for Chase Card Services) |
-| 8. Product data → channel files | n/a | **Daniel's Wayfair sheet (column-to-column copy and paste, dropdown-restricted columns, info read off product images); Tina's Kohls inventory feed, Amazon inventory file and Daniel's submission sheet reviewed 3x; Wayfair listing shows curtain width per panel when 55" is the whole curtain (customer complaint reached Charmaine)** | n/a | n/a |
+| 6. Open-item tracker | Mason, tariff deduction, $200 short-pay, lost UPS package, Lowes pending list | Returns we shouldn't receive; Avi's unclear dispute list; unresolved Lincoln Supply shipping; Mason orders to be closed after they close in our system | Weekly Thu to Fri follow-up from a printed aging; notes per customer; salesman (Heshy) told by note; June invoice still open | Credit holds open over a year; nothing paid to Contact Electric since April; Lincoln orders waiting on payment; desk calendar and notebook used as the reminder list; Tina's DSCO pricing issue set aside, cause partly unexplained; Monday is cleanup and update-notes day |
+| 7. Defaults / validation | Credit-card default; 810 required fields; item line lost without "Add item" | Repeated 3x manual review instead of validation; Daniel reads the whole Wayfair file at the end to check it; Charmaine reviews emails a few times; deduction checking differs by person (Suzanne checks the original invoice, Charmaine accepts Wayfair's figure) | CVC code not stored by F&O, so card details go in a paper notebook or arrive by email | Payment proposal selects every line and sets the method automatically; she unticks all but what she wants and changes the method (e.g. check for Chase Card Services); a price with more than 2 decimal places reached Kohls; no check caught it |
+| 8. Product data → channel files | n/a | **Daniel's Wayfair sheet (column-to-column copy and paste, dropdown-restricted columns, info read off product images); Tina's Kohls inventory feed, Amazon inventory file and Daniel's submission sheet reviewed 3x; Wayfair listing shows curtain width per panel when 55" is the whole curtain (customer complaint reached Charmaine)** | n/a | n/a; Daniel distributes new content to every customer that sells the item and checks listings match what we sell; Home Depot spec sheet; the DSCO price issue; Tina's unfinished AI listing-check tool |
 
-**Other observations:** Adoption note for automation: Chani (office manager) works largely by hand and on paper and is comfortable that way, so automation aimed at her tasks should account for comfort and adoption, not only time saved. Paper bridges recur: printed lists and emails, handwritten notebooks, a desk calendar, hand-filled slips, a printed copy of a check (Charmaine's printed Lowes list on Day 1, Suzanne's printed aging on Day 3, Chani on Day 4). The check printer has been broken for some time and checks are printed on the regular printer (drum replacement $300 to $400).  Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
+**Other observations:** Overlapping AI efforts: Tina started a tool to check that customer listings match what we sell, then saw Avi G working on an AI tool and paused; the observer's own reporting app is a third effort. Worth coordinating among Baruch Grossman, Peleg and Avi G. OTP prompts recur across portals (Lowes Day 1, Walmart Retail Link Day 4). Adoption note for automation: Chani (office manager) works largely by hand and on paper and is comfortable that way, so automation aimed at her tasks should account for comfort and adoption, not only time saved. Paper bridges recur: printed lists and emails, handwritten notebooks, a desk calendar, hand-filled slips, a printed copy of a check (Charmaine's printed Lowes list on Day 1, Suzanne's printed aging on Day 3, Chani on Day 4). The check printer has been broken for some time and checks are printed on the regular printer (drum replacement $300 to $400).  Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
 
 ---
 
@@ -481,6 +528,7 @@ Finishing, she called Isaac Grossman to ask whether she should put in the ACH. T
 - Moshe Aryeh Grossman: which PortPro screens and which details does ChatGPT misread? What other complicated questions does he ask besides driver assignments? Does PortPro offer an export or API?
 - Day 3: who was the last person cc'd on Suzanne's email about skipped invoices (maybe Isaac Grossman)? Is the follow-up always from a printed aging? Who is Heshy's customer here?
 - Day 4: what is OFB, and who is Ken? Who are Mordy and Zundel? Is "Lincoln (comfy)" the same customer as Lincoln Supply? What was copied "to a list of" with the Contact Electric email (the note was cut off)? What did Isaac Grossman answer about the ACH? What was the purpose of checking the vendor's open transactions against the notebook? Does the bank allow depositing a printed copy of a customer's check image?
+- Day 4 afternoon: what is Avi G's AI tool? Does Tina continue hers? How often does Daniel run the content and listing checks, and how long do they take? How did Kohls' pricing change if only inventory and SKUs are sent? Who sent the OneDrive email to Peleg, Baruch Grossman and Dan, and what exactly was failing? What was Suzanne doing with the customer balance and the held order?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - What exactly is Vendo's role?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
@@ -492,7 +540,7 @@ Finishing, she called Isaac Grossman to ask whether she should put in the ACH. T
 # Shadowing plan
 - Next: Moshe Aryeh Grossman's PortPro cleanup, possibly Baruch Salamander. Done for now: Tina, Daniel, Moshe's ChatGPT use (#16), Charmaine's afternoon.
 - Final report: remove the "ask Suzanne" open item from the Day 1 content; the observer rule is to only ask WHAT.
-- Done: Suzanne's morning (Day 3), Charmaine's afternoon (#17 to #21), Chani's morning (Day 4).
+- Done: Suzanne's morning (Day 3), Charmaine's afternoon (#17 to #21), Chani's morning, Tina, Daniel and part of Suzanne's day (Day 4).
 - Sales team and buying team.
 - Audience note: the final report goes to Baruch Grossman and Peleg. Before it goes out, phrase individual-level remarks (speed, talkativeness, "stupid", etc.) as process observations, and decide how to handle observations about named people's mistakes.
 - Word document format: match `reference/Shadowing_Day_Report_2026-10-14_v1.pdf` (the PDF of the Day 1 Word report). Header "Shadowing Day Report, <date> | Page N"; title and subtitle; intro line on `~` estimates and italic asides; "The Day at a Glance" table; one Part per person (systems and tools line, episode table of Time / Episode / Type, then "What happened" with bold-led episode subsections and numbered steps); the observer's own work as a separate Part; Open Items; candidate modules table (# / Module / What it would do / Episodes touched) with a closing next-step line.
