@@ -10,6 +10,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 - Day 1: Wed Oct 14: Charmaine (CS) AM, Suzanne (AR) PM
 - Day 2: Thu Oct 15: Evelyn, Avi Altman, Tina (AM), Daniel, Moshe Aryeh Grossman, Charmaine (PM)
 - Day 3: Fri Oct 16: Suzanne (AR) morning
+- Day 4: Mon Oct 19: Chani (AP and office manager) morning
 - Candidate pain-point modules (working list)
 - Signals by module
 - Open questions
@@ -23,13 +24,13 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 |---|---|---|
 | Charmaine | Customer Service | Day 1 AM |
 | Suzanne | AR | Day 1 PM. Works closely with Chani |
-| Chani | AP and office manager | Deposits checks, scans, sends to Suzanne |
+| Chani | AP and office manager | Deposits checks, scans, sends to Suzanne. Day 4: pays vendors by check and ACH |
 | Tina | Ecommerce / inventory feeds and PO follow-up (working label) | Day 2 AM. Faster at computer skills than Charmaine and Suzanne |
 | Daniel | Works for Tina and Avi G | Builds submission and spec files (e.g. the Wayfair spec sheet). No access to open PO lines or goods in transit. Day 2 PM |
 | Evelyn | Forwards order emails to Justin, sometimes ships replacements, handles the front door | Day 2, observed 9:52 |
 | Avi Altman | Buying team; works for Moshe Aryeh Grossman | Day 2, 10:00. Hard to follow |
 | Moshe Aryeh Grossman | Head of buying. Observer's brother | Works for both Bais Trucking and Achim (buying team). Starts the day cleaning up Bais Trucking in PortPro. Day 2, shadowed from ~2:15 to 2:30 |
-| Avi Grossman ("Avi G") | Head of sales, and so head of CS questions. Also sort of the CEO's assistant. Observer's brother | Different person from Avi Altman. Escalation target for CS (Nexus tile) and deductions |
+| Avi Grossman ("Avi G") | Head of sales, and so head of CS questions. Also sort of the CEO's assistant. Observer's brother | Different person from Avi Altman. Escalation target for CS (Nexus tile) and deductions. Day 4: handles credit card payments and tells Chani when they are due |
 | Baruch Grossman | COO, warehouse. Observer's brother. One of the "brains" behind the operation; a recipient of this report | cc'd on Justin's sample order; cleared app changes |
 | Baruch Salamander | Not the same Baruch. Emails numbers out all day; handles Amazon disputes | Chani doesn't know what he does. Possible shadow |
 | Isaac Grossman ("Tatty") | CEO. Observer's father | |
@@ -38,6 +39,12 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Jhony | Warehouse, beside/under Keith. Parts and replacements | |
 | Justin | Enters sample orders and orders | |
 | Peleg | Developer / IT. The observer reports to him. With Baruch Grossman, the other "brain" behind the operation; a recipient of this report | Charmaine emailed him about Teams (no reply) |
+| Troy | Not yet identified | Day 4: with Peleg, had not been able to release two old Amazon credit holds |
+| Mordy | Not yet identified | Day 4: Chani thought he tells Isaac Grossman when credit card payments are due |
+| Ken | Not yet identified | Day 4: sent Chani a list with "OFB" on it |
+| Zundel | Not yet identified | Day 4: recipient of an email from Avi G with credit card bills |
+| Robert | Contact at Contact Electric (assumed) | Day 4: emailed a bill and a set of unpaid invoices |
+| Contact Electric; Chase Card Services | Vendors | Day 4 payments |
 | Heshy | Salesman | Day 3: Suzanne leaves him a note when a customer can't pay |
 | David Dweck | Salesman, ext. 123 | Calls Tina and Suzanne |
 | Jamie | Does some sales and designs the soft window side of the company (curtains). Long-time employee | Calls Tina about a new customer and product list |
@@ -355,6 +362,90 @@ She drafted an email to a customer about skipped invoices they have not paid. Sh
 
 ---
 
+# Day 4: Monday, Oct 19
+
+| # | Time | Who | Episode |
+|---|---|---|---|
+| 1 | 9:00 | Chani | Vendor invoice journal; payment proposal |
+| 2 | After 1 | Chani | Printing checks on the regular printer |
+| 3 | After 2 | Chani | Isaac Grossman signs; payment slip; posting the payment batch |
+| 4 | After 3 | Chani | Lincoln orders waiting on payment; releasing credit holds |
+| 5 | After 4 | Chani | Suzanne's check image: print, scissors, deposit |
+| 6 | After 5 | Chani | Credit card emails from Avi G → desk calendar |
+| 7 | After 6 | Chani | "OFB" list from Ken |
+| 8 | After 7 | Chani | Isaac Grossman's order email → Justin |
+| 9 | 9:36 | Chani | Explanation: who handles credit card vs check payments |
+| 10 | After 9 | Chani | Contact Electric bill from Robert; nothing paid since April |
+| 11 | After 10 | Chani | ACH payments notebook (from Avi Altman's printed email) |
+| 12 | After 11 | Chani | Back to ACH: open transactions vs notebook |
+| 13 | ~10:00 | Chani | Calls Isaac Grossman about putting in ACH |
+
+Exact times: 9:00, 9:36 and ~10:00. Episodes 1 to 8 happened between 9:00 and 9:36, and episodes 10 to 12 between 9:36 and ~10:00; their order is known, their exact times are not.
+
+## Chani, AP and Office Manager: Day 4 morning (9:00 to ~10:00)
+
+**Tools:** F&O (vendor invoice journal, payment proposal, customers, credit and collection), the regular office printer (inkjet) and check stock, a check deposit scanner, a paper notebook, a large desk calendar, printed emails, Excel, email.
+
+### 1. Vendor invoice journal and payment proposal (9:00)
+- In the vendor invoice journal she validates and posts the journal, then clicks Create payment proposal.
+- She selects all payments and looks down the list, which mixes all vendors. F&O sets the payment method (check, ACH or card) automatically and adds every line to the payment.
+- She then goes through the list unchecking everything except what she wants to pay. *(Observer: this works backwards; the default should be nothing selected.)*
+- For Chase Card Services she changes the method to check, then clicks Create payment → OK → OK.
+
+### 2. Printing checks
+- She loads the check paper into the regular printer by hand. *(There used to be a dedicated check printer, which died.)* The regular printer is a slow inkjet. After printing she switches the paper back.
+- Asked about it: the old printer needs a new drum, which costs $300 to $400, and she doesn't print checks often, so she uses the regular printer.
+
+### 3. Signature, payment slip, posting
+- She takes the checks to Isaac Grossman (CEO) to be signed. *(Observer's idea: print the checks already signed. Controls would need to be checked.)*
+- She fills out a payment slip and paper-clips it to the bill.
+- She posts the payment batch. She was speaking with someone and told them that they can do something now that it is posted.
+
+### 4. Lincoln orders; credit holds
+- She turned to Suzanne about Lincoln (comfy) orders they are waiting on payment for. Nothing yet.
+- Releasing a credit hold: Customers → filter by name → open transactions, then Credit and collection → Open credit holds → select → Release → Release from credit hold.
+- There are two Amazon credit holds that have been open for over a year. Troy and Peleg had not been able to release them.
+
+### 5. Suzanne's check image
+- Suzanne emailed a picture of a customer's check with a list of the invoices it pays. Chani tried to print the email, but the image was too large and spilled onto another page.
+- Instead of printing the text and the image separately, she scaled the whole email down to 65% so it fit on one page and printed it. She then cut the check out of the printed image with scissors and set it aside.
+- About half an hour later the observer asked what it was for: she uses the printed, cut-out check to deposit in the check deposit scanner. The scanner accepted it on regular paper. *(Observer found this surprising. Worth confirming that depositing a printed copy is allowed under the bank's rules, and whether the original check also arrives, since both could be deposited.)*
+
+### 6. Credit card emails from Avi G
+- She opened an email from Avi G to Zundel with credit card bills (reading "cc" as credit card).
+- While going through emails she deleted junk. For the credit card charge emails from Avi G, she writes the scheduled payment dates in the large desk calendar and then deletes the email. She did this several times.
+- The observer first thought Avi G handles credit card payments, or that Chani writes the checks and notes when from his emails. Chani explained it (see #9).
+
+### 7. "OFB" list from Ken
+She received a list from Ken with OFB and today's date on it and looked through an Excel sheet. The observer didn't know what OFB is. *(Open question.)*
+
+### 8. Isaac Grossman's order email → Justin
+She received an email from Isaac Grossman about an order. He doesn't want the invoice to go to Alex Grossman, who the order is for. She forwarded the email to Justin and told him to use Isaac Grossman as the customer and Alex as the ship-to.
+
+### 9. Who handles credit card vs check payments (9:36)
+Explained by Chani:
+- Avi G takes care of credit card payments. Chani does check payments.
+- Avi G tells Chani when a credit card payment is due. She writes it down so Isaac Grossman can make sure there is money in the account.
+- Chani thought Mordy tells Isaac Grossman, but Mordy thought someone else does, so Chani does it.
+- *(Observer: the chain has many hand-offs and many ways to go wrong. It could be automated: an email to Isaac Grossman, or a calendar entry, reminding him to fund the payment account.)*
+
+### 10. Contact Electric bill
+- She got an email from Robert with a Contact Electric bill for 5702. She took a stack of papers and found what looks like a printed email, and copied information to a list *(the notes are cut off here; see open questions)*.
+- Later she printed the bill from Robert, wrote something on it and set it aside. *(Observer's read: nothing has been paid to Contact Electric since April. Robert sent a number of unpaid invoices.)*
+
+### 11. ACH payments notebook
+She took a break from emails for ACH payments. From a printed email from Avi Altman she wrote the list of ACH payments in a notebook. *(Observer: she prefers this by hand.)*
+
+### 12. Open transactions vs notebook
+She checked a vendor's open transactions against her handwritten notebook and did some arithmetic. The purpose wasn't clear to the observer.
+
+### 13. Calling Isaac Grossman about ACH (~10:00)
+Finishing, she called Isaac Grossman to ask whether she should put in the ACH. The answer wasn't heard. The observer moved on at about 10:00.
+
+*(Observation across the morning: much of the work runs through paper: printed emails, written lists and notebook entries, a desk calendar, hand-filled payment slips, and a printed copy of a check.)*
+
+---
+
 # Candidate pain-point modules (working list)
 
 | # | Module | What it would do |
@@ -370,24 +461,26 @@ She drafted an email to a customer about skipped invoices they have not paid. Sh
 
 ## Signals by module
 
-| Module | Day 1 | Day 2 | Day 3 |
-|---|---|---|---|
-| 1. Cross-system match | CHUB / F&O / FedEx / UPS hopping; InOrder phone numbers; searching email for a total | **Tina's low-stock vs open-PO lookup (clearest yet)**; Avi's PortPro → Excel row deletion; Moshe Aryeh Grossman's PortPro screenshots pasted into ChatGPT (misread details) | Suzanne's aging → customer info → phone number; open transactions and balance each behind extra clicks |
-| 2. Retailer / portal handler | Lowes 810, Wayfair, Mason (doesn't auto-close), Home Depot, Lowes pending list | Kohls inventory feed (under 5 → send 0, never omit the line); Amazon returns / disputes via Vendo; **Charmaine's Wayfair deductions (accept or dispute per PO in the portal; CSV export available) and hand-closing Mason orders again** | Credit card added to the sales order via Header → Open prices and discounts; processing fee added by hand |
-| 3. Intake / routing | Amazon and Kohls customers sent back to retailer; emails forwarded to Evelyn | Evelyn forwards orders to Justin; Jamie → Tina → Daniel by email; Keith → Tina for Amazon return; Charmaine forwards replacement-part request to Jhony | Order emails forwarded by hand to Justin (observer: could be forwarded automatically by a bot); Charmaine asks Suzanne for an account number |
-| 4. Templates / checklists | 4-minute email; short-pay wording; Nexus reply | Templated prompt copy-pasted; Daniel's sheet reviewed 3x | Each follow-up call or email ~5 min; email drafted to a customer about skipped invoices; every follow-up gets a written note |
-| 5. Payment matching | Most of Suzanne's afternoon | n/a | n/a (morning was collections follow-up, not payment entry) |
-| 6. Open-item tracker | Mason, tariff deduction, $200 short-pay, lost UPS package, Lowes pending list | Returns we shouldn't receive; Avi's unclear dispute list; unresolved Lincoln Supply shipping; Mason orders to be closed after they close in our system | Weekly Thu to Fri follow-up from a printed aging; notes per customer; salesman (Heshy) told by note; June invoice still open |
-| 7. Defaults / validation | Credit-card default; 810 required fields; item line lost without "Add item" | Repeated 3x manual review instead of validation; Daniel reads the whole Wayfair file at the end to check it; Charmaine reviews emails a few times; deduction checking differs by person (Suzanne checks the original invoice, Charmaine accepts Wayfair's figure) | CVC code not stored by F&O, so card details go in a paper notebook or arrive by email |
-| 8. Product data → channel files | n/a | **Daniel's Wayfair sheet (column-to-column copy and paste, dropdown-restricted columns, info read off product images); Tina's Kohls inventory feed, Amazon inventory file and Daniel's submission sheet reviewed 3x; Wayfair listing shows curtain width per panel when 55" is the whole curtain (customer complaint reached Charmaine)** | n/a |
+| Module | Day 1 | Day 2 | Day 3 | Day 4 |
+|---|---|---|---|---|
+| 1. Cross-system match | CHUB / F&O / FedEx / UPS hopping; InOrder phone numbers; searching email for a total | **Tina's low-stock vs open-PO lookup (clearest yet)**; Avi's PortPro → Excel row deletion; Moshe Aryeh Grossman's PortPro screenshots pasted into ChatGPT (misread details) | Suzanne's aging → customer info → phone number; open transactions and balance each behind extra clicks | Contact Electric: printed bill vs stack of printed emails; ACH notebook vs a vendor's open transactions; dates copied from email to desk calendar |
+| 2. Retailer / portal handler | Lowes 810, Wayfair, Mason (doesn't auto-close), Home Depot, Lowes pending list | Kohls inventory feed (under 5 → send 0, never omit the line); Amazon returns / disputes via Vendo; **Charmaine's Wayfair deductions (accept or dispute per PO in the portal; CSV export available) and hand-closing Mason orders again** | Credit card added to the sales order via Header → Open prices and discounts; processing fee added by hand | Credit hold release (Customers → Credit and collection → Open credit holds); two old Amazon holds unresolved |
+| 3. Intake / routing | Amazon and Kohls customers sent back to retailer; emails forwarded to Evelyn | Evelyn forwards orders to Justin; Jamie → Tina → Daniel by email; Keith → Tina for Amazon return; Charmaine forwards replacement-part request to Jhony | Order emails forwarded by hand to Justin (observer: could be forwarded automatically by a bot); Charmaine asks Suzanne for an account number | Isaac Grossman's order email forwarded by Chani to Justin (customer and ship-to named in the forward); credit card due dates pass Avi G → Chani → Isaac Grossman, with unclear ownership of the last step; Suzanne's check image emailed to Chani |
+| 4. Templates / checklists | 4-minute email; short-pay wording; Nexus reply | Templated prompt copy-pasted; Daniel's sheet reviewed 3x | Each follow-up call or email ~5 min; email drafted to a customer about skipped invoices; every follow-up gets a written note | Payment slip filled by hand and clipped to each bill; the forward to Justin spells out customer and ship-to each time |
+| 5. Payment matching | Most of Suzanne's afternoon | n/a | n/a (morning was collections follow-up, not payment entry) | n/a (vendor side, not customer payments) |
+| 6. Open-item tracker | Mason, tariff deduction, $200 short-pay, lost UPS package, Lowes pending list | Returns we shouldn't receive; Avi's unclear dispute list; unresolved Lincoln Supply shipping; Mason orders to be closed after they close in our system | Weekly Thu to Fri follow-up from a printed aging; notes per customer; salesman (Heshy) told by note; June invoice still open | Credit holds open over a year; nothing paid to Contact Electric since April; Lincoln orders waiting on payment; desk calendar and notebook used as the reminder list |
+| 7. Defaults / validation | Credit-card default; 810 required fields; item line lost without "Add item" | Repeated 3x manual review instead of validation; Daniel reads the whole Wayfair file at the end to check it; Charmaine reviews emails a few times; deduction checking differs by person (Suzanne checks the original invoice, Charmaine accepts Wayfair's figure) | CVC code not stored by F&O, so card details go in a paper notebook or arrive by email | Payment proposal selects every line and sets the method automatically; she unticks all but what she wants and changes the method (e.g. check for Chase Card Services) |
+| 8. Product data → channel files | n/a | **Daniel's Wayfair sheet (column-to-column copy and paste, dropdown-restricted columns, info read off product images); Tina's Kohls inventory feed, Amazon inventory file and Daniel's submission sheet reviewed 3x; Wayfair listing shows curtain width per panel when 55" is the whole curtain (customer complaint reached Charmaine)** | n/a | n/a |
 
-**Other observations:**  Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
+**Other observations:** Paper bridges recur: printed lists and emails, handwritten notebooks, a desk calendar, hand-filled slips, a printed copy of a check (Charmaine's printed Lowes list on Day 1, Suzanne's printed aging on Day 3, Chani on Day 4). The check printer has been broken for some time and checks are printed on the regular printer (drum replacement $300 to $400).  Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
 
 ---
 
 # Open questions
 - Moshe Aryeh Grossman: which PortPro screens and which details does ChatGPT misread? What other complicated questions does he ask besides driver assignments? Does PortPro offer an export or API?
 - Day 3: who was the last person cc'd on Suzanne's email about skipped invoices (maybe Isaac Grossman)? Is the follow-up always from a printed aging? Who is Heshy's customer here?
+- Day 4: what is OFB, and who is Ken? Who are Troy, Mordy and Zundel? Is "Lincoln (comfy)" the same customer as Lincoln Supply? What was copied "to a list of" with the Contact Electric email (the note was cut off), and what does "5702" refer to (amount or invoice)? What did Isaac Grossman answer about the ACH? What was the purpose of checking the vendor's open transactions against the notebook? Who told the observer that Troy and Peleg couldn't release the Amazon credit holds?
+- Day 4: was the original check Suzanne photographed also deposited or still to arrive? Does the bank allow depositing a printed copy?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - What exactly is Vendo's role?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
@@ -399,7 +492,7 @@ She drafted an email to a customer about skipped invoices they have not paid. Sh
 # Shadowing plan
 - Next: Moshe Aryeh Grossman's PortPro cleanup, possibly Baruch Salamander. Done for now: Tina, Daniel, Moshe's ChatGPT use (#16), Charmaine's afternoon.
 - Final report: remove the "ask Suzanne" open item from the Day 1 content; the observer rule is to only ask WHAT.
-- Done: Suzanne's morning (Day 3) and Charmaine's afternoon (#17 to #21).
+- Done: Suzanne's morning (Day 3), Charmaine's afternoon (#17 to #21), Chani's morning (Day 4).
 - Sales team and buying team.
 - Audience note: the final report goes to Baruch Grossman and Peleg. Before it goes out, phrase individual-level remarks (speed, talkativeness, "stupid", etc.) as process observations, and decide how to handle observations about named people's mistakes.
 - Word document format: match `reference/Shadowing_Day_Report_2026-10-14_v1.pdf` (the PDF of the Day 1 Word report). Header "Shadowing Day Report, <date> | Page N"; title and subtitle; intro line on `~` estimates and italic asides; "The Day at a Glance" table; one Part per person (systems and tools line, episode table of Time / Episode / Type, then "What happened" with bold-led episode subsections and numbered steps); the observer's own work as a separate Part; Open Items; candidate modules table (# / Module / What it would do / Episodes touched) with a closing next-step line.
