@@ -38,8 +38,9 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Brandon | Warehouse. Easiest to reach | Packaging details for UPS claim; shipping to Lincoln Supply |
 | Jhony | Warehouse, beside/under Keith. Parts and replacements | |
 | Justin | Enters sample orders and orders | |
-| Peleg | Developer / IT. The observer reports to him. With Baruch Grossman, the other "brain" behind the operation; a recipient of this report | Charmaine emailed him about Teams (no reply) |
-| Troy | Not yet identified | Day 4: with Peleg, had not been able to release two old Amazon credit holds |
+| Locations | 5702 = Brooklyn office; 1600 = warehouse in Jersey | Used in vendor bills (Day 4) |
+| Peleg | Developer / IT. Main in-house technical person now. The observer reports to him. With Baruch Grossman, the other "brain" behind the operation; a recipient of this report | Charmaine emailed him about Teams (no reply) |
+| Troy | Consultant who helped migrate to F&O. Mostly gone now; asked questions from time to time | Day 4: with Peleg, had not been able to release two old Amazon credit holds |
 | Mordy | Not yet identified | Day 4: Chani thought he tells Isaac Grossman when credit card payments are due |
 | Ken | Not yet identified | Day 4: sent Chani a list with "OFB" on it |
 | Zundel | Not yet identified | Day 4: recipient of an email from Avi G with credit card bills |
@@ -404,12 +405,12 @@ Exact times: 9:00, 9:36 and ~10:00. Episodes 1 to 8 happened between 9:00 and 9:
 ### 4. Lincoln orders; credit holds
 - She turned to Suzanne about Lincoln (comfy) orders they are waiting on payment for. Nothing yet.
 - Releasing a credit hold: Customers → filter by name → open transactions, then Credit and collection → Open credit holds → select → Release → Release from credit hold.
-- There are two Amazon credit holds that have been open for over a year. Troy and Peleg had not been able to release them.
+- There are two Amazon credit holds that have been open for over a year. Chani told someone on the phone that Peleg and Troy (the consultant who helped with the F&O migration) could not release them.
 
 ### 5. Suzanne's check image
-- Suzanne emailed a picture of a customer's check with a list of the invoices it pays. Chani tried to print the email, but the image was too large and spilled onto another page.
+- Suzanne emailed a picture of a customer's check with a list of the invoices it pays. The customer writes the check, photographs it and sends the picture, so the original is never handled. Chani tried to print the email, but the image was too large and spilled onto another page.
 - Instead of printing the text and the image separately, she scaled the whole email down to 65% so it fit on one page and printed it. She then cut the check out of the printed image with scissors and set it aside.
-- About half an hour later the observer asked what it was for: she uses the printed, cut-out check to deposit in the check deposit scanner. The scanner accepted it on regular paper. *(Observer found this surprising. Worth confirming that depositing a printed copy is allowed under the bank's rules, and whether the original check also arrives, since both could be deposited.)*
+- About half an hour later the observer asked what it was for: she uses the printed, cut-out check to deposit in the check deposit scanner. The scanner accepted it on regular paper. *(Observer found this surprising and is unsure whether it is allowed under the bank's rules.)*
 
 ### 6. Credit card emails from Avi G
 - She opened an email from Avi G to Zundel with credit card bills (reading "cc" as credit card).
@@ -430,7 +431,7 @@ Explained by Chani:
 - *(Observer: the chain has many hand-offs and many ways to go wrong. It could be automated: an email to Isaac Grossman, or a calendar entry, reminding him to fund the payment account.)*
 
 ### 10. Contact Electric bill
-- She got an email from Robert with a Contact Electric bill for 5702. She took a stack of papers and found what looks like a printed email, and copied information to a list *(the notes are cut off here; see open questions)*.
+- She got an email from Robert with a Contact Electric bill for 5702 (the Brooklyn office location; the warehouse in Jersey is 1600). She took a stack of papers and found what looks like a printed email, and copied information to a list *(the notes are cut off here; see open questions)*.
 - Later she printed the bill from Robert, wrote something on it and set it aside. *(Observer's read: nothing has been paid to Contact Electric since April. Robert sent a number of unpaid invoices.)*
 
 ### 11. ACH payments notebook
@@ -472,15 +473,14 @@ Finishing, she called Isaac Grossman to ask whether she should put in the ACH. T
 | 7. Defaults / validation | Credit-card default; 810 required fields; item line lost without "Add item" | Repeated 3x manual review instead of validation; Daniel reads the whole Wayfair file at the end to check it; Charmaine reviews emails a few times; deduction checking differs by person (Suzanne checks the original invoice, Charmaine accepts Wayfair's figure) | CVC code not stored by F&O, so card details go in a paper notebook or arrive by email | Payment proposal selects every line and sets the method automatically; she unticks all but what she wants and changes the method (e.g. check for Chase Card Services) |
 | 8. Product data → channel files | n/a | **Daniel's Wayfair sheet (column-to-column copy and paste, dropdown-restricted columns, info read off product images); Tina's Kohls inventory feed, Amazon inventory file and Daniel's submission sheet reviewed 3x; Wayfair listing shows curtain width per panel when 55" is the whole curtain (customer complaint reached Charmaine)** | n/a | n/a |
 
-**Other observations:** Paper bridges recur: printed lists and emails, handwritten notebooks, a desk calendar, hand-filled slips, a printed copy of a check (Charmaine's printed Lowes list on Day 1, Suzanne's printed aging on Day 3, Chani on Day 4). The check printer has been broken for some time and checks are printed on the regular printer (drum replacement $300 to $400).  Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
+**Other observations:** Adoption note for automation: Chani (office manager) works largely by hand and on paper and is comfortable that way, so automation aimed at her tasks should account for comfort and adoption, not only time saved. Paper bridges recur: printed lists and emails, handwritten notebooks, a desk calendar, hand-filled slips, a printed copy of a check (Charmaine's printed Lowes list on Day 1, Suzanne's printed aging on Day 3, Chani on Day 4). The check printer has been broken for some time and checks are printed on the regular printer (drum replacement $300 to $400).  Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
 
 ---
 
 # Open questions
 - Moshe Aryeh Grossman: which PortPro screens and which details does ChatGPT misread? What other complicated questions does he ask besides driver assignments? Does PortPro offer an export or API?
 - Day 3: who was the last person cc'd on Suzanne's email about skipped invoices (maybe Isaac Grossman)? Is the follow-up always from a printed aging? Who is Heshy's customer here?
-- Day 4: what is OFB, and who is Ken? Who are Troy, Mordy and Zundel? Is "Lincoln (comfy)" the same customer as Lincoln Supply? What was copied "to a list of" with the Contact Electric email (the note was cut off), and what does "5702" refer to (amount or invoice)? What did Isaac Grossman answer about the ACH? What was the purpose of checking the vendor's open transactions against the notebook? Who told the observer that Troy and Peleg couldn't release the Amazon credit holds?
-- Day 4: was the original check Suzanne photographed also deposited or still to arrive? Does the bank allow depositing a printed copy?
+- Day 4: what is OFB, and who is Ken? Who are Mordy and Zundel? Is "Lincoln (comfy)" the same customer as Lincoln Supply? What was copied "to a list of" with the Contact Electric email (the note was cut off)? What did Isaac Grossman answer about the ACH? What was the purpose of checking the vendor's open transactions against the notebook? Does the bank allow depositing a printed copy of a customer's check image?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - What exactly is Vendo's role?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
