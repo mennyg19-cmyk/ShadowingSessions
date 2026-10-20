@@ -11,6 +11,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 - Day 2: Thu Oct 15: Evelyn, Avi Altman, Tina (AM), Daniel, Moshe Aryeh Grossman, Charmaine (PM)
 - Day 3: Fri Oct 16: Suzanne (AR) morning
 - Day 4: Mon Oct 19: Chani (AP and office manager), Tina, Daniel, Suzanne
+- Day 5: Tue Oct 20: Baruch Salamander (deductions, reporting, collections)
 - Candidate pain-point modules (working list)
 - Signals by module
 - Open questions
@@ -32,7 +33,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Moshe Aryeh Grossman | Head of buying. Observer's brother | Works for both Bais Trucking and Achim (buying team). Starts the day cleaning up Bais Trucking in PortPro. Day 2, shadowed from ~2:15 to 2:30 |
 | Avi Grossman ("Avi G") | Head of sales, and so head of CS questions. Also sort of the CEO's assistant. Observer's brother | Different person from Avi Altman. Escalation target for CS (Nexus tile) and deductions. Day 4: handles credit card payments and tells Chani when they are due |
 | Baruch Grossman | COO, warehouse. Observer's brother. One of the "brains" behind the operation; a recipient of this report | cc'd on Justin's sample order; cleared app changes |
-| Baruch Salamander | Not the same Baruch. Emails numbers out all day; handles Amazon disputes | Chani doesn't know what he does. Possible shadow |
+| Baruch Salamander | Not the same Baruch. Deductions and disputes (Walmart, Home Depot, Amazon, Lowes) in SPS Commerce, recovery and Amazon reports, aging reports by salesman, bank funding check, collections on late customers | Day 5, shadowed from 11:00. Chani didn't know what he does (Day 2) |
 | Isaac Grossman ("Tatty") | CEO. Observer's father | |
 | Keith | Warehouse floor manager | Charmaine emailed him re Lowes cancellation (Day 1). Sent Tina an Amazon return label (Day 2) |
 | Brandon | Warehouse. Easiest to reach | Packaging details for UPS claim; shipping to Lincoln Supply |
@@ -41,9 +42,9 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Locations | 5702 = Brooklyn office; 1600 = warehouse in Jersey | Used in vendor bills (Day 4) |
 | Peleg | Developer / IT. Main in-house technical person now. The observer reports to him. With Baruch Grossman, the other "brain" behind the operation; a recipient of this report | Charmaine emailed him about Teams (no reply) |
 | Troy | Consultant who helped migrate to F&O. Mostly gone now; asked questions from time to time | Day 4: with Peleg, had not been able to release two old Amazon credit holds |
-| Mordy | Not yet identified | Day 4: Chani thought he tells Isaac Grossman when credit card payments are due |
-| Ken | Not yet identified | Day 4: sent Chani a list with "OFB" on it |
-| Zundel | Not yet identified | Day 4: recipient of an email from Avi G with credit card bills |
+| Mordy Berman | Surname confirmed Day 5; role not yet identified. Receives Baruch Salamander's recovery reports | Day 4: Chani thought he tells Isaac Grossman when credit card payments are due |
+| Ken | Not yet identified. Cc'd on Baruch Salamander's recovery reports | Day 4: sent Chani a list with "OFB" on it |
+| Zundel | Not yet identified. Cc'd on Baruch Salamander's recovery reports | Day 4: recipient of an email from Avi G with credit card bills |
 | Robert | Contact at Contact Electric (assumed) | Day 4: emailed a bill and a set of unpaid invoices |
 | Contact Electric; Chase Card Services | Vendors | Day 4 payments |
 | Dan | Works in IT | Day 4: copied on the OneDrive file-sharing email |
@@ -54,7 +55,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Vendo | Middleman / consulting company between us and Amazon | Exact role unknown. Daniel downloads from their SharePoint; Tina sends files back to them |
 | Lincoln Supply | Customer | Problems with shipping (Day 2) |
 
-**Systems:** F&O (main ERP), CHUB (order/invoice system for Lowes etc.), InOrder (old system, still used for phone numbers), PortPro, DSCO Rithum (Kohls inventory feed), Retail Link (Walmart portal), Lowes portal (WebEDI), Wayfair portal, Mason portal, Teams, Excel, email, FedEx and UPS tracking, desk calculator, printed manuals and templates.
+**Systems:** SPS Commerce (collects deductions and disputes from Walmart, Home Depot, Amazon and Lowes), Amazon Vendor Central, OceanFirst (bank), F&O (main ERP), CHUB (order/invoice system for Lowes etc.), InOrder (old system, still used for phone numbers), PortPro, DSCO Rithum (Kohls inventory feed), Retail Link (Walmart portal), Lowes portal (WebEDI), Wayfair portal, Mason portal, Teams, Excel, email, FedEx and UPS tracking, desk calculator, printed manuals and templates.
 
 ---
 
@@ -494,6 +495,55 @@ She was going through emails. She then went Customers → filter → Balance at 
 
 ---
 
+# Day 5: Tuesday, Oct 20
+
+Observer started at 11:00. Only 11:00 is an exact time; the episodes are in the order they happened.
+
+| # | Time | Who | Episode |
+|---|---|---|---|
+| 1 | 11:00 | Baruch Salamander | Home Depot deduction disputes on SPS Commerce |
+| 2 | After 1 | Baruch Salamander | Recovery report emails |
+| 3 | After 2 | Baruch Salamander | Bank funding check |
+| 4 | After 3 | Baruch Salamander | Amazon payments and deductions report |
+| 5 | After 4 | Baruch Salamander | Aging reports grouped by salesman |
+| 6 | After 5 | Baruch Salamander | Chasing customers for payment; non-paying customer sheet |
+
+## Baruch Salamander: Day 5 (from 11:00)
+
+**Tools:** SPS Commerce, Excel (several files, two screens), Amazon Vendor Central, OceanFirst (bank), F&O (statement balances, assumed), email.
+
+### 1. Home Depot deduction disputes (11:00)
+- He was disputing Home Depot deductions on SPS Commerce. SPS Commerce collects the deductions and disputes from Walmart, Home Depot, Amazon and Lowes in one place.
+- He has an Excel file open on one screen and SPS Commerce on the other, and compares numbers methodically. The observer wasn't sure exactly what he was doing at first.
+- He types values rather than copying and pasting.
+- One file lists paid, approved and disputed deductions. *(Observer: it looks nice, but isn't set up correctly.)* On the left he has a file with the total recovery numbers, and compares the two.
+
+### 2. Recovery report emails
+- The observer thinks he sends the left-hand file, with the final recovery numbers, to whoever needs it. He puts the totals in the body of the email and attaches the summary files.
+- He has recovered about $146k in disputes this year so far.
+- The emails go out daily, although the content is month-to-date or year-to-date totals. *(Observer isn't sure why they are sent daily.)*
+- Recipients: Mordy Berman, Avi G and Isaac Grossman (CEO), cc Ken, Chani and Zundel. All of them deal with money at some level; the observer doesn't know their individual workflows.
+
+### 3. Bank funding check
+He makes sure the bank has enough money for the day. *(Observer: this is an extension of what Chani does, ensuring there is money in the bank for Avi G's credit card payments, Day 4. Several people ensure funds through different channels, with room for error.)*
+
+### 4. Amazon payments and deductions report
+- Amazon gives a discount if it is paid early. It also takes daily deductions on orders, which is very complicated.
+- He breaks this down for Isaac Grossman: how much money came in, how much Amazon deducted, and why.
+- Vendor Central and OceanFirst almost always match. For some invoices Amazon holds payment instead of paying on time or early, so it can hold them against future deductions.
+- He copies and pastes, and sends several reports that show the same information, each in great detail.
+- **Finding (his analysis, not verified):** ignoring labor and other costs, Amazon takes on average about 30 cents off every dollar we sell to them. *(Observer: useful business information if it is used. Not sure anyone uses it.)*
+
+### 5. Aging reports grouped by salesman
+He creates several aging reports grouped by salesman, manually, with SUMIF formulas in Excel. He breaks the information down in many different ways. *(Observer's view: much of this Excel work could be done with the observer's reporting tool, which can group and report it more easily.)*
+
+### 6. Chasing customers for payment
+- He first emails the sales reps to make sure they haven't received a check that is sitting around. Once they confirm, he runs a statement balance and sends it to the customer. If the customer is missing invoices they didn't receive, they ask and he sends them.
+- Some customers frequently don't pay on time. He keeps a separate sheet of all customers who are not paying; it is close to $300k right now. He looks into each one that is over 120 days to decide whether it can be chased or will be a write-off.
+- *(Observer: Suzanne also follows up with late customers from an aging report, see Day 3. How the two split this work is not known.)*
+
+---
+
 # Candidate pain-point modules (working list)
 
 | # | Module | What it would do |
@@ -507,20 +557,24 @@ She was going through emails. She then went Customers → filter → Balance at 
 | 7 | Defaults and validation | Fix defaults that cause errors; validate before submit |
 | 8 | Product data → channel file builder (new, from Day 2) | Keep one complete product spec sheet and generate each customer's template (Wayfair, Amazon, Kohls, Home Depot) from it, including dropdown-valid values. Fill gaps in the main sheet once instead of by hand each time |
 
+## Possible additions (not adopted; for the observer to decide)
+- **Recurring reports and grouped summaries:** Baruch Salamander's daily recovery emails, Amazon breakdown and SUMIF aging reports by salesman (Day 5); Suzanne's printed aging and the aging dashboard idea (Day 3). Observer's own reporting tool is relevant here.
+- **Paper handling:** printed emails and lists, notebooks, a desk calendar, hand-filled slips, a printed check copy (Days 1, 3, 4).
+
 ## Signals by module
 
-| Module | Day 1 | Day 2 | Day 3 | Day 4 |
-|---|---|---|---|---|
-| 1. Cross-system match | CHUB / F&O / FedEx / UPS hopping; InOrder phone numbers; searching email for a total | **Tina's low-stock vs open-PO lookup (clearest yet)**; Avi's PortPro → Excel row deletion; Moshe Aryeh Grossman's PortPro screenshots pasted into ChatGPT (misread details) | Suzanne's aging → customer info → phone number; open transactions and balance each behind extra clicks | Contact Electric: printed bill vs stack of printed emails; ACH notebook vs a vendor's open transactions; dates copied from email to desk calendar; Tina's historical Excel upload files vs DSCO line update history to trace a price change |
-| 2. Retailer / portal handler | Lowes 810, Wayfair, Mason (doesn't auto-close), Home Depot, Lowes pending list | Kohls inventory feed (under 5 → send 0, never omit the line); Amazon returns / disputes via Vendo; **Charmaine's Wayfair deductions (accept or dispute per PO in the portal; CSV export available) and hand-closing Mason orders again** | Credit card added to the sales order via Header → Open prices and discounts; processing fee added by hand | Credit hold release (Customers → Credit and collection → Open credit holds); two old Amazon holds unresolved; Walmart Retail Link slow, then not loading, OTP again; Kohls portal wouldn't save a price correction |
-| 3. Intake / routing | Amazon and Kohls customers sent back to retailer; emails forwarded to Evelyn | Evelyn forwards orders to Justin; Jamie → Tina → Daniel by email; Keith → Tina for Amazon return; Charmaine forwards replacement-part request to Jhony | Order emails forwarded by hand to Justin (observer: could be forwarded automatically by a bot); Charmaine asks Suzanne for an account number | Isaac Grossman's order email forwarded by Chani to Justin (customer and ship-to named in the forward); credit card due dates pass Avi G → Chani → Isaac Grossman, with unclear ownership of the last step; Suzanne's check image emailed to Chani; Walmart store email to Tina, who checks Retail Link and replies on shipment status |
-| 4. Templates / checklists | 4-minute email; short-pay wording; Nexus reply | Templated prompt copy-pasted; Daniel's sheet reviewed 3x | Each follow-up call or email ~5 min; email drafted to a customer about skipped invoices; every follow-up gets a written note | Payment slip filled by hand and clipped to each bill; the forward to Justin spells out customer and ship-to each time; Daniel's Home Depot spec sheet again: copy, paste, validate, review |
-| 5. Payment matching | Most of Suzanne's afternoon | n/a | n/a (morning was collections follow-up, not payment entry) | n/a (vendor side, not customer payments) |
-| 6. Open-item tracker | Mason, tariff deduction, $200 short-pay, lost UPS package, Lowes pending list | Returns we shouldn't receive; Avi's unclear dispute list; unresolved Lincoln Supply shipping; Mason orders to be closed after they close in our system | Weekly Thu to Fri follow-up from a printed aging; notes per customer; salesman (Heshy) told by note; June invoice still open | Credit holds open over a year; nothing paid to Contact Electric since April; Lincoln orders waiting on payment; desk calendar and notebook used as the reminder list; Tina's DSCO pricing issue set aside, cause partly unexplained; Monday is cleanup and update-notes day |
-| 7. Defaults / validation | Credit-card default; 810 required fields; item line lost without "Add item" | Repeated 3x manual review instead of validation; Daniel reads the whole Wayfair file at the end to check it; Charmaine reviews emails a few times; deduction checking differs by person (Suzanne checks the original invoice, Charmaine accepts Wayfair's figure) | CVC code not stored by F&O, so card details go in a paper notebook or arrive by email | Payment proposal selects every line and sets the method automatically; she unticks all but what she wants and changes the method (e.g. check for Chase Card Services); a price with more than 2 decimal places reached Kohls; no check caught it |
-| 8. Product data → channel files | n/a | **Daniel's Wayfair sheet (column-to-column copy and paste, dropdown-restricted columns, info read off product images); Tina's Kohls inventory feed, Amazon inventory file and Daniel's submission sheet reviewed 3x; Wayfair listing shows curtain width per panel when 55" is the whole curtain (customer complaint reached Charmaine)** | n/a | n/a; Daniel distributes new content to every customer that sells the item and checks listings match what we sell; Home Depot spec sheet; the DSCO price issue; Tina's unfinished AI listing-check tool |
+| Module | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 |
+|---|---|---|---|---|---|
+| 1. Cross-system match | CHUB / F&O / FedEx / UPS hopping; InOrder phone numbers; searching email for a total | **Tina's low-stock vs open-PO lookup (clearest yet)**; Avi's PortPro → Excel row deletion; Moshe Aryeh Grossman's PortPro screenshots pasted into ChatGPT (misread details) | Suzanne's aging → customer info → phone number; open transactions and balance each behind extra clicks | Contact Electric: printed bill vs stack of printed emails; ACH notebook vs a vendor's open transactions; dates copied from email to desk calendar; Tina's historical Excel upload files vs DSCO line update history to trace a price change | Excel files vs SPS Commerce (deductions); Vendor Central vs OceanFirst (almost always match); recovery totals compared across two files |
+| 2. Retailer / portal handler | Lowes 810, Wayfair, Mason (doesn't auto-close), Home Depot, Lowes pending list | Kohls inventory feed (under 5 → send 0, never omit the line); Amazon returns / disputes via Vendo; **Charmaine's Wayfair deductions (accept or dispute per PO in the portal; CSV export available) and hand-closing Mason orders again** | Credit card added to the sales order via Header → Open prices and discounts; processing fee added by hand | Credit hold release (Customers → Credit and collection → Open credit holds); two old Amazon holds unresolved; Walmart Retail Link slow, then not loading, OTP again; Kohls portal wouldn't save a price correction | SPS Commerce already collects deductions and disputes from Walmart, Home Depot, Amazon and Lowes in one place; Amazon early-pay discount, daily deductions, and holds against future deductions |
+| 3. Intake / routing | Amazon and Kohls customers sent back to retailer; emails forwarded to Evelyn | Evelyn forwards orders to Justin; Jamie → Tina → Daniel by email; Keith → Tina for Amazon return; Charmaine forwards replacement-part request to Jhony | Order emails forwarded by hand to Justin (observer: could be forwarded automatically by a bot); Charmaine asks Suzanne for an account number | Isaac Grossman's order email forwarded by Chani to Justin (customer and ship-to named in the forward); credit card due dates pass Avi G → Chani → Isaac Grossman, with unclear ownership of the last step; Suzanne's check image emailed to Chani; Walmart store email to Tina, who checks Retail Link and replies on shipment status | Recovery totals emailed daily to six people (Mordy Berman, Avi G, Isaac Grossman, cc Ken, Chani, Zundel); sales reps emailed to confirm no check is pending |
+| 4. Templates / checklists | 4-minute email; short-pay wording; Nexus reply | Templated prompt copy-pasted; Daniel's sheet reviewed 3x | Each follow-up call or email ~5 min; email drafted to a customer about skipped invoices; every follow-up gets a written note | Payment slip filled by hand and clipped to each bill; the forward to Justin spells out customer and ship-to each time; Daniel's Home Depot spec sheet again: copy, paste, validate, review | Several reports sent with the same information; statement balances sent to late customers |
+| 5. Payment matching | Most of Suzanne's afternoon | n/a | n/a (morning was collections follow-up, not payment entry) | n/a (vendor side, not customer payments) | n/a (deductions and Amazon payments reconciled, not customer payment entry) |
+| 6. Open-item tracker | Mason, tariff deduction, $200 short-pay, lost UPS package, Lowes pending list | Returns we shouldn't receive; Avi's unclear dispute list; unresolved Lincoln Supply shipping; Mason orders to be closed after they close in our system | Weekly Thu to Fri follow-up from a printed aging; notes per customer; salesman (Heshy) told by note; June invoice still open | Credit holds open over a year; nothing paid to Contact Electric since April; Lincoln orders waiting on payment; desk calendar and notebook used as the reminder list; Tina's DSCO pricing issue set aside, cause partly unexplained; Monday is cleanup and update-notes day | Separate sheet of non-paying customers (~$300k); each over 120 days reviewed for chase vs write-off |
+| 7. Defaults / validation | Credit-card default; 810 required fields; item line lost without "Add item" | Repeated 3x manual review instead of validation; Daniel reads the whole Wayfair file at the end to check it; Charmaine reviews emails a few times; deduction checking differs by person (Suzanne checks the original invoice, Charmaine accepts Wayfair's figure) | CVC code not stored by F&O, so card details go in a paper notebook or arrive by email | Payment proposal selects every line and sets the method automatically; she unticks all but what she wants and changes the method (e.g. check for Chase Card Services); a price with more than 2 decimal places reached Kohls; no check caught it | n/a |
+| 8. Product data → channel files | n/a | **Daniel's Wayfair sheet (column-to-column copy and paste, dropdown-restricted columns, info read off product images); Tina's Kohls inventory feed, Amazon inventory file and Daniel's submission sheet reviewed 3x; Wayfair listing shows curtain width per panel when 55" is the whole curtain (customer complaint reached Charmaine)** | n/a | n/a; Daniel distributes new content to every customer that sells the item and checks listings match what we sell; Home Depot spec sheet; the DSCO price issue; Tina's unfinished AI listing-check tool | n/a |
 
-**Other observations:** Overlapping AI efforts: Tina started a tool to check that customer listings match what we sell, then saw Avi G working on an AI tool and paused; the observer's own reporting app is a third effort. Worth coordinating among Baruch Grossman, Peleg and Avi G. OTP prompts recur across portals (Lowes Day 1, Walmart Retail Link Day 4). Adoption note for automation: Chani (office manager) works largely by hand and on paper and is comfortable that way, so automation aimed at her tasks should account for comfort and adoption, not only time saved. Paper bridges recur: printed lists and emails, handwritten notebooks, a desk calendar, hand-filled slips, a printed copy of a check (Charmaine's printed Lowes list on Day 1, Suzanne's printed aging on Day 3, Chani on Day 4). The check printer has been broken for some time and checks are printed on the regular printer (drum replacement $300 to $400).  Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
+**Other observations:** Deductions are handled in several places: Suzanne (deductions list to Avi G, Day 1), Charmaine (Wayfair, Day 2), Tina forwarding Avi G's list to Baruch Salamander, who disputes on SPS Commerce (Days 2 and 5). Late-customer follow-up is also done twice: Suzanne from an aging report (Day 3) and Baruch Salamander from statements and a 120-day sheet (Day 5). Several people ensure the bank has enough money (Chani, Baruch Salamander), through different channels. Overlapping AI efforts: Tina started a tool to check that customer listings match what we sell, then saw Avi G working on an AI tool and paused; the observer's own reporting app is a third effort. Worth coordinating among Baruch Grossman, Peleg and Avi G. OTP prompts recur across portals (Lowes Day 1, Walmart Retail Link Day 4). Adoption note for automation: Chani (office manager) works largely by hand and on paper and is comfortable that way, so automation aimed at her tasks should account for comfort and adoption, not only time saved. Paper bridges recur: printed lists and emails, handwritten notebooks, a desk calendar, hand-filled slips, a printed copy of a check (Charmaine's printed Lowes list on Day 1, Suzanne's printed aging on Day 3, Chani on Day 4). The check printer has been broken for some time and checks are printed on the regular printer (drum replacement $300 to $400).  Teams was down for Charmaine (Day 1) and Tina (Day 2). File handling is manual and scattered (misplaced files, drag-drop into email, folders everywhere). The warehouse floor manager (Keith) is a key signal source for the office. Same task, different routes: Suzanne reaches invoices directly, Charmaine goes through the sales order; Suzanne verifies deductions against the original invoice, Charmaine accepts Wayfair's. Retailers differ in what they export: Wayfair gives a CSV of deductions, Lowes gives a list that doesn't download cleanly.
 
 ---
 
@@ -529,6 +583,7 @@ She was going through emails. She then went Customers → filter → Balance at 
 - Day 3: who was the last person cc'd on Suzanne's email about skipped invoices (maybe Isaac Grossman)? Is the follow-up always from a printed aging? Who is Heshy's customer here?
 - Day 4: what is OFB, and who is Ken? Who are Mordy and Zundel? Is "Lincoln (comfy)" the same customer as Lincoln Supply? What was copied "to a list of" with the Contact Electric email (the note was cut off)? What did Isaac Grossman answer about the ACH? What was the purpose of checking the vendor's open transactions against the notebook? Does the bank allow depositing a printed copy of a customer's check image?
 - Day 4 afternoon: what is Avi G's AI tool? Does Tina continue hers? How often does Daniel run the content and listing checks, and how long do they take? How did Kohls' pricing change if only inventory and SKUs are sent? Who sent the OneDrive email to Peleg, Baruch Grossman and Dan, and what exactly was failing? What was Suzanne doing with the customer balance and the held order?
+- Day 5: why are the recovery reports sent daily, and who uses them? Does anyone use the Amazon analysis (about 30 cents of every dollar)? What exactly was he comparing between Excel and SPS Commerce for Home Depot? Who does what on collections, Suzanne or Baruch Salamander? What does each cc'd recipient do with the recovery emails? How long does each report take, and how often?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - What exactly is Vendo's role?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
@@ -538,7 +593,7 @@ She was going through emails. She then went Customers → filter → Balance at 
 - Lunch window (12:15 to ~2:45 on Day 1) is blank by design (not shadowing).
 
 # Shadowing plan
-- Next: Moshe Aryeh Grossman's PortPro cleanup, possibly Baruch Salamander. Done for now: Tina, Daniel, Moshe's ChatGPT use (#16), Charmaine's afternoon.
+- Next: Moshe Aryeh Grossman's PortPro cleanup. Baruch Salamander done (Day 5, first session). Done for now: Tina, Daniel, Moshe's ChatGPT use (#16), Charmaine's afternoon.
 - Final report: remove the "ask Suzanne" open item from the Day 1 content; the observer rule is to only ask WHAT.
 - Done: Suzanne's morning (Day 3), Charmaine's afternoon (#17 to #21), Chani's morning, Tina, Daniel and part of Suzanne's day (Day 4).
 - Sales team and buying team.
