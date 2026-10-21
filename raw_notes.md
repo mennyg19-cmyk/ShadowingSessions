@@ -422,4 +422,12 @@ He is constantly switching between PortPro and Achim work. Bais does pickups fro
 He also has Verizon camera reviews with dashcams for the drivers, and it keeps recording for him to review. He uses extensive tools that seem to be good.
 
 ***
+**End of the observer's message. Next message, same session:**
+
+Mosi does item creation in F&O. Most of the data entry into F&O is done by Avi A, but Mosi does item creation and has a step-by-step manual from Troy that he follows. He also runs projections for Family Dollar for what he needs to order from F&O. (Family Dollar is a customer and became his personal project. He runs everything for this customer.) The rest of his connection to Achim is emails and PortPro.
+He doesn't update ETA fields from water vessels. Avi A is supposed to be entering it, but Mosi doesn't know if he's doing it correctly. F&O has multiple ETA fields that connect to different places, so he's not sure if it's being done correctly.
+Mosi tracks vessels via an Excel sheet that he, Avi A and Sal have access to. If Avi G wants to know about an item's exact ETA, it will come from the Excel file.
+He uses Allways Shipping to clear customs, and they also book the shipping vessels and assign containers to suppliers. They also give us access to their portal where they have exact locations of all locations. This would be a powerful connection to F&O/PortPro. It would update ETAs to exact dates. They have API/EDI integrations available, we should harness it.
+
+***
 **End of the observer's message. No follow-up questions have been asked yet.**
