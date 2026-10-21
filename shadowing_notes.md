@@ -10,6 +10,7 @@ Purpose: find groups of pain points ("modules") where one reusable function coul
 - **Example:** give a Grok bot the format of the product spec sheet Daniel builds, then ask "draft an email with a spec sheet for the floor tiles for Home Depot". The bot builds it in seconds, instead of Daniel copying and pasting for a long time.
 - So each module below is best read as a candidate for a Grok bot task.
 
+Raw notes as typed are saved in `raw_notes.md` (verbatim, not edited).
 Conventions: times marked `~` are estimates from the order of events. *Italics in parentheses* are the observer's own asides. Personnel comments overheard in conversation are left out on purpose. **Observer's rules while shadowing:** don't interrupt, don't comment, and don't ask why someone does something one way and not another; only ask WHAT they are doing when it isn't clear. Moshe, Moshe Aryeh and Mosi are all the same person; always write **Moshe Aryeh Grossman**. "Avi" with no surname means Avi Grossman (Avi G) by default; it means Avi Altman (Avi A) only while shadowing Moshe Aryeh Grossman's buying team.
 
 ---
