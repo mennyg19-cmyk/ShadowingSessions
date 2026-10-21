@@ -400,11 +400,26 @@ So Avi, with Peleg and Baruch, transitioned from Claude to Grok bots, and everyt
 
 ---
 
-## Day 6, Wed Oct 21: Moshe Aryeh Grossman (from 11:15)
+## Day 6, Wed Oct 21: Moshe Aryeh Grossman (11:15 first note; ~11:30 to 12:00)
 
 Avi is using Grok bots heavily already and anything that should be streamlined will be done between him and Baruch/Peleg directly, so I'm not shadowing him.
 I'm sitting by Mosi now. It's 11:15am on Wednesday 10/21.
 
 (This message answered the assistant's question "who needs more shadowing?" The assistant had listed, in priority order: Justin, Avi G, the warehouse (Keith Hamby, Brandon, Jhony, Robert), sales (David Dweck, Jamie, Heshy); repeat sessions for Daniel, Moshe Aryeh Grossman and Avi Altman, Baruch Salamander, Tina and Suzanne; and conversations rather than shadowing for Mordy Berman, Zundel and Dan Holland.)
 
-(No notes yet for the Day 6 session.)
+***
+**Notes from the Moshe session (observer's message, Oct 21):**
+
+Mosi's notes. I started about 11:30, it's now 12. Not much to see. A lot of the same switching between platforms and stuff, but I think I got much of what he does:
+
+Mosi is the first one I see who uses Teams extensively for communication. Everyone else uses the phone, talking face to face or email. In my view, this creates different communication channels and nobody is on the same page about anything. Things should be in one central place, like Slack or a similar tool. All internal communications should be there. There should be no internal emails. All reports should be sent there also, so that errors and questions are asked on the reports in one place. For example, as an aside that I'm not dealing with right now, but happens. When there's an issue on a scheduled report that goes out via email from my reporting app, sometimes the issue is reported in the Teams chat between me, Baruch and Avi, and sometimes Avi responds to the email, which also CC's me and Baruch. This allows for confusion and lost messages and skipped issues. We need a centralized communication channel.
+
+OK, back to Mosi. He filed a claim with EZPass. It seems someone either left a tag in a truck that was returned and is now being used by someone else, or it was stolen. They are stupid. If we report the tag lost, they simply switch to charge the license plate, but never report someone else using the tag. They filed a police report to report the possible theft. It totals $38k.
+
+US Customs auto pulls money from us. Mosi gets the emails and forwards them to whoever needs to know. It's Mordy, Zundel, AP, Avi Altmann, and Baruch S. Why doesn't it go straight to them? Good question. Also something that would be helped by a central communication channel. He literally sat there and went down a list of emails and clicked forward, copied email addresses into the field and hit send. It doesn't take him much time, but that's dumb.
+He is constantly switching between PortPro and Achim work. Bais does pickups from the port for Achim, so he and Avi are tracking containers from the port to Achim as well as charging Achim for the trucking. It's a mush and mix of the two companies here. PortPro tracks the trucks and drivers via GPS, so he knows exactly where everyone is. It's a great tool. I wonder if it can be copied into F&O and if it makes sense to. It is officially a different company, but there is a ton of overlap, and connecting straight from one to the other would eliminate a bunch of steps he does.
+
+He also has Verizon camera reviews with dashcams for the drivers, and it keeps recording for him to review. He uses extensive tools that seem to be good.
+
+***
+**End of the observer's message. No follow-up questions have been asked yet.**
