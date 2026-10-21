@@ -430,4 +430,12 @@ Mosi tracks vessels via an Excel sheet that he, Avi A and Sal have access to. If
 He uses Allways Shipping to clear customs, and they also book the shipping vessels and assign containers to suppliers. They also give us access to their portal where they have exact locations of all locations. This would be a powerful connection to F&O/PortPro. It would update ETAs to exact dates. They have API/EDI integrations available, we should harness it.
 
 ***
-**End of the observer's message. No follow-up questions have been asked yet.**
+**End of the observer's message. Follow-up (the assistant asked who Sal is):**
+
+Sal is Sal D'Rienzo. Also a very long tenured employee. He works in the warehouse. He manages the warehouse, and works with Moshe Aryeh on Bais Trucking (he's officially president of Bais).
+He also works closely with Baruch to make the warehouse efficient.
+
+About the shared Excel file: the ETAs on there are updated by Avi Altman whenever he wants/knows/gets an update. Mosi thinks he uses the Allways portal at this point.
+
+***
+**No further follow-up questions have been asked yet.**
