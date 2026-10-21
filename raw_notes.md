@@ -438,4 +438,16 @@ He also works closely with Baruch to make the warehouse efficient.
 About the shared Excel file: the ETAs on there are updated by Avi Altman whenever he wants/knows/gets an update. Mosi thinks he uses the Allways portal at this point.
 
 ***
-**No further follow-up questions have been asked yet.**
+**No further follow-up questions on that. Next message, same session:**
+
+Mosi is now working for Achim. 12:22.
+He is setting up a wire for Tatty to send to All Blinds Co. (supplier in China, headed by Duke. He's a long tenured supplier). He copies from one Excel to another that totals everything for him.
+
+He prepares wires and saves them as drafts on OceanFirst and Tatty releases them. He copies the info from his spreadsheet into OceanFirst's portal. He somehow splits the wires. Not sure what's splitting them. He explained: every payment has to match a BOL, which can have multiple containers on it. (He doesn't like Brandon. He teaches Brandon things and he calls again with the same question.)
+
+Supplier sends Excel with invoice and packing list to Avi A. They then send a few days later the BOL. He sends it to Lina at Allways. She confirms and adds it into their portal. If they book it for us, it's there earlier. But if we only use Allways for customs, we only start seeing it when Lina puts it in after Avi's email. He also adds it to the shared Excel that's on Mosi's desk with the ETAs and whatever.
+Mosi is cc'd so he sees when this happens. When he sees Avi forward it, he knows it was confirmed by Avi and matched to F&O. He adds the total to a shared Excel with the payments team (Zundal) for him to apply to the PO and voyages in F&O. He has no clue what they do.
+He puts the invoice, ETA and PO into the Excel file. Goes into OceanFirst, sets up a new payment for Tatty to clear. Once Tatty clears it, he tells Mosi either via email or WhatsApp, and Mosi updates the factory for them to release the containers in the port.
+
+***
+**End of the observer's message. No follow-up questions have been asked yet.**
