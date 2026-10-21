@@ -3,6 +3,7 @@
 Saved as written, with typos and missing punctuation. Do not edit. The cleaned-up version is in `shadowing_notes.md`.
 
 Not included here: the observer's short answers to follow-up questions.
+
 ---
 
 ## Day 1, Wed Oct 14: Charmaine (9:45 to 12:15)
