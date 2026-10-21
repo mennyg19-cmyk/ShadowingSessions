@@ -455,4 +455,9 @@ He puts the invoice, ETA and PO into the Excel file. Goes into OceanFirst, sets 
 Another step to this is customs, which is handled by Allways. Customs release and freight release. Freight has two parts: shipping lines need to get paid and the factory needs to surrender the BOL to the shipping line. Now this changed. It works electronically for the past two years. They do not do this (the supplier) until they get paid. So these two processes happen simultaneously. For a live example: Achim has 7 containers sitting at the port right now. They all were released by customs because Allways took care of that, but the freight release was not done yet because the factory wasn't paid, but shipping lines were paid. Chani pays the freight.
 
 ***
-**End of the observer's message. No follow-up questions have been asked yet.**
+**End of the observer's message. Follow-up (the assistant asked about storage or other charges while the containers wait):**
+
+After the allotted free time of 4 working days, we have to pay demurrage charges. Approx $300-$350 per day per container.
+
+***
+**No further follow-up questions have been asked yet.**
