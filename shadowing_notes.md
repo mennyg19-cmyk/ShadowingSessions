@@ -25,7 +25,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 |---|---|---|
 | Charmaine | Customer Service | Day 1 AM |
 | Suzanne | AR | Day 1 PM. Works closely with Chani |
-| Chani | AP and office manager | Deposits checks, scans, sends to Suzanne. Day 4: pays vendors by check and ACH |
+| Chani Kraus | Officially the office manager. Also assists Isaac Grossman and handles AP and AR | Deposits checks, scans, sends to Suzanne. Day 4: pays vendors by check and ACH. Easy to talk to; works mostly by hand and on paper, so changes to her tasks need hands-on support |
 | Tina | Ecommerce / inventory feeds and PO follow-up (working label) | Day 2 AM. Faster at computer skills than Charmaine and Suzanne |
 | Daniel | Works for Tina and Avi G | Builds submission and spec files (e.g. the Wayfair spec sheet). No access to open PO lines or goods in transit. Day 2 PM. Day 4: manages content (every new item's content reaches every customer that sells it) and checks that what we say we sell each customer is live on their site |
 | Evelyn | Forwards order emails to Justin, sometimes ships replacements, handles the front door | Day 2, observed 9:52 |
@@ -35,19 +35,19 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Baruch Grossman | COO, warehouse. Observer's brother. One of the "brains" behind the operation; a recipient of this report | cc'd on Justin's sample order; cleared app changes |
 | Baruch Salamander | Not the same Baruch. Deductions and disputes (Walmart, Home Depot, Amazon, Lowes) in SPS Commerce, recovery and Amazon reports, aging reports by salesman, bank funding check, collections on late customers | Day 5, shadowed from 11:00. Chani didn't know what he does (Day 2) |
 | Isaac Grossman ("Tatty") | CEO. Observer's father | |
-| Keith | Warehouse floor manager | Charmaine emailed him re Lowes cancellation (Day 1). Sent Tina an Amazon return label (Day 2) |
+| Keith Hamby | Warehouse floor manager (a different person from Ken Kaplan) | Charmaine emailed him re Lowes cancellation (Day 1). Sent Tina an Amazon return label (Day 2) |
 | Brandon | Warehouse. Easiest to reach | Packaging details for UPS claim; shipping to Lincoln Supply |
 | Jhony | Warehouse, beside/under Keith. Parts and replacements | |
 | Justin | Enters sample orders and orders | |
 | Locations | 5702 = Brooklyn office; 1600 = warehouse in Jersey | Used in vendor bills (Day 4) |
-| Peleg | Developer / IT. Main in-house technical person now. The observer reports to him. With Baruch Grossman, the other "brain" behind the operation; a recipient of this report | Charmaine emailed him about Teams (no reply) |
+| Peleg Ovadia | Developer / IT. Main in-house technical person now. The observer reports to him. Most proficient with F&O setup and settings changes; knows the data best; DBA for the Grok automation tool being set up; closely involved in many parts of the system. Works with Dan Holland (IT and EDI), Keith Hamby (warehouse), Brandon, Jhony, Baruch Grossman, and others. With Baruch Grossman, the other "brain" behind the operation; a recipient of this report | Charmaine emailed him about Teams (no reply) |
 | Troy | Consultant who helped migrate to F&O. Mostly gone now; asked questions from time to time | Day 4: with Peleg, had not been able to release two old Amazon credit holds |
-| Mordy Berman | Surname confirmed Day 5; role not yet identified. Receives Baruch Salamander's recovery reports | Day 4: Chani thought he tells Isaac Grossman when credit card payments are due |
-| Ken | Not yet identified. Cc'd on Baruch Salamander's recovery reports | Day 4: sent Chani a list with "OFB" on it |
-| Zundel | Not yet identified. Cc'd on Baruch Salamander's recovery reports | Day 4: recipient of an email from Avi G with credit card bills |
-| Robert | Contact at Contact Electric (assumed) | Day 4: emailed a bill and a set of unpaid invoices |
+| Mordy Berman | Officially the CFO, per the observer. Most money decisions are made directly by Isaac Grossman, so Mordy works more as an assistant to the CEO on money decisions. Baruch Grossman calls him a controller (assumed to be the COO; confirm). Works offsite and has not been shadowed. Receives Baruch Salamander's recovery reports | Day 4: Chani thought he tells Isaac Grossman when credit card payments are due |
+| Ken Kaplan | One of the longest-tenured employees. Easy to work with and open to new tools. Cc'd on Baruch Salamander's recovery reports | Day 4: sent Chani a list with "OFB" on it |
+| Zundel | Believed to work with Mordy Berman; role unknown. Not seen or shadowed, and the observer has had no contact since he was brought in. Cc'd on Baruch Salamander's recovery reports | Day 4: recipient of an email from Avi G with credit card bills |
+| Robert | Unclear: earlier assumed to be at Contact Electric, but named among the people Peleg works with (with Brandon and Jhony), so possibly internal. Confirm | Day 4: emailed a bill and a set of unpaid invoices |
 | Contact Electric; Chase Card Services | Vendors | Day 4 payments |
-| Dan | Works in IT | Day 4: copied on the OneDrive file-sharing email |
+| Dan Holland | In charge of IT and EDI. Works with Peleg | Day 4: copied on the OneDrive file-sharing email |
 | Heshy | Salesman | Day 3: Suzanne leaves him a note when a customer can't pay |
 | David Dweck | Salesman, ext. 123 | Calls Tina and Suzanne |
 | Jamie | Does some sales and designs the soft window side of the company (curtains). Long-time employee | Calls Tina about a new customer and product list |
@@ -55,7 +55,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Vendo | Middleman / consulting company between us and Amazon | Exact role unknown. Daniel downloads from their SharePoint; Tina sends files back to them |
 | Lincoln Supply | Customer | Problems with shipping (Day 2) |
 
-**Systems:** SPS Commerce (collects deductions and disputes from Walmart, Home Depot, Amazon and Lowes), Amazon Vendor Central, OceanFirst (bank), F&O (main ERP), CHUB (order/invoice system for Lowes etc.), InOrder (old system, still used for phone numbers), PortPro, DSCO Rithum (Kohls inventory feed), Retail Link (Walmart portal), Lowes portal (WebEDI), Wayfair portal, Mason portal, Teams, Excel, email, FedEx and UPS tracking, desk calculator, printed manuals and templates.
+**Systems:** Grok (automation tool being set up; Peleg is the DBA), SPS Commerce (collects deductions and disputes from Walmart, Home Depot, Amazon and Lowes), Amazon Vendor Central, OceanFirst (bank), F&O (main ERP), CHUB (order/invoice system for Lowes etc.), InOrder (old system, still used for phone numbers), PortPro, DSCO Rithum (Kohls inventory feed), Retail Link (Walmart portal), Lowes portal (WebEDI), Wayfair portal, Mason portal, Teams, Excel, email, FedEx and UPS tracking, desk calculator, printed manuals and templates.
 
 ---
 
@@ -583,7 +583,7 @@ He creates several aging reports grouped by salesman, manually, with SUMIF formu
 # Open questions
 - Moshe Aryeh Grossman: which PortPro screens and which details does ChatGPT misread? What other complicated questions does he ask besides driver assignments? Does PortPro offer an export or API?
 - Day 3: who was the last person cc'd on Suzanne's email about skipped invoices (maybe Isaac Grossman)? Is the follow-up always from a printed aging? Who is Heshy's customer here?
-- Day 4: what is OFB, and who is Ken? Who are Mordy and Zundel? Is "Lincoln (comfy)" the same customer as Lincoln Supply? What was copied "to a list of" with the Contact Electric email (the note was cut off)? What did Isaac Grossman answer about the ACH? What was the purpose of checking the vendor's open transactions against the notebook? Does the bank allow depositing a printed copy of a customer's check image?
+- Day 4: what is OFB? Is Avi G's AI tool (Day 4) the Grok tool? Is Robert internal or at Contact Electric, and who forwarded the Contact Electric bill? Is "Lincoln (comfy)" the same customer as Lincoln Supply? What was copied "to a list of" with the Contact Electric email (the note was cut off)? What did Isaac Grossman answer about the ACH? What was the purpose of checking the vendor's open transactions against the notebook? Does the bank allow depositing a printed copy of a customer's check image?
 - Day 4 afternoon: what is Avi G's AI tool? Does Tina continue hers? How often does Daniel run the content and listing checks, and how long do they take? How did Kohls' pricing change if only inventory and SKUs are sent? Who sent the OneDrive email to Peleg, Baruch Grossman and Dan, and what exactly was failing? What was Suzanne doing with the customer balance and the held order?
 - Day 5: Mordy Berman has used the reporting tool twice (9/14 and 9/22, 5 reports in total) and receives Baruch Salamander's reports; what is his role with these numbers, and which of Baruch Salamander's reports could be replaced by scheduled ones from the tool? Avi G reportedly doesn't use the reports; do any recipients? Why are the recovery reports sent daily? Does anyone use the Amazon analysis (about 30 cents of every dollar)? What exactly was he comparing between Excel and SPS Commerce for Home Depot? Who does what on collections, Suzanne or Baruch Salamander? What does each cc'd recipient do with the recovery emails? How long does each report take, and how often?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
