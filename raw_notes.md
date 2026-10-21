@@ -450,4 +450,9 @@ Mosi is cc'd so he sees when this happens. When he sees Avi forward it, he knows
 He puts the invoice, ETA and PO into the Excel file. Goes into OceanFirst, sets up a new payment for Tatty to clear. Once Tatty clears it, he tells Mosi either via email or WhatsApp, and Mosi updates the factory for them to release the containers in the port.
 
 ***
+**End of the observer's message. Next message, same session:**
+
+Another step to this is customs, which is handled by Allways. Customs release and freight release. Freight has two parts: shipping lines need to get paid and the factory needs to surrender the BOL to the shipping line. Now this changed. It works electronically for the past two years. They do not do this (the supplier) until they get paid. So these two processes happen simultaneously. For a live example: Achim has 7 containers sitting at the port right now. They all were released by customs because Allways took care of that, but the freight release was not done yet because the factory wasn't paid, but shipping lines were paid. Chani pays the freight.
+
+***
 **End of the observer's message. No follow-up questions have been asked yet.**
