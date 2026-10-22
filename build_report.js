@@ -18,20 +18,43 @@ function rich(text, base = {}) {
   });
 }
 
-const p = (text, opts = {}) =>
-  new Paragraph({ spacing: { after: 120 }, ...opts, children: rich(text, opts.run) });
-const h1 = (text) =>
-  new Paragraph({ heading: HeadingLevel.HEADING_1, keepNext: true, spacing: { before: 360, after: 160 }, children: [new TextRun({ text, font: FONT })] });
-const h2 = (text) =>
-  new Paragraph({ heading: HeadingLevel.HEADING_2, keepNext: true, spacing: { before: 240, after: 100 }, children: [new TextRun({ text, font: FONT })] });
-const h3 = (text) =>
-  new Paragraph({ heading: HeadingLevel.HEADING_3, keepNext: true, spacing: { before: 180, after: 80 }, children: [new TextRun({ text, font: FONT })] });
-const bullets = (items) =>
-  items.map((t) => new Paragraph({ numbering: { reference: "bullets", level: 0 }, spacing: { after: 60 }, children: rich(t) }));
-const steps = (ref, items) =>
-  items.map((t) => new Paragraph({ numbering: { reference: ref, level: 0 }, spacing: { after: 60 }, children: rich(t) }));
+const md = [];
+let mdQuote = "";
+const mdEsc = (t) => t.replace(/~/g, "\\~");
+const emit = (t) => md.push(mdEsc(t).split("\n").map((l) => mdQuote + l).join("\n"));
+
+const p = (text, opts = {}) => {
+  emit(text);
+  return new Paragraph({ spacing: { after: 120 }, ...opts, children: rich(text, opts.run) });
+};
+const heading = (level, text) => {
+  emit(`${"#".repeat(level)} ${text}`);
+  return new Paragraph({
+    heading: [HeadingLevel.HEADING_1, HeadingLevel.HEADING_2, HeadingLevel.HEADING_3][level - 1],
+    keepNext: true,
+    spacing: [{ before: 360, after: 160 }, { before: 240, after: 100 }, { before: 180, after: 80 }][level - 1],
+    children: [new TextRun({ text, font: FONT })],
+  });
+};
+const h1 = (text) => heading(1, text);
+const h2 = (text) => heading(2, text);
+const h3 = (text) => heading(3, text);
+const bullets = (items) => {
+  emit(items.map((t) => `- ${t}`).join("\n"));
+  return items.map((t) => new Paragraph({ numbering: { reference: "bullets", level: 0 }, spacing: { after: 60 }, children: rich(t) }));
+};
+const steps = (ref, items) => {
+  emit(items.map((t, i) => `${i + 1}. ${t}`).join("\n"));
+  return items.map((t) => new Paragraph({ numbering: { reference: ref, level: 0 }, spacing: { after: 60 }, children: rich(t) }));
+};
+const rawP = (mdText, paragraph) => {
+  emit(mdText);
+  return paragraph;
+};
 
 function table(widths, header, rows) {
+  const mdRow = (r) => `| ${r.map((t) => t.replace(/\|/g, "\\|")).join(" | ")} |`;
+  emit([mdRow(header), `|${header.map(() => " --- |").join("")}`, ...rows.map(mdRow)].join("\n"));
   const cell = (text, w, isHeader) =>
     new TableCell({
       borders: BORDERS,
@@ -57,26 +80,34 @@ const W2 = [1700, 7660];
 const body = [];
 const add = (...xs) => xs.flat().forEach((x) => body.push(x));
 
-const box = (title, items) =>
-  new Table({
+const box = (title, items) => {
+  mdQuote = "> ";
+  emit(`**${title}**`);
+  const list = bullets(items);
+  mdQuote = "";
+  const listMd = md.pop();
+  md.push(`${md.pop()}\n>\n${listMd}`);
+  const side = { style: BorderStyle.SINGLE, size: 12, color: "C00000" };
+  return new Table({
     width: { size: 9360, type: WidthType.DXA },
     columnWidths: [9360],
     rows: [new TableRow({ children: [new TableCell({
-      borders: { top: { style: BorderStyle.SINGLE, size: 12, color: "C00000" }, bottom: { style: BorderStyle.SINGLE, size: 12, color: "C00000" }, left: { style: BorderStyle.SINGLE, size: 12, color: "C00000" }, right: { style: BorderStyle.SINGLE, size: 12, color: "C00000" } },
+      borders: { top: side, bottom: side, left: side, right: side },
       width: { size: 9360, type: WidthType.DXA },
       shading: { fill: "FBE5E5", type: ShadingType.CLEAR, color: "auto" },
       margins: { top: 100, bottom: 100, left: 160, right: 160 },
       children: [
         new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: title, bold: true, size: 24, font: FONT, color: "C00000" })] }),
-        ...bullets(items),
+        ...list,
       ],
     })] })],
   });
+};
 const spec = (title, rows) => [h3(title), table([1900, 7460], ["", "Detail"], rows), gap()];
 
 add(
-  new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: "Shadowing Report", bold: true, size: 44, font: FONT })] }),
-  new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: "Wednesday, October 14 to Wednesday, October 21, 2026 (six shadowing days). Version 2: ranked summary up front, detail in the appendix", size: 26, font: FONT, color: "404040" })] }),
+  rawP("# Shadowing Report", new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: "Shadowing Report", bold: true, size: 44, font: FONT })] })),
+  rawP("*Wednesday, October 14 to Wednesday, October 21, 2026 (six shadowing days). Version 2: ranked summary up front, detail in the appendix*", new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: "Wednesday, October 14 to Wednesday, October 21, 2026 (six shadowing days). Version 2: ranked summary up front, detail in the appendix", size: 26, font: FONT, color: "404040" })] })),
   p("Prepared for Baruch Grossman (COO) and Peleg."),
 
   h2("Why this shadowing, and what it is for"),
@@ -187,7 +218,7 @@ add(
   ]),
   p("**Next step:** pick which of bots A to G to build first, and have Peleg take the settings list.", { spacing: { before: 200, after: 120 } }),
 
-  new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, children: [new TextRun({ text: "Appendix: Detailed Observations", bold: true, size: 40, font: FONT, color: "1F3864" })] }),
+  rawP("---\n\n# Appendix: Detailed Observations", new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, children: [new TextRun({ text: "Appendix: Detailed Observations", bold: true, size: 40, font: FONT, color: "1F3864" })] })),
   p("Everything below is the version 1 report text, unchanged."),
   p("Times marked ~ are estimates from the order of events. The original notes only have a few exact timestamps. Text in italics inside parentheses are the observer's own comments, kept from the notes. The observer did not interrupt or ask staff why they work the way they do; questions were limited to what they were doing when it wasn't clear. Differences in method between people are recorded as observed, not explained. Mistakes are recorded as things the systems and processes allowed, not as anyone's failing."),
   p("\"Avi\" with no surname means Avi Grossman (Avi G). Avi Altman is always written in full, as is Moshe Aryeh Grossman. Baruch Salamander is a different person from Baruch Grossman."),
@@ -893,6 +924,10 @@ const doc = new Document({
     children: body,
   }],
 });
+
+const MD_OUT = OUT.replace(/\.docx$/, "") + ".md";
+fs.writeFileSync(MD_OUT, md.join("\n\n") + "\n");
+console.log("wrote", MD_OUT);
 
 Packer.toBuffer(doc).then((buf) => {
   fs.writeFileSync(OUT, buf);
