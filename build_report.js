@@ -5,7 +5,7 @@ const {
   HeadingLevel,
 } = require("docx");
 
-const OUT = process.argv[2] || "Shadowing_Report_2026-10-21.docx";
+const OUT = process.argv[2] || "Shadowing_Report_2026-10-22_v2.docx";
 const FONT = "Calibri";
 const BORDER = { style: BorderStyle.SINGLE, size: 4, color: "BFBFBF" };
 const BORDERS = { top: BORDER, bottom: BORDER, left: BORDER, right: BORDER };
@@ -57,18 +57,142 @@ const W2 = [1700, 7660];
 const body = [];
 const add = (...xs) => xs.flat().forEach((x) => body.push(x));
 
+const box = (title, items) =>
+  new Table({
+    width: { size: 9360, type: WidthType.DXA },
+    columnWidths: [9360],
+    rows: [new TableRow({ children: [new TableCell({
+      borders: { top: { style: BorderStyle.SINGLE, size: 12, color: "C00000" }, bottom: { style: BorderStyle.SINGLE, size: 12, color: "C00000" }, left: { style: BorderStyle.SINGLE, size: 12, color: "C00000" }, right: { style: BorderStyle.SINGLE, size: 12, color: "C00000" } },
+      width: { size: 9360, type: WidthType.DXA },
+      shading: { fill: "FBE5E5", type: ShadingType.CLEAR, color: "auto" },
+      margins: { top: 100, bottom: 100, left: 160, right: 160 },
+      children: [
+        new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: title, bold: true, size: 24, font: FONT, color: "C00000" })] }),
+        ...bullets(items),
+      ],
+    })] })],
+  });
+const spec = (title, rows) => [h3(title), table([1900, 7460], ["", "Detail"], rows), gap()];
+
 add(
   new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: "Shadowing Report", bold: true, size: 44, font: FONT })] }),
-  new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: "Wednesday, October 14 to Wednesday, October 21, 2026 (six shadowing days)", size: 26, font: FONT, color: "404040" })] }),
+  new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: "Wednesday, October 14 to Wednesday, October 21, 2026 (six shadowing days). Version 2: ranked summary up front, detail in the appendix", size: 26, font: FONT, color: "404040" })] }),
   p("Prepared for Baruch Grossman (COO) and Peleg."),
 
   h2("Why this shadowing, and what it is for"),
-  p("This shadowing grew out of the Grok bot effort. Avi G first used Claude to automate his own tasks and asked the observer to help him get his information faster from the observer's reporting tool. After talking with Baruch Grossman and Peleg, the decision was to build with the Grok bots the company already subscribes to, which go straight to the data without the reporting tool. The observer was then asked to do a discovery of what can be automated with Grok bots. The reporting site stays as a manual report runner for people who don't want to use Grok, and nothing about it is changing now."),
-  p("The goal is to find **modules**: groups of pain points that one reusable function could remove together. Each module in Part 14 is best read as a candidate Grok bot task. As an example, give a bot the format of the product spec sheet Daniel builds, then ask it to \"draft an email with a spec sheet for the floor tiles for Home Depot\". It builds it in seconds, instead of Daniel copying and pasting for a long time."),
+  p("This grew out of the Grok bot effort. Avi G started automating his own tasks with Claude, and after talking with Baruch Grossman and Peleg we decided to build on the Grok bots the company already pays for, which go straight to the data. I was asked to find out what else can be automated. My reporting site stays as a manual report runner and is not changing."),
+  p("I came in with a clean view, so this report records what I saw people actually doing, which is not always what their title says. The first pages are the decisions: what to act on now, the top five opportunities, the F&O settings fixes, and a spec for each bot. Everything I observed is in the appendix, unchanged from version 1."),
+
+  h1("Summary"),
+  p("Six days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The most money at risk is in the **payment to container release chain**, and the clearest bot is **Daniel's channel files built from the spec sheet**. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate."),
+
+  h1("Act on Now"),
+  box("Do these regardless of the bot work", [
+    "**CVC codes on paper and by email (Suzanne, Day 3).** Card security codes are written in a notebook because F&O doesn't store them, and customers email card details. PCI rules forbid keeping the CVC after a payment is authorized. Decide how card payments are taken without keeping it (for example a payment link or a processor that stores the card).",
+    "**Printed check photo deposited (Chani, Day 4).** A customer photographs the check and emails it; Chani prints it, cuts it out and runs the printout through the deposit scanner. Ask OceanFirst whether this is allowed under the deposit agreement. If not, ask the customer for the original or for ACH.",
+    "**Contact Electric (5702), Day 4.** Robert forwarded several unpaid invoices; my read is nothing has been paid since April. Confirm and settle.",
+    "**About $300k owed by non-paying customers (Baruch Salamander, Day 5).** He reviews each one over 120 days for chase vs write-off, and Suzanne also chases late customers. Agree who owns collections and set a date for the write-off decisions.",
+    "**$38k EZPass claim (Moshe Aryeh Grossman, Day 6)** with a police report filed. Someone should own the follow-up.",
+    "**Two Amazon credit holds open over a year** that Peleg and Troy could not release (Day 4).",
+    "**Tell Tina whether to continue her ChatGPT listing-check tool.** She paused it when she saw the Grok rollout (Day 4).",
+  ]),
+  gap(),
+
+  h1("Top 5 Opportunities"),
+  p("My ranking, by money at risk and how clearly the notes describe the work. Hours per week are not measured yet; the figures are only what the notes support (see What to Measure Next)."),
+  table([400, 2000, 3760, 1500, 1700], ["#", "Opportunity", "What's at stake (from the notes)", "Fix type", "Suggested owner"], [
+    ["1", "Payment to container release tracker", "Release depends on a chain through a supplier Excel, Allways, two shared Excels, F&O and an OceanFirst wire draft, with status by cc'd email and WhatsApp. 7 containers were waiting on the factory payment (still within free time). Rule: once 4 working days of free time run out, demurrage is about $300 to $350 per container per day.", "Bot now; Allways API later", "Peleg with Moshe Aryeh Grossman"],
+    ["2", "Spec sheet to channel file builder", "About 15 to 20 minutes per product line for Daniel, then at least 3 reviews per file. A wrong curtain width on Wayfair reached a customer. Weekly volume not known.", "Bot", "Peleg with Daniel and Tina"],
+    ["3", "Low-stock vs open-PO match", "A six-step download and match in F&O for each Vendo low-stock file. Only Tina can do it, because Daniel has no access to open PO lines or Goods in Transit. Frequency not known.", "Bot", "Peleg with Tina"],
+    ["4", "Payment entry and posting", "Most of Suzanne's Day 1 afternoon (3:00 to 4:30). Two batches wouldn't post, one because the method defaulted to credit card, and the error didn't say why. She finds Chani's deposit email by searching for the total.", "Settings first, then bot", "Peleg with Suzanne"],
+    ["5", "Money reports and notices on a schedule", "Recovery totals emailed by hand daily to six people (Avi G doesn't use them; Mordy ran reports on only two days). US Customs pulls forwarded to five people. Credit card due dates go Avi G to Chani to a desk calendar to Isaac Grossman.", "Scheduled reports + routing bot", "Peleg with Baruch Salamander and Chani"],
+  ]),
+  gap(),
+
+  h1("F&O Settings Fixes (for Peleg)"),
+  p("These are configuration or data fixes, not bots. Some may sit on the EDI side (Dan Holland) rather than F&O; Peleg to confirm."),
+  table([3000, 5160, 1200], ["Fix", "What happens now", "Seen"], [
+    ["Payment method defaulting to credit card on check payments", "Suzanne's batch wouldn't post; she deleted and re-entered payments until she found it", "Day 1"],
+    ["Posting errors that don't name the cause", "Suzanne hunts for the bad line by deleting payments", "Day 1"],
+    ["Payment proposal selects every line and sets the method", "Chani unticks everything except what she wants to pay", "Day 4"],
+    ["Mason orders don't close automatically", "Charmaine checks Mason against F&O and closes orders by hand", "Days 1, 2"],
+    ["Phone numbers only in InOrder", "Suzanne looks up phone numbers in the old system", "Day 1"],
+    ["No check on prices with more than 2 decimals", "One reached Kohls through DSCO and nothing caught it", "Day 4"],
+    ["Several ETA fields in F&O", "Nobody is sure which is right; Avi G's ETAs come from an Excel instead", "Day 6"],
+    ["Amazon credit holds that can't be released", "Two open over a year", "Day 4"],
+  ]),
+  p("*Not a setting, but just as quick:* replace the check printer drum ($300 to $400) so checks stop going through the office inkjet (Day 4).", { spacing: { before: 120, after: 120 } }),
+
+  h1("Bot Specs"),
+  p("Each is written so it can be built or rejected. \"Confirm first\" is what I still need to find out before it's sized."),
+  ...spec("A. Container release tracker (opportunity 1)", [
+    ["Trigger", "A supplier invoice or BOL arrives, a wire is drafted or cleared, or a container nears the end of free time"],
+    ["What it does", "Keeps one status per BOL and container: invoice received, BOL received, in Allways, wire drafted, wire cleared, factory told, freight released. Warns Moshe, Chani and Isaac Grossman when a container is close to 4 working days at the port without a release."],
+    ["Data", "Supplier invoice Excel, the shared ETA and payments Excels, F&O POs and voyages, OceanFirst wire drafts, Allways portal (API or EDI later)"],
+    ["Evidence", "Day 6: the seven-step invoice and BOL chain; the 7 containers waiting on the factory payment; status passed by cc'd email and WhatsApp"],
+    ["Confirm first", "How often containers get close to free time; how many wires a week; what splits the wires; what Zundel does with the payments Excel"],
+  ]),
+  ...spec("B. Channel file builder (opportunity 2)", [
+    ["Trigger", "\"Build the Wayfair (or Home Depot, Amazon, Kohls) file for product line X\", or a new customer product list from Jamie"],
+    ["What it does", "Fills the customer's template from the main product spec sheet, using only dropdown-valid values, flags missing attributes, checks dimensions against the spec sheet, and drafts the email to go with it"],
+    ["Data", "Main product spec sheet, each customer's template"],
+    ["Evidence", "Day 2: Daniel's Wayfair sheet, column-to-column copy and paste, info read off product images, 15 to 20 minutes per line; Tina's 3 reviews; the 55\" curtain width error. Day 4: Home Depot spec sheet."],
+    ["Confirm first", "Product lines per week and per customer; which attributes are missing from the main sheet"],
+  ]),
+  ...spec("C. Low-stock vs open-PO match (opportunity 3)", [
+    ["Trigger", "Daniel's low-stock file from Vendo's SharePoint"],
+    ["What it does", "Matches each low-stock or out-of-stock item to open PO lines and Goods in Transit, fills the next available date, and flags lines with no updated date"],
+    ["Data", "Vendo file, F&O open PO lines, Goods in Transit"],
+    ["Evidence", "Day 2: Tina's six-step download, filter and match"],
+    ["Confirm first", "How often Vendo sends the file and how many items are on it"],
+  ]),
+  ...spec("D. Remittance matching assistant (opportunity 4)", [
+    ["Trigger", "Chani's deposit email with the scanned checks and batch total"],
+    ["What it does", "Finds the email for the batch, proposes a match of each check to open invoices, shows deductions and short pays with the difference, and checks the payment method before posting"],
+    ["Data", "Deposit email and scans, F&O open customer transactions"],
+    ["Evidence", "Day 1: searching email for the total, postdated checks, payments landing in the wrong journal, the credit memo worked out by hand"],
+    ["Confirm first", "Checks per week; how remittance details arrive"],
+  ]),
+  ...spec("E. Scheduled money reports (opportunity 5)", [
+    ["Trigger", "A schedule, instead of a manual daily email"],
+    ["What it does", "Sends recovery totals, the Amazon payments and deductions breakdown, and aging by salesman from the data, only to people who use them"],
+    ["Data", "SPS Commerce, Vendor Central, OceanFirst, F&O aging"],
+    ["Evidence", "Day 5: daily recovery emails to six people with MTD and YTD totals; SUMIF aging by salesman built by hand; about $146k recovered this year"],
+    ["Confirm first", "Which recipients use which report; how long each takes him"],
+  ]),
+  ...spec("F. Notice router (opportunity 5)", [
+    ["Trigger", "A US Customs pull email, a credit card due-date email from Avi G, or an order email"],
+    ["What it does", "Sends Customs pulls to Mordy Berman, Zundel, AP, Avi Altman and Baruch Salamander; puts card due dates on a calendar for Chani and Isaac Grossman so the account is funded; sends order emails to Justin. Some of this may only need a mail rule."],
+    ["Evidence", "Day 6: Customs forwards; Day 4: card due dates copied into the desk calendar; Days 2 to 4: order emails forwarded to Justin"],
+    ["Confirm first", "Whether Customs pulls are part of the bank funding checks"],
+  ]),
+  ...spec("G. Collections worklist", [
+    ["Trigger", "Weekly, before Suzanne's Thursday to Friday follow-up"],
+    ["What it does", "One list of overdue customers with phone number, open invoices, balance and past notes on the same screen, shared by Suzanne and Baruch Salamander"],
+    ["Evidence", "Day 3: printed aging, about 5 minutes per call, clicks for transactions, balance and phone; Day 5: Baruch Salamander's 120-day sheet"],
+    ["Confirm first", "How Suzanne and Baruch Salamander split collections"],
+  ]),
+
+  h1("Bigger Projects (outside this scope)"),
+  ...bullets([
+    "**One central chat channel** for internal communication and report questions, instead of phone, email, Teams and WhatsApp (my idea).",
+    "**PortPro to F&O link** for container and trucking status. Bais Trucking is a separate company but overlaps heavily with Achim.",
+    "**Allways API or EDI into F&O** so vessel ETAs are exact dates rather than an Excel updated when someone remembers.",
+  ]),
+
+  h1("What to Measure Next"),
+  ...bullets([
+    "For each top-5 item: how often it happens and how many each time. Daniel's product lines a week; how often Tina gets the Vendo file; Suzanne's checks a week; Moshe's wires a week; how long Baruch Salamander's reports take.",
+    "Still to shadow: Justin, the warehouse and sales. Repeat sessions with Daniel, Moshe Aryeh Grossman and Avi Altman.",
+  ]),
+  p("**Next step:** pick which of bots A to G to build first, and have Peleg take the settings list.", { spacing: { before: 200, after: 120 } }),
+
+  new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, children: [new TextRun({ text: "Appendix: Detailed Observations", bold: true, size: 40, font: FONT, color: "1F3864" })] }),
+  p("Everything below is the version 1 report text, unchanged."),
   p("Times marked ~ are estimates from the order of events. The original notes only have a few exact timestamps. Text in italics inside parentheses are the observer's own comments, kept from the notes. The observer did not interrupt or ask staff why they work the way they do; questions were limited to what they were doing when it wasn't clear. Differences in method between people are recorded as observed, not explained. Mistakes are recorded as things the systems and processes allowed, not as anyone's failing."),
   p("\"Avi\" with no surname means Avi Grossman (Avi G). Avi Altman is always written in full, as is Moshe Aryeh Grossman. Baruch Salamander is a different person from Baruch Grossman."),
 
-  h1("Key Findings at a Glance"),
+  h1("Key Findings (detailed)"),
   ...bullets([
     "**Payment to container release (Day 6).** Releasing containers at the port depends on a long chain: supplier invoice and packing list, bill of lading (BOL), Allways portal, a shared ETA Excel, a payments Excel, F&O, an OceanFirst wire draft, Isaac Grossman clearing it, then a message to the factory. The same invoice, ETA, PO and BOL data is entered or copied into several places, and status moves by cc'd emails and WhatsApp. Right now 7 containers are at the port, cleared by customs but waiting on the freight release until the factory is paid. They are still within free time, so no demurrage is being paid on them yet. The general rule: once the 4 working days of free time run out, demurrage is about $300 to $350 per container per day.",
     "**Product data to channel files (Days 2 and 4).** Daniel builds each customer's file (Wayfair, Home Depot, Amazon) from the main product spec sheet by copy and paste, about 15 to 20 minutes per product line, and every file is reviewed at least 3 times. A Wayfair listing with the wrong curtain width reached a customer. This is the clearest fit for the spec sheet example above.",
@@ -728,12 +852,11 @@ add(
     "Adoption note for automation: Chani works largely by hand and on paper and is comfortable that way, so automation aimed at her tasks should account for comfort and adoption, not only time saved. The same may hold elsewhere.",
     "The observer's reporting site remains as a manual report runner and is not changing.",
   ]),
-  p("**Next step:** decide which modules are real, which are off, and which groupings are missing, then dig into each one.", { spacing: { before: 200, after: 120 } }),
-);
+  );
 
 const doc = new Document({
   creator: "Shadowing notes",
-  title: "Shadowing Report, Oct 14 to 21, 2026",
+  title: "Shadowing Report v2, Oct 14 to 21, 2026",
   styles: {
     default: { document: { run: { font: FONT, size: 22 } } },
     paragraphStyles: [
@@ -761,7 +884,7 @@ const doc = new Document({
         children: [new Paragraph({
           alignment: AlignmentType.LEFT,
           children: [
-            new TextRun({ text: "Shadowing Report, Oct 14 to 21, 2026 | Page ", size: 18, color: "7F7F7F", font: FONT }),
+            new TextRun({ text: "Shadowing Report v2, Oct 14 to 21, 2026 | Page ", size: 18, color: "7F7F7F", font: FONT }),
             new TextRun({ children: [PageNumber.CURRENT], size: 18, color: "7F7F7F", font: FONT }),
           ],
         })],
