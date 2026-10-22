@@ -23,7 +23,8 @@ They had 9 orders that came in today that she will check at lunchtime to see if 
 
 Lowes requested a cancellation. Charmaine sent an email to Keith, didn't get a response. She checked herself and it was invoiced, so we missed the cancellation and now we can't invoice on CHUB, so she needs to do it manually on their portal; sometimes they pay, sometimes they don't. (Don't know timing well enough to know who dropped the ball.) Lowes portal, sign in, OTP (code takes a while, she sits). Enters the OTP manually.
 
--- Took a break, to send Jhony an email
+-- 
+Took a break, to send Jhony an email
 She spoke to a customer this morning on the phone and they were missing a part, so she's sending Jhony an email asking if we have replacements for that part. (Buono II Bradford Rod white plastic plug.) She checks her email twice and then sends. (Pleasantly surprised by that.)
 --
 
