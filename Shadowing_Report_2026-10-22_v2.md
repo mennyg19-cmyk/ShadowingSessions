@@ -12,7 +12,7 @@ I came in with a clean view, so this report records what I saw people actually d
 
 # Summary
 
-Six days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The most money at risk is in the **payment to container release chain**, and the clearest bot is **Daniel's channel files built from the spec sheet**. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate.
+Six days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The clearest bot, and the most measured time, is **Daniel's channel files built from the spec sheet**. The **payment to container release chain** is the biggest money risk, but only when cash flow is tight. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate.
 
 # Act on Now
 
@@ -28,13 +28,13 @@ Six days, eight people shadowed. Most of the work I saw is people reading one sc
 
 # Top 5 Opportunities
 
-My ranking, by money at risk and how clearly the notes describe the work. Hours per week are not measured yet; the figures are only what the notes support (see What to Measure Next).
+My ranking, by time and money at stake and how clearly the notes describe the work. Figures are only what the notes and follow-up answers support (see What to Measure Next).
 
 | # | Opportunity | What's at stake (from the notes) | Fix type | Suggested owner |
 | --- | --- | --- | --- | --- |
-| 1 | Payment to container release tracker | Release depends on a chain through a supplier Excel, Allways, two shared Excels, F&O and an OceanFirst wire draft, with status by cc'd email and WhatsApp. 7 containers were waiting on the factory payment (still within free time). Rule: once 4 working days of free time run out, demurrage is about $300 to $350 per container per day. | Bot now; Allways API later | Peleg with Moshe Aryeh Grossman |
-| 2 | Spec sheet to channel file builder | About 15 to 20 minutes per product line for Daniel, then at least 3 reviews per file. A wrong curtain width on Wayfair reached a customer. Weekly volume not known. | Bot | Peleg with Daniel and Tina |
-| 3 | Low-stock vs open-PO match | A six-step download and match in F&O for each Vendo low-stock file. Only Tina can do it, because Daniel has no access to open PO lines or Goods in Transit. Frequency not known. | Bot | Peleg with Tina |
+| 1 | Spec sheet to channel file builder | About 8 spec sheets a week at about 15 to 20 minutes each, roughly 2 to 2.5 hours of Daniel's week, then at least 3 reviews per file. A wrong curtain width on Wayfair reached a customer. | Bot | Peleg with Daniel and Tina |
+| 2 | Payment to container release tracker | Release depends on a chain through a supplier Excel, Allways, two shared Excels, F&O and an OceanFirst wire draft, with status by cc'd email and WhatsApp. Containers rarely go past free time; it happens at random, when cash flow is tight. Rule: once 4 working days of free time run out, demurrage is about $300 to $350 per container per day. | Bot now; Allways API later | Peleg with Moshe Aryeh Grossman |
+| 3 | Low-stock vs open-PO match | A six-step download and match in F&O, every week when the Vendo file is updated (usually Thursday, sometimes Friday). Only Tina can do it, because Daniel has no access to open PO lines or Goods in Transit. | Bot | Peleg with Tina |
 | 4 | Payment entry and posting | Most of Suzanne's Day 1 afternoon (3:00 to 4:30). Two batches wouldn't post, one because the method defaulted to credit card, and the error didn't say why. She finds Chani's deposit email by searching for the total. | Settings first, then bot | Peleg with Suzanne |
 | 5 | Money reports and notices on a schedule | Recovery totals emailed by hand daily to six people (Avi G doesn't use them; Mordy ran reports on only two days). US Customs pulls forwarded to five people. Credit card due dates go Avi G to Chani to a desk calendar to Isaac Grossman. | Scheduled reports + routing bot | Peleg with Baruch Salamander and Chani |
 
@@ -59,45 +59,45 @@ These are configuration or data fixes, not bots. Some may sit on the EDI side (D
 
 Each is written so it can be built or rejected. "Confirm first" is what I still need to find out before it's sized.
 
-### A. Container release tracker (opportunity 1)
+### A. Container release tracker (opportunity 2)
 
 |  | Detail |
 | --- | --- |
 | Trigger | A supplier invoice or BOL arrives, a wire is drafted or cleared, or a container nears the end of free time |
 | What it does | Keeps one status per BOL and container: invoice received, BOL received, in Allways, wire drafted, wire cleared, factory told, freight released. Warns Moshe, Chani and Isaac Grossman when a container is close to 4 working days at the port without a release. |
 | Data | Supplier invoice Excel, the shared ETA and payments Excels, F&O POs and voyages, OceanFirst wire drafts, Allways portal (API or EDI later) |
-| Evidence | Day 6: the seven-step invoice and BOL chain; the 7 containers waiting on the factory payment; status passed by cc'd email and WhatsApp |
-| Confirm first | How often containers get close to free time; how many wires a week; what splits the wires; what Zundel does with the payments Excel |
+| Evidence | Day 6: the seven-step invoice and BOL chain; the 7 containers waiting on the factory payment; status passed by cc'd email and WhatsApp. Follow-up: containers usually don't go past free time, except at random when cash flow is tight. Zundel takes the payments Excel and applies the payments to our POs in F&O. |
+| Confirm first | How many wires a week; what splits the wires |
 
-### B. Channel file builder (opportunity 2)
+### B. Channel file builder (opportunity 1)
 
 |  | Detail |
 | --- | --- |
 | Trigger | "Build the Wayfair (or Home Depot, Amazon, Kohls) file for product line X", or a new customer product list from Jamie |
 | What it does | Fills the customer's template from the main product spec sheet, using only dropdown-valid values, flags missing attributes, checks dimensions against the spec sheet, and drafts the email to go with it |
 | Data | Main product spec sheet, each customer's template |
-| Evidence | Day 2: Daniel's Wayfair sheet, column-to-column copy and paste, info read off product images, 15 to 20 minutes per line; Tina's 3 reviews; the 55" curtain width error. Day 4: Home Depot spec sheet. |
-| Confirm first | Product lines per week and per customer; which attributes are missing from the main sheet |
+| Evidence | Day 2: Daniel's Wayfair sheet, column-to-column copy and paste, info read off product images, 15 to 20 minutes per line; Tina's 3 reviews; the 55" curtain width error. Day 4: Home Depot spec sheet. Follow-up: about 8 spec sheets a week. |
+| Confirm first | Which customers the 8 sheets are for; which attributes are missing from the main sheet |
 
 ### C. Low-stock vs open-PO match (opportunity 3)
 
 |  | Detail |
 | --- | --- |
-| Trigger | Daniel's low-stock file from Vendo's SharePoint |
+| Trigger | The weekly Vendo low-stock file from Vendo's SharePoint (usually Thursday, sometimes pushed to Friday) |
 | What it does | Matches each low-stock or out-of-stock item to open PO lines and Goods in Transit, fills the next available date, and flags lines with no updated date |
 | Data | Vendo file, F&O open PO lines, Goods in Transit |
 | Evidence | Day 2: Tina's six-step download, filter and match |
-| Confirm first | How often Vendo sends the file and how many items are on it |
+| Confirm first | How many items are on the file each week |
 
 ### D. Remittance matching assistant (opportunity 4)
 
 |  | Detail |
 | --- | --- |
-| Trigger | Chani's deposit email with the scanned checks and batch total |
+| Trigger | A check arriving by mail or email, with the remittance attached; for mailed checks, Chani's deposit email with the scans and batch total |
 | What it does | Finds the email for the batch, proposes a match of each check to open invoices, shows deductions and short pays with the difference, and checks the payment method before posting |
-| Data | Deposit email and scans, F&O open customer transactions |
+| Data | The check and its attached remittance, deposit email and scans, F&O open customer transactions |
 | Evidence | Day 1: searching email for the total, postdated checks, payments landing in the wrong journal, the credit memo worked out by hand |
-| Confirm first | Checks per week; how remittance details arrive |
+| Confirm first | Checks per week |
 
 ### E. Scheduled money reports (opportunity 5)
 
@@ -135,7 +135,7 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 
 # What to Measure Next
 
-- For each top-5 item: how often it happens and how many each time. Daniel's product lines a week; how often Tina gets the Vendo file; Suzanne's checks a week; Moshe's wires a week; how long Baruch Salamander's reports take.
+- For each top-5 item: how often it happens and how many each time. Still open: items on the weekly Vendo file; Suzanne's checks a week; Moshe's wires a week; how long Baruch Salamander's reports take.
 - Still to shadow: Justin, the warehouse and sales. Repeat sessions with Daniel, Moshe Aryeh Grossman and Avi Altman.
 
 **Next step:** pick which of bots A to G to build first, and have Peleg take the settings list.
