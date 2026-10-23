@@ -81,9 +81,9 @@ The two have to be combined: Goods in Transit alone would leave out everything n
 - **Red:** discontinued or obsolete. They stay on the file so Amazon can sell its own remaining stock and OnePlatform still gets information on them. Once a red item's Amazon inventory reaches 0, it's dead.
 - Reds are updated from F&O status: discontinued with stock left stays **disco**; discontinued with no stock becomes **obsolete**.
 
-### What we send
+### What we need to send
 
-ASIN, SKU, UPC, product name and inventory status, for the whole list every week, not only items that changed. OnePlatform's file also has Amazon's product line, subcategory and similar fields, but we don't need to send those. **Everything we send is already in F&O.**
+ASIN, SKU, UPC, product name and inventory status, for the whole list every week, not only items that changed. OnePlatform's file and the current file we use also has Amazon's product line, subcategory and similar fields, but we don't *need* to send those. **Everything we send is already in F&O.**
 
 ---
 
