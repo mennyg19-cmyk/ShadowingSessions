@@ -84,10 +84,10 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 |  | Detail |
 | --- | --- |
 | Trigger | Weekly, on Friday (OnePlatform, formerly Vendo, updates its file usually Thursday, sometimes Friday) |
-| What it does | Builds the whole file from F&O: ASIN, SKU, UPC, product name and status for every item. Status comes from on-hand in warehouse 1600: 11 pieces or fewer is out of stock, under 50 is low, 50 or more is in stock. For low and out-of-stock items it adds the next available date: the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither. Discontinued items are marked disco while we have stock and obsolete once we don't. Then it drafts the email to Matt and Reggie, cc Avi G and Tara. First step (my idea): an F&O report with the dates already coalesced, even before anything else changes. |
-| Data | F&O items (ASIN, SKU, UPC, name, status), on-hand for 1600, open PO lines, Goods in Transit; OnePlatform's file only as a cross-check |
-| Evidence | Day 2: Tina's six-step download, filter and match. Day 7: the full weekly cycle. Daniel restarts the file every week and emails it to Tina as an attachment. Tina's part is under 10 minutes; when she used to do Daniel's part, a lookup formula wrote the status automatically. The only OnePlatform fields we don't have (Amazon product line, subcategory) aren't needed in what we send. The whole list goes out every week. Out-of-stock items aren't marked temporarily unavailable with an in-stock date, by us or OnePlatform. |
-| Confirm first | Items on the file and how many need dates; on-hand or available quantity; whether the 30-day Goods in Transit cutoff should stay (it follows how Avi Altman updates dates); who should mark items temporarily unavailable |
+| What it does | Builds the whole file from F&O: ASIN, SKU, UPC, product name and status for every item. Status comes from available quantity in warehouse 1600: 11 pieces or fewer is out of stock, under 50 is low, 50 or more is in stock. For low and out-of-stock items it adds the next available date: the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither. Discontinued items are marked disco while we have stock and obsolete once we don't. No 30-day cutoff. Then it drafts the email to Matt and Reggie, cc Avi G and Tara. First step (my idea): an F&O report with the dates already coalesced, even before anything else changes. |
+| Data | F&O items (ASIN, SKU, UPC, name, status), available quantity for 1600, open PO lines, Goods in Transit; OnePlatform's file only as a cross-check |
+| Evidence | Day 2: Tina's six-step download, filter and match. Day 7: the full weekly cycle. Daniel restarts the file every week and emails it to Tina as an attachment. Tina's part is under 10 minutes; when she used to do Daniel's part, a lookup formula wrote the status automatically. The only OnePlatform fields we don't have (Amazon product line, subcategory) aren't needed in what we send. The whole list, every item in our Amazon catalog, goes out every week. Follow-up: Tina uses available quantity; the 30-day cutoff should go (Goods in Transit first, then the earliest open PO). Out-of-stock items aren't marked temporarily unavailable with an in-stock date, by us or OnePlatform. |
+| Confirm first | How many items need dates each week; how long Daniel's part takes; who should mark items temporarily unavailable |
 
 ### D. Remittance matching assistant (opportunity 4)
 
@@ -145,7 +145,7 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 
 # What to Measure Next
 
-- For each top-5 item: how often it happens and how many each time. Still open: items on the weekly OnePlatform file and how long Daniel's part takes; Suzanne's checks a week; how long Baruch Salamander's reports take.
+- For each top-5 item: how often it happens and how many each time. Still open: how long Daniel's part of the OnePlatform file takes and how many items need dates; Suzanne's checks a week; how long Baruch Salamander's reports take.
 - Still to shadow: Justin, the warehouse and sales. Repeat sessions with Daniel, Moshe Aryeh Grossman and Avi Altman.
 
 **Next step:** pick which of bots A to H to build first, and have Peleg take the settings list.
@@ -876,12 +876,12 @@ I sat with Tina. Daniel's part was described by Tina, not watched. No clock time
 - OnePlatform's SharePoint Excel is a running report of everything we do with Amazon, with the full product list. Daniel copies one sheet into a base sheet on the network and reuses it to start each week's file.
 - Black rows are items we keep selling. Red rows are discontinued or obsolete; they stay on so Amazon can sell its own remaining stock and OnePlatform still gets info on them. Once a red item's Amazon inventory is 0, it's dead. We work mostly with the black rows.
 - Reds are updated from F&O status: discontinued with stock left stays disco; discontinued with no stock becomes obsolete.
-- We send the whole list every week, not just the items whose status changed.
+- We send the whole list every week, not just the items whose status changed. The list is every item in our Amazon catalog; there is no exact count.
 - The only OnePlatform fields we don't have in F&O are Amazon's product line, subcategory and similar. What we send is ASIN, SKU, UPC, product name and inventory status, and we have all of those.
 
 ## Stock levels
 
-We don't give Amazon exact inventory because the warehouse is too fluid. The status uses on-hand pieces in F&O for warehouse 1600, our only warehouse:
+We don't give Amazon exact inventory because the warehouse is too fluid. The status uses pieces in F&O for warehouse 1600, our only warehouse. Tina uses available quantity; Daniel was first said to use on-hand, which still needs checking with him.
 
 - **Out of stock:** 11 pieces or fewer. Amazon requires full packs, and 12 is the most common pack size.
 - **Low stock:** under 50. The number is arbitrary. *(Observer's view: it should probably be a multiple of 12, like 48 or 60. I'm not changing it now.)*
@@ -893,7 +893,7 @@ We don't give Amazon exact inventory because the warehouse is too fluid. The sta
 2. Daniel marks each item in, low or out of stock from on-hand. When Tina used to do this part, a formula with a lookup to an on-hand download wrote the status automatically and it took her very little time. Tina doesn't know how long Daniel takes, and says he may be leaving.
 3. Daniel emails the file to Tina as an attachment, not a shared file.
 4. Tina downloads open PO lines from F&O and VLOOKUPs the low and out-of-stock items to them, taking the earliest open PO date. Daniel can't do this step because he has no access to open PO lines or Goods in Transit.
-5. If that date is within 30 days of today, or already past, she pulls Goods in Transit for those items and uses its date instead. The open PO date is set when the PO is created; the Goods in Transit date is set when the goods ship and is updated as things change. Goods in Transit alone isn't enough, because items not yet on the water have no date there, so the result is a coalesce of the two. The 30-day rule comes from Avi Altman's explanation of how he updates dates in the system.
+5. If that date is within 30 days of today, or already past, she pulls Goods in Transit for those items and uses its date instead. The open PO date is set when the PO is created; the Goods in Transit date is set when the goods ship and is updated as things change. Goods in Transit alone isn't enough, because items not yet on the water have no date there, so the result is a coalesce of the two. The 30-day rule comes from Avi Altman's explanation of how he updates dates in the system. *(Observer's view: the rule should already be gone. Goods in Transit dates first, then the earliest open PO date for items still without one, is fine, and I had already recommended it to her.)*
 6. With no open PO and no Goods in Transit, the date is left blank. A past date usually means the warehouse already received it.
 7. Tina emails the file to Matt and Reggie, cc Avi G and Tara.
 

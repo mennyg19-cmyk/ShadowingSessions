@@ -674,7 +674,8 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 - We send the whole list every week, not just the changes (required, per Tina).
 - Of OnePlatform's fields, only Amazon product line, subcategory and similar aren't in F&O. What we send is ASIN, SKU, UPC, product name and inventory status, all of which we have.
 
-### Stock levels (pieces, on-hand in F&O, warehouse 1600, our only warehouse)
+### Stock levels (pieces in F&O, warehouse 1600, our only warehouse)
+- Quantity: Tina uses available quantity. Daniel was said to use on-hand (first answer); to confirm with him.
 - Out of stock: 11 or fewer. Amazon requires full packs and 12 is the most common pack size.
 - Low stock: under 50. Arbitrary. *(Observer's view: should probably be a multiple of 12, like 48 or 60. Not changing it now.)*
 - In stock: 50 or more.
@@ -685,11 +686,12 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 2. Daniel marks each item in, low or out of stock from on-hand. When Tina did this part, a formula with a lookup to an on-hand download wrote the status automatically and it took her very little time. Daniel's time is unknown; Tina says he may be leaving.
 3. Daniel emails the file to Tina as an attachment (not a shared file).
 4. Tina downloads open PO lines from F&O and VLOOKUPs the low and out-of-stock items to them, taking the earliest open PO date. Daniel can't do this step: he has no access to open PO lines or Goods in Transit.
-5. If that date is within 30 days of today, or already past, she pulls Goods in Transit for those items and uses its date instead. The open PO date is set when the PO is created; the Goods in Transit date is set when the goods ship and updated as things change. Goods in Transit alone isn't enough, because items not yet on the water have no date there, so the result is a coalesce. The 30-day rule comes from Avi Altman's explanation of how he updates dates in the system.
+5. If that date is within 30 days of today, or already past, she pulls Goods in Transit for those items and uses its date instead. *(Observer: the 30-day rule should already be gone. Recommended order, already given to her: Goods in Transit dates first, then the earliest open PO date for items still without a date.)* The open PO date is set when the PO is created; the Goods in Transit date is set when the goods ship and updated as things change. Goods in Transit alone isn't enough, because items not yet on the water have no date there, so the result is a coalesce. The 30-day rule comes from Avi Altman's explanation of how he updates dates in the system.
 6. No open PO and no Goods in Transit: the date is left blank. A past date usually means the warehouse already received it.
 7. Tina emails the file to Matt and Reggie, cc Avi G and Tara. Her part takes under 10 minutes, depending on interruptions.
 
 ### Gaps and ideas
+- The file holds every item in our Amazon catalog; no exact count.
 - Out-of-stock items should be marked temporarily unavailable with an in-stock date. Tina is fairly sure OnePlatform doesn't do it, and we don't either.
 - *(Observer's idea: an F&O report with the due dates already coalesced would be an easy first step, even without changing the rest of the flow. Since everything we send is in F&O, the whole file could be built for her each week.)*
 - *(Observer's note: the file should be one shared file updated weekly, not an attachment passed back and forth.)*
@@ -741,7 +743,7 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 - Day 6: what splits the wires in OceanFirst? (About 5 wires a week, which Isaac Grossman releases; answered Oct 22.) What does Zundel do with the shared payments Excel? Which F&O ETA fields exist and what does each connect to? How often are items created, and how long does it take? How often are Family Dollar projections run and how long do they take? What would the Allways Shipping API or EDI connect to? Day 6: what time did the Moshe session start (11:15 or about 11:30)? Is the "Avi" he tracks containers with Avi Altman? Do the US Customs pulls go through the bank-funding check? What does each person do with the Customs emails? What does the EZPass claim cover, and who else was told? Could PortPro data connect to F&O?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - OnePlatform (Vendo): beyond the weekly file and advertising decisions, what else do they do for us?
-- Day 7: on-hand or available quantity for the status? Is exactly 50 low or in stock? How many items are on the weekly file, and how many need dates? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Should the 30-day rule stay once dates are coalesced in a report (ask Avi Altman how he updates dates)? Who should mark out-of-stock items temporarily unavailable on Amazon?
+- Day 7: does Daniel use on-hand or available quantity (Tina uses available)? Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
 - Daniel: how many product lines a week does he build, and for which customers? Does each customer (Wayfair, Amazon, Home Depot, Kohls) need its own template?
 - Daniel: which attributes are missing from the main spec sheet and have to be read off the product images?

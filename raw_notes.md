@@ -509,4 +509,11 @@ She emails the file to Matt and Reggie. Matt is at Vendo; Reggie is our Amazon r
 When we started they were Vendo; now they are called OnePlatform.
 
 ***
-**Still open:** on-hand vs available quantity; whether exactly 50 counts as low or in stock; how many items are on the file and how many need dates; does Daniel download the file Thursday or Friday (an earlier answer said it's updated usually Thursday, sometimes Friday); who should mark out-of-stock items temporarily unavailable.
+**Still open at this point (some answered below):** on-hand vs available quantity; whether exactly 50 counts as low or in stock; how many items are on the file and how many need dates; does Daniel download the file Thursday or Friday (an earlier answer said it's updated usually Thursday, sometimes Friday); who should mark out-of-stock items temporarily unavailable.
+
+***
+**Follow-up (the assistant asked the remaining open questions):**
+
+She uses available qty.
+The number of items on there is the number of items in Amazon's catalog. Don't have an exact number. I'm not sure about Daniel.
+The 30-day rule should probably be gone already. If she gets GIT dates first, and then looks up open POs for the items that still don't have dates, then that's fine. (Which I recommended already.)
