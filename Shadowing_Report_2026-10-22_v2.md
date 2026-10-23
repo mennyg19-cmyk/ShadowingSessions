@@ -76,8 +76,8 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 | Trigger | "Build the Wayfair (or Home Depot, Amazon, Kohls) file for product line X", or a new customer product list from Jamie |
 | What it does | Fills the customer's template from the main product spec sheet, using only dropdown-valid values, flags missing attributes, checks dimensions against the spec sheet, and drafts the email to go with it |
 | Data | Main product spec sheet, each customer's template |
-| Evidence | Day 2: Daniel's Wayfair sheet, column-to-column copy and paste, info read off product images, 15 to 20 minutes per line; Tina's 3 reviews; the 55" curtain width error. Day 4: Home Depot spec sheet. Follow-up: about 8 spec sheets a week. |
-| Confirm first | Which customers the 8 sheets are for; which attributes are missing from the main sheet |
+| Evidence | Day 2: Daniel's Wayfair sheet, column-to-column copy and paste, info read off product images, 15 to 20 minutes per line; Tina's 3 reviews; the 55" curtain width error. Day 4: Home Depot spec sheet. Follow-up: about 8 spec sheets a week, covering all our dropship customers. |
+| Confirm first | Which attributes are missing from the main sheet |
 
 ### C. Low-stock vs open-PO match (opportunity 3)
 
