@@ -858,7 +858,7 @@ Once Isaac Grossman clears the payment, he tells Moshe by email or WhatsApp, and
 
 I sat with Tina. Daniel's part was described by Tina, not watched. No clock times. OnePlatform was called Vendo when we started with them; earlier parts use the old name.
 
-**Systems and tools:** OnePlatform (Vendo) SharePoint, the network drive (Daniel's base sheet), F&O (on-hand, open PO lines, Goods in Transit), Excel VLOOKUPs, email, Teams.
+**Systems and tools:** OnePlatform (Vendo) SharePoint, the network drive (Daniel's base sheet), F&O (available quantity and on-hand, open PO lines, Goods in Transit), Excel VLOOKUPs, email, Teams.
 
 ## The process at a glance
 

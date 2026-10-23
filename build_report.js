@@ -817,7 +817,7 @@ add(
 add(
   h1("Part 13: Tina, Weekly Amazon Inventory File for OnePlatform, Day 7 (Fri Oct 23)"),
   p("I sat with Tina. Daniel's part was described by Tina, not watched. No clock times. OnePlatform was called Vendo when we started with them; earlier parts use the old name."),
-  p("**Systems and tools:** OnePlatform (Vendo) SharePoint, the network drive (Daniel's base sheet), F&O (on-hand, open PO lines, Goods in Transit), Excel VLOOKUPs, email, Teams."),
+  p("**Systems and tools:** OnePlatform (Vendo) SharePoint, the network drive (Daniel's base sheet), F&O (available quantity and on-hand, open PO lines, Goods in Transit), Excel VLOOKUPs, email, Teams."),
   h2("The process at a glance"),
   table([1900, 7460], ["", "Detail"], [
     ["What", "A weekly file telling OnePlatform whether each Amazon item is in stock, low or out, with the next available date for low and out-of-stock items"],
