@@ -1,6 +1,6 @@
 # Shadowing Report
 
-*Wednesday, October 14 to Wednesday, October 21, 2026 (six shadowing days). Version 2: ranked summary up front, detail in the appendix*
+*Wednesday, October 14 to Friday, October 23, 2026 (seven shadowing days). Version 2: ranked summary up front, detail in the appendix*
 
 Prepared for Baruch Grossman (COO) and Peleg.
 
@@ -12,7 +12,7 @@ I came in with a clean view, so this report records what I saw people actually d
 
 # Summary
 
-Six days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The clearest bot, and the most measured time, is **Daniel's channel files built from the spec sheet**. The **payment to container release chain** is the biggest money risk, but only when cash flow is tight. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate.
+Seven days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The clearest bot, and the most measured time, is **Daniel's channel files built from the spec sheet**. The **payment to container release chain** is the biggest money risk, but only when cash flow is tight. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate.
 
 # Act on Now
 
@@ -34,7 +34,7 @@ My ranking, by time and money at stake and how clearly the notes describe the wo
 | --- | --- | --- | --- | --- |
 | 1 | Spec sheet to channel file builder | About 8 spec sheets a week at about 15 to 20 minutes each, roughly 2 to 2.5 hours of Daniel's week, then at least 3 reviews per file. A wrong curtain width on Wayfair reached a customer. | Bot | Peleg with Daniel and Tina |
 | 2 | Payment to container release tracker | Release depends on a chain through a supplier Excel, Allways, two shared Excels, F&O and an OceanFirst wire draft, with status by cc'd email and WhatsApp. Containers rarely go past free time; it happens at random, when cash flow is tight. Rule: once 4 working days of free time run out, demurrage is about $300 to $350 per container per day. | Bot now; Allways API later | Peleg with Moshe Aryeh Grossman |
-| 3 | Low-stock vs open-PO match | A six-step download and match in F&O, every week when the Vendo file is updated (usually Thursday, sometimes Friday). Only Tina can do it, because Daniel has no access to open PO lines or Goods in Transit. | Bot | Peleg with Tina |
+| 3 | Weekly Amazon inventory file for OnePlatform (Vendo) | Every Friday Daniel rebuilds the file and marks each item in, low or out of stock, then Tina adds next available dates from open PO lines and Goods in Transit with VLOOKUPs. Her part is under 10 minutes; Daniel's isn't measured, and Tina says he may be leaving. Everything we send is already in F&O, so the whole file can be built from it. Out-of-stock items are not marked temporarily unavailable on Amazon. | F&O report first, then bot | Peleg with Tina |
 | 4 | Payment entry and posting | Most of Suzanne's Day 1 afternoon (3:00 to 4:30). Two batches wouldn't post, one because the method defaulted to credit card, and the error didn't say why. She finds Chani's deposit email by searching for the total. | Settings first, then bot | Peleg with Suzanne |
 | 5 | Money reports and notices on a schedule | Recovery totals emailed by hand daily to six people (Avi G doesn't use them; Mordy ran reports on only two days). US Customs pulls forwarded to five people. Credit card due dates go Avi G to Chani to a desk calendar to Isaac Grossman. | Scheduled reports + routing bot | Peleg with Baruch Salamander and Chani |
 
@@ -66,8 +66,8 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 | Trigger | A supplier invoice or BOL arrives, a wire is drafted or cleared, or a container nears the end of free time |
 | What it does | Keeps one status per BOL and container: invoice received, BOL received, in Allways, wire drafted, wire cleared, factory told, freight released. Warns Moshe, Chani and Isaac Grossman when a container is close to 4 working days at the port without a release. |
 | Data | Supplier invoice Excel, the shared ETA and payments Excels, F&O POs and voyages, OceanFirst wire drafts, Allways portal (API or EDI later) |
-| Evidence | Day 6: the seven-step invoice and BOL chain; the 7 containers waiting on the factory payment; status passed by cc'd email and WhatsApp. Follow-up: containers usually don't go past free time, except at random when cash flow is tight. Zundel takes the payments Excel and applies the payments to our POs in F&O. |
-| Confirm first | How many wires a week; what splits the wires |
+| Evidence | Day 6: the seven-step invoice and BOL chain; the 7 containers waiting on the factory payment; status passed by cc'd email and WhatsApp. Follow-up: containers usually don't go past free time, except at random when cash flow is tight. Zundel takes the payments Excel and applies the payments to our POs in F&O. About 5 wires a week, each released by Isaac Grossman. |
+| Confirm first | What splits the wires |
 
 ### B. Channel file builder (opportunity 1)
 
@@ -79,15 +79,15 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 | Evidence | Day 2: Daniel's Wayfair sheet, column-to-column copy and paste, info read off product images, 15 to 20 minutes per line; Tina's 3 reviews; the 55" curtain width error. Day 4: Home Depot spec sheet. Follow-up: about 8 spec sheets a week, covering all our dropship customers. |
 | Confirm first | Which attributes are missing from the main sheet |
 
-### C. Low-stock vs open-PO match (opportunity 3)
+### C. Weekly Amazon inventory file for OnePlatform (opportunity 3)
 
 |  | Detail |
 | --- | --- |
-| Trigger | The weekly Vendo low-stock file from Vendo's SharePoint (usually Thursday, sometimes pushed to Friday) |
-| What it does | Matches each low-stock or out-of-stock item to open PO lines and Goods in Transit, fills the next available date, and flags lines with no updated date |
-| Data | Vendo file, F&O open PO lines, Goods in Transit |
-| Evidence | Day 2: Tina's six-step download, filter and match |
-| Confirm first | How many items are on the file each week |
+| Trigger | Weekly, on Friday (OnePlatform, formerly Vendo, updates its file usually Thursday, sometimes Friday) |
+| What it does | Builds the whole file from F&O: ASIN, SKU, UPC, product name and status for every item. Status comes from available quantity in warehouse 1600: 11 pieces or fewer is out of stock, under 50 is low, 50 or more is in stock. For low and out-of-stock items it adds the next available date: the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither. Discontinued items are marked disco while we have stock and obsolete once we don't. No 30-day cutoff. Then it drafts the email to Matt and Reggie, cc Avi G and Tara. First step (my idea): an F&O report with the dates already coalesced, even before anything else changes. |
+| Data | F&O items (ASIN, SKU, UPC, name, status), available quantity for 1600, open PO lines, Goods in Transit; OnePlatform's file only as a cross-check |
+| Evidence | Day 2: Tina's six-step download, filter and match. Day 7: the full weekly cycle. Daniel restarts the file every week and emails it to Tina as an attachment. Tina's part is under 10 minutes; when she used to do Daniel's part, a lookup formula wrote the status automatically. The only OnePlatform fields we don't have (Amazon product line, subcategory) aren't needed in what we send. The whole list, every item in our Amazon catalog, goes out every week. Follow-up: Tina uses available quantity; the 30-day cutoff should go (Goods in Transit first, then the earliest open PO). Out-of-stock items aren't marked temporarily unavailable with an in-stock date, by us or OnePlatform. |
+| Confirm first | How many items need dates each week; how long Daniel's part takes; who should mark items temporarily unavailable |
 
 ### D. Remittance matching assistant (opportunity 4)
 
@@ -145,7 +145,7 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 
 # What to Measure Next
 
-- For each top-5 item: how often it happens and how many each time. Still open: items on the weekly Vendo file; Suzanne's checks a week; Moshe's wires a week; how long Baruch Salamander's reports take.
+- For each top-5 item: how often it happens and how many each time. Still open: how long Daniel's part of the OnePlatform file takes and how many items need dates; Suzanne's checks a week; how long Baruch Salamander's reports take.
 - Still to shadow: Justin, the warehouse and sales. Repeat sessions with Daniel, Moshe Aryeh Grossman and Avi Altman.
 
 **Next step:** pick which of bots A to H to build first, and have Peleg take the settings list.
@@ -160,7 +160,7 @@ Times marked \~ are estimates from the order of events. The original notes only 
 
 "Avi" with no surname means Avi Grossman (Avi G). Avi Altman is always written in full, as is Moshe Aryeh Grossman. Baruch Salamander is a different person from Baruch Grossman.
 
-# The Six Days at a Glance
+# The Seven Days at a Glance
 
 | Day | Time | Activity |
 | --- | --- | --- |
@@ -186,6 +186,7 @@ Times marked \~ are estimates from the order of events. The original notes only 
 | Tue Oct 20 | From 11:00 | Baruch Salamander (deductions, reports, collections) |
 | Wed Oct 21 | \~11:30 to 12:00 | Moshe Aryeh Grossman (first note says 11:15; a later note says about 11:30) |
 |  | 12:22 | Moshe Aryeh Grossman, Achim side: wire, bill of lading, containers |
+| Fri Oct 23 | Not given | Tina (Daniel's part described): weekly Amazon inventory file for OnePlatform (Vendo) |
 
 ## Who's who
 
@@ -213,8 +214,10 @@ Times marked \~ are estimates from the order of events. The original notes only 
 | Sal D'Rienzo | Long-tenured; manages the warehouse and is president of Bais Trucking. Has access to the vessel tracking Excel |
 | Justin | Enters orders and sample orders |
 | David Dweck / Jamie / Heshy | Sales. Jamie also designs the curtain side of the company |
+| Matt / Tara | At OnePlatform (formerly Vendo). Matt gets the weekly inventory file; Tara is cc'd |
+| Reggie | Our Amazon rep. Gets the weekly inventory file with Matt |
 
-**Companies:** Bais Trucking (sister company of Achim, runs on PortPro); Allways Shipping (customs, vessel bookings, container assignments; portal with exact locations; has API and EDI integrations available); All Blinds Co. (supplier in China); Vendo (middleman between us and Amazon; exact role not yet clear); Lincoln Supply, Family Dollar and Herman's (customers). **Locations:** 5702 is the Brooklyn office and 1600 is the Jersey warehouse.
+**Companies:** Bais Trucking (sister company of Achim, runs on PortPro); Allways Shipping (customs, vessel bookings, container assignments; portal with exact locations; has API and EDI integrations available); All Blinds Co. (supplier in China); OnePlatform, called Vendo when we started with them (middleman between us and Amazon; uses our weekly inventory file for advertising decisions on Amazon); Lincoln Supply, Family Dollar and Herman's (customers). **Locations:** 5702 is the Brooklyn office and 1600 is the Jersey warehouse.
 
 **Systems:** F&O (main ERP), CHUB (order and invoice system for Lowes and others), InOrder (old system, still used for phone numbers), PortPro, DSCO Rithum (Kohls inventory feed), SPS Commerce (deductions and disputes), Retail Link (Walmart), Amazon Vendor Central, OceanFirst (bank portal), Allways portal, Lowes portal (WebEDI), Wayfair portal, Mason portal, Teams, WhatsApp, Excel, email, EZPass, Verizon dashcams, FedEx and UPS tracking, a desk calculator, printed manuals and templates.
 
@@ -439,7 +442,7 @@ Avi G emailed a list of invoices needing disputes. Tina forwarded it to Baruch S
 5. Look up the spec sheet against the open PO download to see which low-stock items are on open POs.
 6. Also download Goods in Transit, because some open PO lines don't have updated dates.
 
-**Whole workflow:** Daniel downloads a file from Vendo's SharePoint and adds low-stock and out-of-stock items. He sends it to Tina, who adds the next available date (Daniel has no access to open PO lines or Goods in Transit). She reviews it and sends it back to Vendo. *(Observer's view: this matching would be better done in the system itself, rather than a low-stock list matched against an F&O export.)*
+**Whole workflow:** Daniel downloads a file from Vendo's SharePoint and adds low-stock and out-of-stock items. He sends it to Tina, who adds the next available date (Daniel has no access to open PO lines or Goods in Transit). She reviews it and sends it back to Vendo. Day 7 (Part 13) has the full weekly process. *(Observer's view: this matching would be better done in the system itself, rather than a low-stock list matched against an F&O export.)*
 
 ### 6. Lincoln Supply
 
@@ -851,6 +854,56 @@ Once Isaac Grossman clears the payment, he tells Moshe by email or WhatsApp, and
 
 *(Observer's note on this chain: the same invoice, ETA, PO and BOL data is entered or copied into several places, and the status moves by cc'd emails and messages. Isaac Grossman is the approver for checks (Day 4) and wires (Day 6). The containers can't be released until the whole chain finishes.)*
 
-# Part 13: Observer's Own Work (not part of the process study)
+# Part 13: Tina, Weekly Amazon Inventory File for OnePlatform, Day 7 (Fri Oct 23)
+
+I sat with Tina. Daniel's part was described by Tina, not watched. No clock times. OnePlatform was called Vendo when we started with them; earlier parts use the old name.
+
+**Systems and tools:** OnePlatform (Vendo) SharePoint, the network drive (Daniel's base sheet), F&O (available quantity and on-hand, open PO lines, Goods in Transit), Excel VLOOKUPs, email, Teams.
+
+## The process at a glance
+
+|  | Detail |
+| --- | --- |
+| What | A weekly file telling OnePlatform whether each Amazon item is in stock, low or out, with the next available date for low and out-of-stock items |
+| Why | OnePlatform uses it for advertising decisions on Amazon |
+| When | Weekly, on Friday |
+| Who | Daniel, then Tina |
+| Where it goes | Emailed to Matt (OnePlatform) and Reggie (our Amazon rep), cc Avi G and Tara (OnePlatform) |
+| How long | Tina: under 10 minutes, depending on interruptions. Daniel: not known |
+
+## The file
+
+- OnePlatform's SharePoint Excel is a running report of everything we do with Amazon, with the full product list. Daniel copies one sheet into a base sheet on the network and reuses it to start each week's file.
+- Black rows are items we keep selling. Red rows are discontinued or obsolete; they stay on so Amazon can sell its own remaining stock and OnePlatform still gets info on them. Once a red item's Amazon inventory is 0, it's dead. We work mostly with the black rows.
+- Reds are updated from F&O status: discontinued with stock left stays disco; discontinued with no stock becomes obsolete.
+- We send the whole list every week, not just the items whose status changed. The list is every item in our Amazon catalog; there is no exact count.
+- The only OnePlatform fields we don't have in F&O are Amazon's product line, subcategory and similar. What we send is ASIN, SKU, UPC, product name and inventory status, and we have all of those.
+
+## Stock levels
+
+We don't give Amazon exact inventory because the warehouse is too fluid. The status uses pieces in F&O for warehouse 1600, our only warehouse. Tina uses available quantity; Daniel was first said to use on-hand, which still needs checking with him.
+
+- **Out of stock:** 11 pieces or fewer. Amazon requires full packs, and 12 is the most common pack size.
+- **Low stock:** under 50. The number is arbitrary. *(Observer's view: it should probably be a multiple of 12, like 48 or 60. I'm not changing it now.)*
+- **In stock:** 50 or more.
+
+## Steps
+
+1. Daniel downloads OnePlatform's file from SharePoint and starts from his base sheet. He starts from scratch every week by design: a full download plus a lookup is easier than finding only the items that changed.
+2. Daniel marks each item in, low or out of stock from on-hand. When Tina used to do this part, a formula with a lookup to an on-hand download wrote the status automatically and it took her very little time. Tina doesn't know how long Daniel takes, and says he may be leaving.
+3. Daniel emails the file to Tina as an attachment, not a shared file.
+4. Tina downloads open PO lines from F&O and VLOOKUPs the low and out-of-stock items to them, taking the earliest open PO date. Daniel can't do this step because he has no access to open PO lines or Goods in Transit.
+5. If that date is within 30 days of today, or already past, she pulls Goods in Transit for those items and uses its date instead. The open PO date is set when the PO is created; the Goods in Transit date is set when the goods ship and is updated as things change. Goods in Transit alone isn't enough, because items not yet on the water have no date there, so the result is a coalesce of the two. The 30-day rule comes from Avi Altman's explanation of how he updates dates in the system. *(Observer's view: the rule should already be gone. Goods in Transit dates first, then the earliest open PO date for items still without one, is fine, and I had already recommended it to her.)*
+6. With no open PO and no Goods in Transit, the date is left blank. A past date usually means the warehouse already received it.
+7. Tina emails the file to Matt and Reggie, cc Avi G and Tara.
+
+## Gaps and ideas
+
+- Out-of-stock items should be marked temporarily unavailable on Amazon with an in-stock date. Tina is fairly sure OnePlatform doesn't do it for us, and we don't do it either.
+- *(Observer's idea: an F&O report with the due dates already coalesced would be an easy first step, even if nothing else in the flow changes. Since everything we send is already in F&O, the whole file could be built for her every week.)*
+- *(Observer's view: the file should be one shared file updated every week, not an attachment emailed back and forth.)*
+- Tina uses Teams well, and also a lot of email (relevant to the central channel idea).
+
+# Part 14: Observer's Own Work (not part of the process study)
 
 Around 4:30 on Day 1, Tina asked about the sales reporting app. After clearing it with Avi G and Baruch Grossman (COO), the observer turned off the daily jobs (so reports stop going to everyone every day) and turned off test mode, so users' own schedules now send. Tina and Isaac Grossman (CEO) can now get their reports.

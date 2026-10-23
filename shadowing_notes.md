@@ -23,6 +23,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 - Day 4: Mon Oct 19: Chani (AP and office manager), Tina, Daniel, Suzanne
 - Day 5: Tue Oct 20: Baruch Salamander (deductions, reporting, collections)
 - Day 6: Wed Oct 21: Moshe Aryeh Grossman (~11:30 on, including the Achim side from 12:22)
+- Day 7: Fri Oct 23: Tina (with Daniel's part described): weekly Amazon inventory file for OnePlatform (Vendo)
 - Candidate pain-point modules (working list)
 - Signals by module
 - Open questions
@@ -68,7 +69,9 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Allways Shipping | Clears customs, books shipping vessels, assigns containers to suppliers; gives us portal access with exact locations. Has API/EDI integrations available | Day 6 |
 | Family Dollar | Customer. Moshe Aryeh Grossman runs everything for this customer, including order projections | Day 6 |
 | Bais Trucking | Sister company of Achim; runs on a different system (PortPro) | Moshe Aryeh Grossman works for it and for Achim's buying team |
-| Vendo | Middleman / consulting company between us and Amazon | Exact role unknown. Daniel downloads from their SharePoint; Tina sends files back to them |
+| OnePlatform (formerly Vendo) | Middleman / consulting company between us and Amazon. Called Vendo when we started with them | Uses our weekly inventory status file for advertising decisions on Amazon (Day 7). Daniel downloads their file from SharePoint; Tina emails it back to Matt |
+| Matt / Tara | At OnePlatform (Vendo). Matt gets the weekly inventory file; Tara is cc'd | Day 2 return label email; Day 7 |
+| Reggie | Our Amazon rep | Gets the weekly inventory file with Matt (Day 7) |
 | Lincoln Supply | Customer | Problems with shipping (Day 2) |
 
 **Systems:** WhatsApp (Isaac Grossman tells Moshe by email or WhatsApp when a wire is cleared), OceanFirst portal (draft wires), Verizon dashcams (driver camera review, Bais Trucking), EZPass (tolls), Grok (AI bots being added by Peleg and Baruch Grossman to automate tasks; Peleg is the DBA; Avi G is the first tester), SPS Commerce (collects deductions and disputes from Walmart, Home Depot, Amazon and Lowes), Amazon Vendor Central, OceanFirst (bank), F&O (main ERP), CHUB (order/invoice system for Lowes etc.), InOrder (old system, still used for phone numbers), PortPro, DSCO Rithum (Kohls inventory feed), Retail Link (Walmart portal), Lowes portal (WebEDI), Wayfair portal, Mason portal, Teams, Excel, email, FedEx and UPS tracking, desk calculator, printed manuals and templates.
@@ -654,6 +657,48 @@ Once Isaac Grossman clears the payment, he tells Moshe by email or WhatsApp, and
 
 ---
 
+# Day 7: Friday, Oct 23
+
+Observer sat with Tina. Daniel's part was described by Tina, not watched. No clock times given.
+
+## Tina and Daniel: weekly Amazon inventory file for OnePlatform (Vendo)
+
+**Tools:** OnePlatform (Vendo) SharePoint, network drive (Daniel's base sheet), F&O (on-hand, open PO lines, Goods in Transit), Excel VLOOKUPs, email, Teams.
+
+**What:** a weekly file telling OnePlatform whether each Amazon item is in stock, low or out, with the next available date for low and out-of-stock items. **Why:** OnePlatform uses it for advertising decisions on Amazon. **When:** weekly, on Friday (an earlier answer said OnePlatform updates the file usually Thursday, sometimes Friday). **Who:** Daniel, then Tina. **Where it goes:** emailed to Matt (OnePlatform) and Reggie (our Amazon rep), cc Avi G and Tara (OnePlatform).
+
+### The file
+- OnePlatform's SharePoint Excel is a running report of everything we do with Amazon, with the full product list. Daniel copies one sheet into a base sheet on the network and reuses it to start each week's file.
+- Black rows are items we keep selling. Red rows are discontinued or obsolete; they stay on so Amazon can sell its own remaining stock and OnePlatform gets info on them. Once a red item's Amazon inventory is 0, it's dead.
+- Reds are updated from F&O status: discontinued with stock left stays "disco"; discontinued with no stock becomes obsolete.
+- We send the whole list every week, not just the changes (required, per Tina).
+- Of OnePlatform's fields, only Amazon product line, subcategory and similar aren't in F&O. What we send is ASIN, SKU, UPC, product name and inventory status, all of which we have.
+
+### Stock levels (pieces in F&O, warehouse 1600, our only warehouse)
+- Quantity: Tina uses available quantity. Daniel was said to use on-hand (first answer); to confirm with him.
+- Out of stock: 11 or fewer. Amazon requires full packs and 12 is the most common pack size.
+- Low stock: under 50. Arbitrary. *(Observer's view: should probably be a multiple of 12, like 48 or 60. Not changing it now.)*
+- In stock: 50 or more.
+- We don't give Amazon exact inventory because the warehouse is too fluid.
+
+### Steps
+1. Daniel downloads OnePlatform's file from SharePoint and starts from his base sheet (from scratch every week, by design: a full download plus a lookup is easier than finding only the changed items).
+2. Daniel marks each item in, low or out of stock from on-hand. When Tina did this part, a formula with a lookup to an on-hand download wrote the status automatically and it took her very little time. Daniel's time is unknown; Tina says he may be leaving.
+3. Daniel emails the file to Tina as an attachment (not a shared file).
+4. Tina downloads open PO lines from F&O and VLOOKUPs the low and out-of-stock items to them, taking the earliest open PO date. Daniel can't do this step: he has no access to open PO lines or Goods in Transit.
+5. If that date is within 30 days of today, or already past, she pulls Goods in Transit for those items and uses its date instead. *(Observer: the 30-day rule should already be gone. Recommended order, already given to her: Goods in Transit dates first, then the earliest open PO date for items still without a date.)* The open PO date is set when the PO is created; the Goods in Transit date is set when the goods ship and updated as things change. Goods in Transit alone isn't enough, because items not yet on the water have no date there, so the result is a coalesce. The 30-day rule comes from Avi Altman's explanation of how he updates dates in the system.
+6. No open PO and no Goods in Transit: the date is left blank. A past date usually means the warehouse already received it.
+7. Tina emails the file to Matt and Reggie, cc Avi G and Tara. Her part takes under 10 minutes, depending on interruptions.
+
+### Gaps and ideas
+- The file holds every item in our Amazon catalog; no exact count.
+- Out-of-stock items should be marked temporarily unavailable with an in-stock date. Tina is fairly sure OnePlatform doesn't do it, and we don't either.
+- *(Observer's idea: an F&O report with the due dates already coalesced would be an easy first step, even without changing the rest of the flow. Since everything we send is in F&O, the whole file could be built for her each week.)*
+- *(Observer's note: the file should be one shared file updated weekly, not an attachment passed back and forth.)*
+- Tina uses Teams well and also a lot of email (relevant to the central channel idea).
+
+---
+
 # Candidate pain-point modules (working list)
 
 | # | Module | What it would do |
@@ -695,9 +740,10 @@ Once Isaac Grossman clears the payment, he tells Moshe by email or WhatsApp, and
 - Day 4: what is OFB? Which tasks are the Grok bots meant to take on first, and does that include Tina's listing check? Is "Lincoln (comfy)" the same customer as Lincoln Supply? What was copied "to a list of" with the Contact Electric email (the note was cut off)? What did Isaac Grossman answer about the ACH? What was the purpose of checking the vendor's open transactions against the notebook? Does the bank allow depositing a printed copy of a customer's check image?
 - Day 4 afternoon: does Tina continue her listing-check tool, given the Grok bots? How often does Daniel run the content and listing checks, and how long do they take? How did Kohls' pricing change if only inventory and SKUs are sent? Who sent the OneDrive email to Peleg, Baruch Grossman and Dan, and what exactly was failing? What was Suzanne doing with the customer balance and the held order?
 - Day 5: Mordy Berman has used the reporting tool twice (9/14 and 9/22, 5 reports in total) and receives Baruch Salamander's reports; what is his role with these numbers, and which of Baruch Salamander's reports could be replaced by scheduled ones from the tool? Avi G reportedly doesn't use the reports; do any recipients? Why are the recovery reports sent daily? Does anyone use the Amazon analysis (about 30 cents of every dollar)? What exactly was he comparing between Excel and SPS Commerce for Home Depot? Who does what on collections, Suzanne or Baruch Salamander? What does each cc'd recipient do with the recovery emails? How long does each report take, and how often?
-- Day 6: what splits the wires in OceanFirst, and how many wires a week? What does Zundel do with the shared payments Excel? Which F&O ETA fields exist and what does each connect to? How often are items created, and how long does it take? How often are Family Dollar projections run and how long do they take? What would the Allways Shipping API or EDI connect to? Day 6: what time did the Moshe session start (11:15 or about 11:30)? Is the "Avi" he tracks containers with Avi Altman? Do the US Customs pulls go through the bank-funding check? What does each person do with the Customs emails? What does the EZPass claim cover, and who else was told? Could PortPro data connect to F&O?
+- Day 6: what splits the wires in OceanFirst? (About 5 wires a week, which Isaac Grossman releases; answered Oct 22.) What does Zundel do with the shared payments Excel? Which F&O ETA fields exist and what does each connect to? How often are items created, and how long does it take? How often are Family Dollar projections run and how long do they take? What would the Allways Shipping API or EDI connect to? Day 6: what time did the Moshe session start (11:15 or about 11:30)? Is the "Avi" he tracks containers with Avi Altman? Do the US Customs pulls go through the bank-funding check? What does each person do with the Customs emails? What does the EZPass claim cover, and who else was told? Could PortPro data connect to F&O?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
-- What exactly is Vendo's role?
+- OnePlatform (Vendo): beyond the weekly file and advertising decisions, what else do they do for us?
+- Day 7: does Daniel use on-hand or available quantity (Tina uses available)? Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
 - Daniel: how many product lines a week does he build, and for which customers? Does each customer (Wayfair, Amazon, Home Depot, Kohls) need its own template?
 - Daniel: which attributes are missing from the main spec sheet and have to be read off the product images?
