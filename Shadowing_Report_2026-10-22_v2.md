@@ -66,8 +66,8 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 | Trigger | A supplier invoice or BOL arrives, a wire is drafted or cleared, or a container nears the end of free time |
 | What it does | Keeps one status per BOL and container: invoice received, BOL received, in Allways, wire drafted, wire cleared, factory told, freight released. Warns Moshe, Chani and Isaac Grossman when a container is close to 4 working days at the port without a release. |
 | Data | Supplier invoice Excel, the shared ETA and payments Excels, F&O POs and voyages, OceanFirst wire drafts, Allways portal (API or EDI later) |
-| Evidence | Day 6: the seven-step invoice and BOL chain; the 7 containers waiting on the factory payment; status passed by cc'd email and WhatsApp. Follow-up: containers usually don't go past free time, except at random when cash flow is tight. Zundel takes the payments Excel and applies the payments to our POs in F&O. |
-| Confirm first | How many wires a week; what splits the wires |
+| Evidence | Day 6: the seven-step invoice and BOL chain; the 7 containers waiting on the factory payment; status passed by cc'd email and WhatsApp. Follow-up: containers usually don't go past free time, except at random when cash flow is tight. Zundel takes the payments Excel and applies the payments to our POs in F&O. About 5 wires a week, each released by Isaac Grossman. |
+| Confirm first | What splits the wires |
 
 ### B. Channel file builder (opportunity 1)
 
@@ -145,7 +145,7 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 
 # What to Measure Next
 
-- For each top-5 item: how often it happens and how many each time. Still open: items on the weekly Vendo file; Suzanne's checks a week; Moshe's wires a week; how long Baruch Salamander's reports take.
+- For each top-5 item: how often it happens and how many each time. Still open: items on the weekly Vendo file; Suzanne's checks a week; how long Baruch Salamander's reports take.
 - Still to shadow: Justin, the warehouse and sales. Repeat sessions with Daniel, Moshe Aryeh Grossman and Avi Altman.
 
 **Next step:** pick which of bots A to H to build first, and have Peleg take the settings list.
