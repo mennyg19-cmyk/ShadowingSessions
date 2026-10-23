@@ -462,3 +462,51 @@ After the allotted free time of 4 working days, we have to pay demurrage charges
 
 ***
 **No further follow-up questions have been asked yet.**
+
+---
+
+## Day 7, Fri Oct 23: Tina and Daniel, weekly Vendo (OnePlatform) file (sat with Tina)
+
+Tina and Daniel's workflow for the Vendo sheet, every Friday.
+
+On Friday, Daniel downloads an Excel file from Vendo's SharePoint that has the full product list of what we sell to Amazon. This huge Excel file is a running report of everything we do with Amazon; it's Vendo's report. He takes one sheet and copies it. He then reuses that every week to start the file.
+
+The items at the top of the file are black and then red. Black is items we are continuing to sell; red is obsolete and disco'd. They keep the reds on the sheet so that if Amazon has stock in their distribution they can still sell them and Vendo gets info on them, but once they're red and Amazon's inventory is 0, they're dead items. So we deal basically with the black, and sometimes update the reds.
+
+We don't give exact inventory to Amazon because our warehouse is too fluid. We have 3 levels we feed them: in stock, out of stock and low stock. Low stock is anything under 50 pieces, in stock is more than that, and no stock is less than a pack size. We usually use the 12 pack size, because that's the most common pack size and it's easier for Tina and Daniel.
+
+This file is used by Vendo for advertising decisions on Amazon.
+
+We should technically be marking items that are OOS as temporarily unavailable with an in-stock date, but Tina is pretty sure Vendo does not do that for us, and we are not doing it ourselves.
+
+So Daniel takes the file, marks every item as in, low or out of stock, and then sends it to Tina. Tina then adds the expected arrival date for the low and out of stock items. She gets this from two different places. (She needs to do this and not him because he doesn't have access to the open POs and GIT.)
+She downloads the open PO lines from F&O, then runs a lookup from Daniel's file to the open POs for the items on Daniel's report and copies the ETA date from the open PO lines.
+If the date is within 30 days of today (or before today), she pulls a goods in transit report for those items, to get more accurate dates. This is because the open PO date is put in when the PO is created, while the goods in transit date is put in when the goods actually ship and is updated throughout if there are changes. She can't use only the goods in transit date, because that wouldn't have dates for the items not yet on the water. So it needs to be a coalesce.
+This is done manually with Excel VLOOKUP functions from one file to the other. [thoughts] This could be an easy report to build as a starting point. Even if we don't revolutionize the whole flow, a report with all the due dates already coalesced would be a good starting point.
+(Question for Tina: is there any information on the file from Vendo that we do not have in our system? Answer: Amazon product line, Amazon subcategory etc. But all we need to send is the ASIN, SKU, UPC, product name and inventory status, so we can technically build the entire report for her every week, because we have all that.)
+
+While shadowing: Tina also seems to use Teams well (a note for my communication channels point, unrelated to this), and she also uses a lot of email. The file going back and forth between her and Daniel is an email attachment instead of a shared file, and the file should be one file that is simply updated every week instead of started from scratch again. He starts from scratch every week by design, because it's easier to download a full file of inventory and run a lookup than to search for the ones that had inventory status changes. And we need to send the whole list every week, not just the inventory status changes. (I asked whether we send the whole list because it's required or because it's simpler for us.)
+
+***
+**End of the observer's message. Follow-up (the assistant asked where Daniel's quantity comes from and what the cutoffs are measured in):**
+
+Daniel gets the qty from on-hand. We only have one warehouse (1600). The cutoffs are based on pieces.
+
+***
+**End of the observer's message. Follow-up (the assistant asked about timing, multiple POs, blanks, past dates, the 30-day rule, where files live, the reds, the exact cutoffs, and where the file goes):**
+
+Tina takes less than 10 minutes, depending on how many times she gets interrupted. She doesn't know how long Daniel takes, and he might be on his way out, but when Tina used to do his part it took her very little time: she downloaded on-hand from F&O and had a formula with a lookup to the sheet that automatically wrote low, in or out of stock based on the on-hand.
+She uses the earliest open PO date.
+No PO and no GIT: she leaves it blank.
+A past date usually means it was already received by the warehouse.
+The 30-day rule is based on Avi Altman's explanation of how he updates dates in the system.
+Daniel's base sheet lives on the network (she can usually access it on her own).
+The reds get updated based on their status in F&O: if they are disco'd but we still have stock, they are disco'd; if we don't have stock, they become obsolete.
+11 and less is out of stock, because an average pack size is 12 and Amazon requires full packs. 50 is an arbitrary low stock number that they send. It should probably be a multiple of 12, like 60 or 48, but I'm not reinventing her wheel right now.
+
+She emails the file to Matt and Reggie. Matt is at Vendo; Reggie is our Amazon rep. She cc's Avi and Tara, who is also at Vendo.
+
+When we started they were Vendo; now they are called OnePlatform.
+
+***
+**Still open:** on-hand vs available quantity; whether exactly 50 counts as low or in stock; how many items are on the file and how many need dates; does Daniel download the file Thursday or Friday (an earlier answer said it's updated usually Thursday, sometimes Friday); who should mark out-of-stock items temporarily unavailable.
