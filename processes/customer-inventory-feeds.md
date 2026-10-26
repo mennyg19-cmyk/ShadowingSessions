@@ -11,7 +11,7 @@
 | | |
 | --- | --- |
 | **What** | Inventory feeds telling six customers what we can ship: no exact quantities, just a stock band per item |
-| **Why** | Kohls is also where leftover disco'd stock gets sold off. Amazon: OnePlatform uses it to make advertising decisions for Amazon warehouse (Daniel didn't know what it was for). Daily customers: not asked (presumably so their sites don't sell what we can't ship) |
+| **Why** | Amazon: OnePlatform uses it to make advertising decisions for Amazon warehouse (Daniel didn't know what it was for). Daily customers: not asked (presumably so their sites don't sell what we can't ship). Kohls is also where leftover disco'd stock gets sold off |
 | **When** | Amazon weekly, on Friday. The other five daily |
 | **Who** | Daniel builds all six. Tina adds dates to Amazon's and sends it |
 | **Volume** | Amazon: OnePlatform's whole catalog (the entire Amazon catalog), every week. Daily: each customer's full item list |
