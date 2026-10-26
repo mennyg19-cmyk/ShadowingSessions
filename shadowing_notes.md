@@ -708,7 +708,7 @@ The Amazon file is one of six inventory feeds Daniel builds. From a conversation
 - **Cutoffs:** under 24 is out of stock, 24 to 50 is low, above that is in stock. Tina had said 12, but confirmed 24 is fine as long as it's above the pack size, so 24 is the rule.
 - **To check:** Lincoln Comfy wants an image URL (is it in F&O, and do they actually need it?); Sears has a variation group ID.
 - For a bot or report runner, Amazon and the daily feeds are the same job, scheduled differently.
-- *(Day 2 had Kohls on an "under 5, send 0" rule; Daniel's 0 / 24 / 50 is what's sent now.)*
+- **Kohls exception** (Tina): other customers' feeds are automated and zero an item once it gets to 6, so nobody else gets inventory for disco'd items under 6. Kohls is manual, so Tina puts a 5 on disco'd items we still have (from returns, or never sold off) to sell them off there. This is the reason behind Day 2's "under 5, send 0" note.
 
 ---
 

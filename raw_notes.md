@@ -545,3 +545,8 @@ Tina described the process as only for Vendo to take care of advertising; Daniel
 Tina says 24 is fine; it doesn't matter as long as it's more than the pack size. So whether or not he's doing exactly what she originally said, it's fine.
 So Daniel is doing this for the whole Vendo catalog and doesn't know what it's for. He is using their catalog, which is the entire Amazon catalog. He thinks it's dropship because for him it's the same process for Amazon and the others (besides switching in / out / low stock for 0 / 24 / 50).
 Technically, for a bot or a report runner, for our purposes it's also the same; we'll just schedule each one differently.
+
+***
+**Follow-up (Tina, on Kohls):**
+
+All our other customers are automated, so when an item gets to 6 it's zeroed. So no customers are getting inventory for disco'd items that have less than 6. Since Kohls is manual, we have the opportunity to upload a piece here and there to get rid of extra stock for disco'd items. So for disco'd items, Tina adds in a 5 here and there when we have disco'd items in stock, so we can sell them off. They might come in here and there from returns, or were never sold off. So we use Kohls as the seller for that, since the others are automated.

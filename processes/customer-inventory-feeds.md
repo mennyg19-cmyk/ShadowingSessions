@@ -11,7 +11,7 @@
 | | |
 | --- | --- |
 | **What** | Inventory feeds telling six customers what we can ship: no exact quantities, just a stock band per item |
-| **Why** | Amazon: OnePlatform uses it to make advertising decisions for Amazon warehouse (Daniel didn't know what it was for). Daily customers: not asked (presumably so their sites don't sell what we can't ship) |
+| **Why** | Kohls is also where leftover disco'd stock gets sold off. Amazon: OnePlatform uses it to make advertising decisions for Amazon warehouse (Daniel didn't know what it was for). Daily customers: not asked (presumably so their sites don't sell what we can't ship) |
 | **When** | Amazon weekly, on Friday. The other five daily |
 | **Who** | Daniel builds all six. Tina adds dates to Amazon's and sends it |
 | **Volume** | Amazon: OnePlatform's whole catalog (the entire Amazon catalog), every week. Daily: each customer's full item list |
@@ -25,7 +25,7 @@
 | Amazon (via OnePlatform) | Weekly, Friday | In stock, low stock or out of stock, plus next available date | ASIN, SKU, UPC, product name | Tina emails Matt and Reggie, cc Avi G and Tara; Daniel also saves it in OneDrive |
 | Mason | Daily | 0, 24 or 50 | Own format | Portal upload |
 | Dealora | Daily | 0, 24 or 50 | Own format | Email |
-| Kohls | Daily | 0, 24 or 50 | Own format | Portal upload (DSCO) |
+| Kohls | Daily | 0, 24 or 50, plus 5 on disco'd items we still have | Own format | Portal upload (DSCO) |
 | Lincoln Comfy | Daily | 0, 24 or 50 | Image URL | Email |
 | Sears | Daily | 0, 24 or 50 | Variation group ID | Portal upload |
 
@@ -99,7 +99,9 @@ We don't send exact quantities because the warehouse is too fluid. Status is bas
 | Low stock | 24 to 50 | 24 |
 | In stock | Above 50 | 50 |
 
-Tina first described 11 or fewer as out of stock (Amazon requires full packs, and 12 is the most common pack size). Daniel uses 24, and Tina confirmed that's fine: any cutoff above the pack size works. On Day 2, Kohls had an "under 5, send 0" rule; it now gets 0 / 24 / 50 like the others.
+Tina first described 11 or fewer as out of stock (Amazon requires full packs, and 12 is the most common pack size). Daniel uses 24, and Tina confirmed that's fine: any cutoff above the pack size works. ### Kohls: the sell-off channel for disco'd stock
+
+Other customers' feeds are automated and zero an item once it gets to 6, so no customer gets inventory for a disco'd item with less than 6. Kohls is manual, so Tina uses it to sell off leftovers: when we have disco'd items in stock (from returns, or never sold off), she puts in a 5 here and there. This is the reason behind Day 2's "under 5, send 0" note.
 
 ### Next available date
 
@@ -140,7 +142,8 @@ ASIN, SKU, UPC, product name and inventory status, for every item in OnePlatform
 ## Pain Points
 
 - **Six hand-filtered feeds.** The same F&O download is filtered band by band and typed in by hand, every day, then VLOOKUPed into six different formats.
-- **The rules live in people's heads.** Tina described 12, Daniel uses 24, and Kohls had "under 5" on Day 2. 24 turned out to be fine, but nothing was written down.
+- **The rules live in people's heads.** Tina described 12, Daniel uses 24, and Kohls has its own disco sell-off habit. 24 turned out to be fine, but nothing was written down.
+- **Disco sell-off is ad hoc.** Tina adds a 5 on Kohls "here and there" when she knows of leftover disco'd stock; nothing lists which disco'd items still have stock.
 - **Daniel doesn't know what the Amazon file is for,** and thought it was dropship only. He runs it the same way as the others.
 - **Unclear extra fields.** Lincoln Comfy's image URL may not be needed or may not be in F&O; Sears' variation group ID isn't understood yet.
 - **Two people, two hand-offs, one email attachment** (Amazon). The file moves Daniel → Tina → OnePlatform by email instead of living in one shared place.
@@ -172,7 +175,7 @@ ASIN, SKU, UPC, product name and inventory status, for every item in OnePlatform
 | | |
 | --- | --- |
 | **Trigger** | Daily for Mason, Dealora, Kohls, Lincoln Comfy and Sears; weekly on Friday for Amazon |
-| **What it does** | Pulls inventory for warehouse 1600 from F&O once and builds every feed in its customer's format, using one set of cutoffs (under 24 out, 24 to 50 low, above that in), each on its own schedule. Daily customers get 0, 24 or 50; it uploads Mason, Kohls and Sears to their portals (or queues them for upload) and drafts the Dealora and Lincoln Comfy emails. For Amazon it builds the whole file: ASIN, SKU, UPC, product name and in / low / out for every item in OnePlatform's catalog, plus the next available date for low and out-of-stock items (the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither; no 30-day cutoff). Marks discontinued items disco while we have stock and obsolete once we don't. Saves to OneDrive and drafts the email to Matt and Reggie, cc Avi G and Tara |
+| **What it does** | Pulls inventory for warehouse 1600 from F&O once and builds every feed in its customer's format, using one set of cutoffs (under 24 out, 24 to 50 low, above that in), each on its own schedule. Daily customers get 0, 24 or 50. For Kohls it also lists disco'd items we still have stock of and proposes a 5 on each, for Tina to approve, so leftovers sell off there; it uploads Mason, Kohls and Sears to their portals (or queues them for upload) and drafts the Dealora and Lincoln Comfy emails. For Amazon it builds the whole file: ASIN, SKU, UPC, product name and in / low / out for every item in OnePlatform's catalog, plus the next available date for low and out-of-stock items (the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither; no 30-day cutoff). Marks discontinued items disco while we have stock and obsolete once we don't. Saves to OneDrive and drafts the email to Matt and Reggie, cc Avi G and Tara |
 | **Data** | F&O items (ASIN, SKU, UPC, name, status), quantity for 1600, open PO lines, Goods in Transit; each customer's template; Lincoln Comfy image URLs and Sears variation group IDs if needed; OnePlatform's file only as a cross-check |
 | **First step** | An F&O report with the stock band and the next available date already worked out for every item |
 | **Human check** | Daniel (or whoever takes over) glances at the daily files before upload; Tina reviews the Amazon file and sends the email |
