@@ -567,3 +567,15 @@ We have way more customers than these. These are the only 5 that are manually bu
 **Follow-up (Tina, on whether she adds dates to all of them):**
 
 Only for Amazon. I know Mason and Kohls would like to receive future dates, but we are not currently adding them. But we should add them to any automation we build.
+
+***
+**Follow-up answers (Tina and Daniel):**
+
+1. Daniel uses available stock, like Tina.
+2. (Who uploads Kohls: not answered yet.)
+3. The Amazon base list will be the catalog we have in F&O; it's the same. Vendo has their own sheet for reporting, so Daniel downloaded that and re-uses it.
+4. Reds only get updated when the item is obsolete in our system, meaning disco'd and no stock, but Amazon might still have inventory for them in their DCs.
+5. Tina clarified that sometimes she sends 1/2/3/4/5 based on our inventory, because we use Kohls to sell off.
+6. Daniel seems to know not to drop the line, because he sends Tina the list with these items still on it.
+7. Mason and Kohls need the next receive date and the next available qty, which will always be 24, as long as there is more than 24 on the next PO.
+8. These five don't have EDI capability for inventory; not all customers have EDI 846s.
