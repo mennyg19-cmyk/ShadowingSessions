@@ -11,6 +11,7 @@
 | | |
 | --- | --- |
 | **What** | Inventory feeds telling six customers what we can ship: no exact quantities, just a stock band per item |
+| **Scope** | Only the 5 customers Daniel builds by hand daily, plus Amazon weekly. All other customers get inventory automatically by EDI 846 or a standard emailed file |
 | **Why** | Amazon: OnePlatform uses it to make advertising decisions for Amazon warehouse (Daniel didn't know what it was for). Daily customers: not asked (presumably so their sites don't sell what we can't ship). Kohls is also where leftover disco'd stock gets sold off |
 | **When** | Amazon weekly, on Friday. The other five daily |
 | **Who** | Daniel builds all six. Tina adds dates to Amazon's and sends it |
@@ -105,7 +106,7 @@ Tina first described 11 or fewer as out of stock (Amazon requires full packs, an
 
 ### Kohls: the sell-off channel for disco'd stock
 
-Other customers' feeds zero an item once it gets to 6, so no customer gets inventory for a disco'd item with less than 6. Kohls is manual, so Tina uses it to sell off leftovers: when we have disco'd items in stock (from returns, or never sold off), she puts in a 5 here and there. This is the reason behind Day 2's "under 5, send 0" note.
+These five are the only customers whose feeds Daniel builds by hand every day. All our other customers (and there are many more) get inventory automatically, either by EDI (an 846) or by an automatic email with a standard inventory file. Those automated feeds zero an item once it gets to 6, so no automated customer gets inventory for a disco'd item with less than 6. Kohls is manual, so Tina uses it to sell off leftovers: when we have disco'd items in stock (from returns, or never sold off), she puts in a 5 here and there. This is the reason behind Day 2's "under 5, send 0" note.
 
 - **Why Kohls:** of the five daily feeds, Kohls carries the largest catalog of our items, so it's most likely to list the leftover item.
 - **How to find them:** F&O already flags items that are disco'd, and the on-hand sheet shows which of those still have stock. Checking the two together gives the sell-off list.

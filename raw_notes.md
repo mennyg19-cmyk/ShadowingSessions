@@ -557,3 +557,8 @@ All our other customers are automated, so when an item gets to 6 it's zeroed. So
 We have a flag when items are disco'd but still on the on-hand inventory sheet, so that can be automated to check both and add inventory when necessary. Tina said the main thing to be aware of with Kohls is that we're not sending them more than what we have. As long as OOS items are marked OOS and the stock levels are more than correct (if we have 30, we send 24), we're fine. So the fact that Daniel might be using different cutoffs is fine.
 
 We use Kohls as the seller because, of these 5 manual feeds, they have the largest catalog of our items. [thoughts] Even though we might want to base this on who has better pricing, so we make more on the item.
+
+***
+**Clarification (automated vs manual):**
+
+We have way more customers than these. These are the only 5 that are manually built daily by Daniel. The rest are either fed via EDI with an 846 or have automatic emails with a standard inventory file being sent to them.

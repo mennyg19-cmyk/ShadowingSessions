@@ -878,7 +878,7 @@ add(
     "The daily feeds take about 10 to 15 minutes a day for all five.",
     "To check: whether Lincoln Comfy actually needs the image URL and whether it's in F&O; what Sears' variation group ID is.",
     "*(Observer's view: for a bot or report runner, Amazon and the daily feeds are the same job, just scheduled differently.)*",
-    "**Kohls exception** (Tina): other customers' feeds are automated and zero an item once it gets to 6, so nobody else gets inventory for disco'd items under 6. Kohls is manual, so Tina puts a 5 on disco'd items we still have (from returns, or never sold off) to sell them off there. This is the reason behind Day 2's \"under 5, send 0\" note.",
+    "**Kohls exception** (Tina): these five are the only daily feeds Daniel builds by hand; all other customers get inventory automatically by EDI 846 or a standard emailed inventory file. Those automated feeds zero an item once it gets to 6, so no automated customer gets inventory for disco'd items under 6. Kohls is manual, so Tina puts a 5 on disco'd items we still have (from returns, or never sold off) to sell them off there. This is the reason behind Day 2's \"under 5, send 0\" note.",
     "Kohls is used because, of the five daily feeds, it carries the largest catalog of our items. F&O already flags disco'd items, and the on-hand sheet shows which still have stock, so the check can be automated. *(Observer's view: we might pick the sell-off channel by which customer gives us the best pricing instead.)*",
     "**The main rule** (Tina): never send a customer more than we have. As long as out-of-stock items are marked out and every number is at or below real stock (we have 30, we send 24), we're fine. So Daniel's different cutoffs don't matter.",
   ]),
