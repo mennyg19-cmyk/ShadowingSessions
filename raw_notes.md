@@ -579,3 +579,8 @@ Only for Amazon. I know Mason and Kohls would like to receive future dates, but 
 6. Daniel seems to know not to drop the line, because he sends Tina the list with these items still on it.
 7. Mason and Kohls need the next receive date and the next available qty, which will always be 24, as long as there is more than 24 on the next PO.
 8. These five don't have EDI capability for inventory; not all customers have EDI 846s.
+
+***
+**Follow-up (who uploads Kohls):**
+
+Daniel does the inventory upload for the disco'd items, and he does it every day. For active items on our file he uses the filters with the VLOOKUPs and does the 24, 50 or 0, but for the discontinued items he leaves the real quantities on there. Tina was only uploading a file on Day 2 because there was an issue she was trying to diagnose; she usually does not do them.
