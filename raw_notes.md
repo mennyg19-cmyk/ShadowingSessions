@@ -562,3 +562,8 @@ We use Kohls as the seller because, of these 5 manual feeds, they have the large
 **Clarification (automated vs manual):**
 
 We have way more customers than these. These are the only 5 that are manually built daily by Daniel. The rest are either fed via EDI with an 846 or have automatic emails with a standard inventory file being sent to them.
+
+***
+**Follow-up (Tina, on whether she adds dates to all of them):**
+
+Only for Amazon. I know Mason and Kohls would like to receive future dates, but we are not currently adding them. But we should add them to any automation we build.
