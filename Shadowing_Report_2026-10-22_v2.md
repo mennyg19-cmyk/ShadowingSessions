@@ -67,7 +67,7 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 | What it does | Keeps one status per BOL and container: invoice received, BOL received, in Allways, wire drafted, wire cleared, factory told, freight released. Warns Moshe, Chani and Isaac Grossman when a container is close to 4 working days at the port without a release. |
 | Data | Supplier invoice Excel, the shared ETA and payments Excels, F&O POs and voyages, OceanFirst wire drafts, Allways portal (API or EDI later) |
 | Evidence | Day 6: the seven-step invoice and BOL chain; the 7 containers waiting on the factory payment; status passed by cc'd email and WhatsApp. Follow-up: containers usually don't go past free time, except at random when cash flow is tight. Zundel takes the payments Excel and applies the payments to our POs in F&O. About 5 wires a week, each released by Isaac Grossman. |
-| Confirm first | Who uploads Kohls each day, and when Tina's sell-off numbers go in; What splits the wires |
+| Confirm first | What splits the wires |
 
 ### B. Channel file builder (opportunity 1)
 
@@ -84,7 +84,7 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 |  | Detail |
 | --- | --- |
 | Trigger | Daily for Mason, Dealora, Kohls, Lincoln Comfy and Sears; weekly on Friday for Amazon (OnePlatform, formerly Vendo, updates its file usually Thursday, sometimes Friday) |
-| What it does | Builds every feed from one F&O inventory pull, in each customer's own format. Daily customers get a quantity of 0, 24 or 50, except that Kohls also gets 1 to 5 (never more than we have) on disco'd items we still have (found by checking the F&O disco flag against on-hand), so leftover stock sells off there. Nothing ever goes out above what we have; it uploads the Mason, Kohls and Sears files to their portals (or queues them) and drafts the Dealora and Lincoln emails. For Amazon it builds the whole file from F&O: ASIN, SKU, UPC, product name and status for every item in OnePlatform's catalog (the entire Amazon catalog). Status comes from available quantity in warehouse 1600: under 24 is out of stock, 24 to 50 is low, above that is in stock (Tina confirmed 24 is fine as long as it's above the pack size). One job, scheduled differently per customer. For low and out-of-stock items it adds the next available date: the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither. Discontinued items are marked disco while we have stock and obsolete once we don't. No 30-day cutoff. It adds the next receive date and next available quantity (24 when the next PO has more than 24) to the Mason and Kohls feeds, which they'd like but don't get today. Then it drafts the Amazon email to Matt and Reggie, cc Avi G and Tara, and saves the file to OneDrive. First step (my idea): an F&O report with the dates already coalesced, even before anything else changes. |
+| What it does | Builds every feed from one F&O inventory pull, in each customer's own format. Daily customers get a quantity of 0, 24 or 50, except that Kohls gets the real quantity on disco'd items we still have (found by checking the F&O disco flag against on-hand), so leftover stock sells off there. Nothing ever goes out above what we have; it uploads the Mason, Kohls and Sears files to their portals (or queues them) and drafts the Dealora and Lincoln emails. For Amazon it builds the whole file from F&O: ASIN, SKU, UPC, product name and status for every item in OnePlatform's catalog (the entire Amazon catalog). Status comes from available quantity in warehouse 1600: under 24 is out of stock, 24 to 50 is low, above that is in stock (Tina confirmed 24 is fine as long as it's above the pack size). One job, scheduled differently per customer. For low and out-of-stock items it adds the next available date: the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither. Discontinued items are marked disco while we have stock and obsolete once we don't. No 30-day cutoff. It adds the next receive date and next available quantity (24 when the next PO has more than 24) to the Mason and Kohls feeds, which they'd like but don't get today. Then it drafts the Amazon email to Matt and Reggie, cc Avi G and Tara, and saves the file to OneDrive. First step (my idea): an F&O report with the dates already coalesced, even before anything else changes. |
 | Data | F&O items (ASIN, SKU, UPC, name, status), available quantity for 1600, open PO lines, Goods in Transit; each customer's template; Lincoln Comfy image URLs and Sears variation group IDs if needed; OnePlatform's file only as a cross-check |
 | Evidence | Day 2: Tina's six-step download, filter and match. Day 7: the full weekly cycle. Daniel restarts the file every week and emails it to Tina as an attachment. Tina's part is under 10 minutes; when she used to do Daniel's part, a lookup formula wrote the status automatically. The only OnePlatform fields we don't have (Amazon product line, subcategory) aren't needed in what we send. The whole list, every item in our Amazon catalog, goes out every week. Follow-up: Tina uses available quantity; the 30-day cutoff should go (Goods in Transit first, then the earliest open PO). Out-of-stock items aren't marked temporarily unavailable with an in-stock date, by us or OnePlatform. Follow-up with Daniel: the same hand-filter and VLOOKUP runs daily for five more customers, about 10 to 15 minutes a day for all of them; the Amazon file is OnePlatform's whole catalog, and 24 is the agreed cutoff. |
 | Confirm first | Whether Lincoln Comfy needs image URLs and where they live; what Sears' variation group ID is; who should mark items temporarily unavailable |
@@ -419,6 +419,7 @@ The only exact times are 10:43 and 12:00. The episodes below are in the order th
 ### 1. Kohls inventory upload (10:43)
 
 - She uploaded an inventory file manually in DSCO Rithum. She messaged Daniel that Kohls has quantities on items that shouldn't have any, which she needs to fix.
+- *(Later clarified: Daniel does the Kohls upload every day; Tina was only uploading here to diagnose this issue.)*
 - Kohls inventory is updated manually every day. **Rule:** if inventory is under 5, send 0. Always send the line with 0 and never leave it off, otherwise Kohls may shut the item down entirely. Discontinued items go to 0 but stay on the file so they stay live, since we may still sell one now and then.
 
 ### 2. Suzanne's call; Teams
@@ -913,7 +914,7 @@ From a conversation with Daniel afterwards, not watched. The Amazon file is one 
 | Amazon (via OnePlatform) | Weekly | In, low or out of stock | Emailed to Tina, saved in OneDrive |
 | Mason | Daily | 0, 24 or 50 | Portal upload |
 | Dealora | Daily | 0, 24 or 50 | Email |
-| Kohls | Daily | 0, 24 or 50 | Portal upload |
+| Kohls | Daily | 0, 24 or 50; real quantity on disco'd items | Portal upload |
 | Lincoln Comfy | Daily | 0, 24 or 50, plus an image URL | Email |
 | Sears | Daily | 0, 24 or 50, plus a variation group ID | Portal upload |
 
@@ -934,7 +935,7 @@ From a conversation with Daniel afterwards, not watched. The Amazon file is one 
 - **Reds:** only updated when the item becomes obsolete in F&O (disco'd and no stock). Amazon may still have inventory in its DCs.
 - **Never drop the line:** Daniel seems to know it; he sends Tina the list with those items still on it.
 - **Why these five are manual:** they don't have EDI capability for inventory; not all customers take an 846.
-- Still open: who uploads Kohls each day, and when Tina's sell-off numbers go in.
+- **Who uploads Kohls** (Menny, after asking): Daniel, every day. Active items go through his filters and VLOOKUP as 0, 24 or 50; disco'd items keep their real quantity. Tina only uploaded it on Day 2 to diagnose an issue; she usually doesn't.
 
 # Part 14: Observer's Own Work (not part of the process study)
 

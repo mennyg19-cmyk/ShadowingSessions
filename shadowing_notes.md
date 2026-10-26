@@ -238,7 +238,7 @@ Gets in between 9 and 10 and usually starts the day cleaning up Bais Trucking in
 - Pattern: rapid switching between PortPro, F&O, email and Excel.
 
 ### 4. Tina: Kohls inventory upload (10:43)
-- Uploaded an inventory file manually in DSCO Rithum. Messaged Daniel that Kohls has quantities on items that shouldn't have any; she needs to fix it.
+- Uploaded an inventory file manually in DSCO Rithum. Messaged Daniel that Kohls has quantities on items that shouldn't have any; she needs to fix it. *(Later clarified: Daniel does the Kohls upload every day; Tina was only uploading here to diagnose this issue.)*
 - Kohls inventory is updated manually every day. **Rule:** if inventory is under 5, send 0. Always send the line with 0 and never leave it off, otherwise Kohls may shut the item down entirely. Discontinued items go to 0 but stay on the file so they stay live (we may still sell one now and then).
 
 ### 5. Tina: Suzanne's call; Teams
@@ -702,7 +702,7 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 The Amazon file is one of six inventory feeds Daniel builds. From a conversation with Daniel, not watched.
 
 - **Amazon:** weekly. Daniel said dropship only, but Tina clarified it's OnePlatform's whole catalog, which is the entire Amazon catalog. He thought dropship because it's the same process as his other feeds, and he doesn't know what the file is used for (Tina: OnePlatform's advertising decisions for Amazon warehouse). His template is already on the server. He saves the finished file in OneDrive as well as emailing it to Tina.
-- **Mason, Dealora, Kohls, Lincoln Comfy, Sears:** daily. Each gets a quantity of 0, 24 or 50 per item (numbers, not in/low/out), each in its own format. Dealora and Lincoln are emailed; Mason, Kohls and Sears are uploaded to portals.
+- **Mason, Dealora, Kohls, Lincoln Comfy, Sears:** daily. Each gets a quantity of 0, 24 or 50 per item (numbers, not in/low/out; Kohls gets the real quantity on disco'd items), each in its own format. Dealora and Lincoln are emailed; Mason, Kohls and Sears are uploaded to portals.
 - **Time:** about 10 to 15 minutes a day for all the daily ones.
 - **How:** downloads inventory from F&O, filters the stock column for one band, types the status (or number) in the next column, copies it down, then filters the next band. Then a VLOOKUP from his working inventory file into each customer's file.
 - **Cutoffs:** under 24 is out of stock, 24 to 50 is low, above that is in stock. Tina had said 12, but confirmed 24 is fine as long as it's above the pack size, so 24 is the rule.
@@ -713,6 +713,7 @@ The Amazon file is one of six inventory feeds Daniel builds. From a conversation
 - **Main rule** (Tina): never send more than we have. Out-of-stock marked out, and numbers at or below real stock (have 30, send 24). Daniel's different cutoffs are fine.
 - **Dates** (Tina): only Amazon gets next available dates. Mason and Kohls would like future dates too, but we don't add them now; any automation we build should.
 - **Sell-off quantity** (Tina): she sends 1, 2, 3, 4 or 5 on Kohls depending on what we have, not always 5.
+- **Who uploads Kohls:** Daniel, every day. Active items go through his filters and VLOOKUP as 0, 24 or 50; disco'd items keep their real quantity. Tina only uploaded on Day 2 to diagnose an issue; she usually doesn't.
 - **Dates for Mason and Kohls:** they need the next receive date and the next available quantity. The quantity is always 24, as long as the next PO has more than 24.
 - **Quantity:** Daniel uses available, like Tina.
 - **Amazon item list:** our Amazon catalog in F&O is the same list. OnePlatform has its own reporting sheet; Daniel downloaded it once and re-uses it.
@@ -767,7 +768,7 @@ The Amazon file is one of six inventory feeds Daniel builds. From a conversation
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - OnePlatform (Vendo): beyond the weekly file and advertising decisions, what else do they do for us?
 - Day 7: Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
-- Daniel's feeds (answered: 24 is the cutoff; the Amazon file is the whole OnePlatform catalog). Does Lincoln Comfy need the image URL, and is it in F&O? What is Sears' variation group ID? (Answered: Daniel uses available.) Who uploads Kohls each day, and when do Tina's sell-off numbers go in?
+- Daniel's feeds (answered: 24 is the cutoff; the Amazon file is the whole OnePlatform catalog). Does Lincoln Comfy need the image URL, and is it in F&O? What is Sears' variation group ID? (Answered: Daniel uses available.) (Answered: Daniel uploads Kohls daily; disco'd items keep their real quantity.)
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
 - Daniel: how many product lines a week does he build, and for which customers? Does each customer (Wayfair, Amazon, Home Depot, Kohls) need its own template?
 - Daniel: which attributes are missing from the main spec sheet and have to be read off the product images?
