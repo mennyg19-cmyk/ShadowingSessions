@@ -670,13 +670,13 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 ### The file
 - OnePlatform's SharePoint Excel is a running report of everything we do with Amazon, with the full product list. Daniel copies one sheet into a base sheet on the network and reuses it to start each week's file.
 - Black rows are items we keep selling. Red rows are discontinued or obsolete; they stay on so Amazon can sell its own remaining stock and OnePlatform gets info on them. Once a red item's Amazon inventory is 0, it's dead.
-- Reds are updated from F&O status: discontinued with stock left stays "disco"; discontinued with no stock becomes obsolete.
+- Reds are only updated when the item becomes obsolete in F&O (disco'd and no stock). Amazon might still have inventory in its DCs.
 - We send the whole list every week, not just the changes (required, per Tina).
 - Of OnePlatform's fields, only Amazon product line, subcategory and similar aren't in F&O. What we send is ASIN, SKU, UPC, product name and inventory status, all of which we have.
 
 ### Stock levels (pieces in F&O, warehouse 1600, our only warehouse)
-- Quantity: Tina uses available quantity. Daniel was said to use on-hand (first answer); to confirm with him.
-- Out of stock: 11 or fewer. Amazon requires full packs and 12 is the most common pack size.
+- Quantity: Tina and Daniel both use available quantity (Daniel's was first given as on-hand; confirmed available).
+- Out of stock: 11 or fewer, as Tina first described (Amazon requires full packs and 12 is the most common pack size). Daniel actually uses under 24, and Tina says that's fine: any cutoff above the pack size works.
 - Low stock: under 50. Arbitrary. *(Observer's view: should probably be a multiple of 12, like 48 or 60. Not changing it now.)*
 - In stock: 50 or more.
 - We don't give Amazon exact inventory because the warehouse is too fluid.
@@ -696,6 +696,29 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 - *(Observer's idea: an F&O report with the due dates already coalesced would be an easy first step, even without changing the rest of the flow. Since everything we send is in F&O, the whole file could be built for her each week.)*
 - *(Observer's note: the file should be one shared file updated weekly, not an attachment passed back and forth.)*
 - Tina uses Teams well and also a lot of email (relevant to the central channel idea).
+
+## Follow-up with Daniel (after Day 7): daily inventory feeds for 5 more customers
+
+The Amazon file is one of six inventory feeds Daniel builds. From a conversation with Daniel, not watched.
+
+- **Amazon:** weekly. Daniel said dropship only, but Tina clarified it's OnePlatform's whole catalog, which is the entire Amazon catalog. He thought dropship because it's the same process as his other feeds, and he doesn't know what the file is used for (Tina: OnePlatform's advertising decisions for Amazon warehouse). His template is already on the server. He saves the finished file in OneDrive as well as emailing it to Tina.
+- **Mason, Dealora, Kohls, Lincoln Comfy, Sears:** daily. Each gets a quantity of 0, 24 or 50 per item (numbers, not in/low/out), each in its own format. Dealora and Lincoln are emailed; Mason, Kohls and Sears are uploaded to portals.
+- **Time:** about 10 to 15 minutes a day for all the daily ones.
+- **How:** downloads inventory from F&O, filters the stock column for one band, types the status (or number) in the next column, copies it down, then filters the next band. Then a VLOOKUP from his working inventory file into each customer's file.
+- **Cutoffs:** under 24 is out of stock, 24 to 50 is low, above that is in stock. Tina had said 12, but confirmed 24 is fine as long as it's above the pack size, so 24 is the rule.
+- **To check:** Lincoln Comfy wants an image URL (is it in F&O, and do they actually need it?); Sears has a variation group ID.
+- For a bot or report runner, Amazon and the daily feeds are the same job, scheduled differently.
+- **Kohls exception** (Tina): these five are the only daily feeds Daniel builds by hand; all other customers get inventory automatically by EDI 846 or a standard emailed inventory file. Those automated feeds zero an item once it gets to 6, so no automated customer gets inventory for disco'd items under 6. Kohls is manual, so Tina puts a 5 on disco'd items we still have (from returns, or never sold off) to sell them off there. This is the reason behind Day 2's "under 5, send 0" note.
+- Kohls is the sell-off channel because, of the five daily feeds, it carries the largest catalog of our items. F&O already flags disco'd items and the on-hand sheet shows which still have stock, so the check can be automated. *(Observer's view: maybe pick the channel by best pricing instead.)*
+- **Main rule** (Tina): never send more than we have. Out-of-stock marked out, and numbers at or below real stock (have 30, send 24). Daniel's different cutoffs are fine.
+- **Dates** (Tina): only Amazon gets next available dates. Mason and Kohls would like future dates too, but we don't add them now; any automation we build should.
+- **Sell-off quantity** (Tina): she sends 1, 2, 3, 4 or 5 on Kohls depending on what we have, not always 5.
+- **Dates for Mason and Kohls:** they need the next receive date and the next available quantity. The quantity is always 24, as long as the next PO has more than 24.
+- **Quantity:** Daniel uses available, like Tina.
+- **Amazon item list:** our Amazon catalog in F&O is the same list. OnePlatform has its own reporting sheet; Daniel downloaded it once and re-uses it.
+- **Reds:** only updated when the item becomes obsolete in F&O (disco'd and no stock). Amazon may still have inventory in its DCs.
+- **Never drop the line:** Daniel seems to know it; he sends Tina the list with those items still on it.
+- **Why these five are manual:** they don't have EDI capability for inventory; not all customers take an 846.
 
 ---
 
@@ -743,7 +766,8 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 - Day 6: what splits the wires in OceanFirst? (About 5 wires a week, which Isaac Grossman releases; answered Oct 22.) What does Zundel do with the shared payments Excel? Which F&O ETA fields exist and what does each connect to? How often are items created, and how long does it take? How often are Family Dollar projections run and how long do they take? What would the Allways Shipping API or EDI connect to? Day 6: what time did the Moshe session start (11:15 or about 11:30)? Is the "Avi" he tracks containers with Avi Altman? Do the US Customs pulls go through the bank-funding check? What does each person do with the Customs emails? What does the EZPass claim cover, and who else was told? Could PortPro data connect to F&O?
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - OnePlatform (Vendo): beyond the weekly file and advertising decisions, what else do they do for us?
-- Day 7: does Daniel use on-hand or available quantity (Tina uses available)? Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
+- Day 7: Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
+- Daniel's feeds (answered: 24 is the cutoff; the Amazon file is the whole OnePlatform catalog). Does Lincoln Comfy need the image URL, and is it in F&O? What is Sears' variation group ID? (Answered: Daniel uses available.) Who uploads Kohls each day, and when do Tina's sell-off numbers go in?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
 - Daniel: how many product lines a week does he build, and for which customers? Does each customer (Wayfair, Amazon, Home Depot, Kohls) need its own template?
 - Daniel: which attributes are missing from the main spec sheet and have to be read off the product images?

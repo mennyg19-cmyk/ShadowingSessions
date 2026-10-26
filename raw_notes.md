@@ -517,3 +517,65 @@ When we started they were Vendo; now they are called OnePlatform.
 She uses available qty.
 The number of items on there is the number of items in Amazon's catalog. Don't have an exact number. I'm not sure about Daniel.
 The 30-day rule should probably be gone already. If she gets GIT dates first, and then looks up open POs for the items that still don't have dates, then that's fine. (Which I recommended already.)
+
+---
+
+## Follow-up with Daniel (after Day 7): the inventory feeds are more than Amazon
+
+Got more information from Daniel. This is more than Amazon. My notes from talking to him:
+
+Daniel's template is already on the server.
+Amazon dropship only (not Amazon warehouse).
+
+He goes into F&O and downloads inventory. He filters the Excel file by the stock columns: numbers under 24 for out of stock (not 12), low stock between 24 and 50, and then in stock. He does this manually: he filters the Excel file by the stock column, fills in "in", "low" or "out of stock" in another column next to the stock, copies it all the way down, and then does the next filter. He then does a VLOOKUP from his working inventory file to the Amazon file. He saves it in OneDrive as well as emailing it to Tina.
+
+He does this for 5 other customers too: Mason, Dealora, Kohls, Lincoln Comfy and Sears. They get 0, 24 or 50: no real numbers, but not in, low or out of stock either; they get numbers. They all have their own formats.
+Lincoln Comfy needs an image URL. Need to check if that's in the system and if they actually need it.
+Sears has a variation group ID. Need to check that out more.
+
+Amazon is once a week. The others are daily. It takes about 10 to 15 minutes to do all of them daily.
+
+He emails Dealora and Lincoln, and the rest get uploaded to portals.
+
+***
+**Follow-up (clarified with Tina, after talking to Daniel):**
+
+Tina described the process as only for Vendo to take care of advertising; Daniel describes it as an inventory file. According to Tina, Vendo is making advertising decisions for Amazon Warehouse. From Daniel's standpoint he's doing the same thing either way; what Tina does with it after he's done is not his problem.
+
+Tina says 24 is fine; it doesn't matter as long as it's more than the pack size. So whether or not he's doing exactly what she originally said, it's fine.
+So Daniel is doing this for the whole Vendo catalog and doesn't know what it's for. He is using their catalog, which is the entire Amazon catalog. He thinks it's dropship because for him it's the same process for Amazon and the others (besides switching in / out / low stock for 0 / 24 / 50).
+Technically, for a bot or a report runner, for our purposes it's also the same; we'll just schedule each one differently.
+
+***
+**Follow-up (Tina, on Kohls):**
+
+All our other customers are automated, so when an item gets to 6 it's zeroed. So no customers are getting inventory for disco'd items that have less than 6. Since Kohls is manual, we have the opportunity to upload a piece here and there to get rid of extra stock for disco'd items. So for disco'd items, Tina adds in a 5 here and there when we have disco'd items in stock, so we can sell them off. They might come in here and there from returns, or were never sold off. So we use Kohls as the seller for that, since the others are automated.
+
+***
+**Follow-up (Tina, on Kohls, continued):**
+
+We have a flag when items are disco'd but still on the on-hand inventory sheet, so that can be automated to check both and add inventory when necessary. Tina said the main thing to be aware of with Kohls is that we're not sending them more than what we have. As long as OOS items are marked OOS and the stock levels are more than correct (if we have 30, we send 24), we're fine. So the fact that Daniel might be using different cutoffs is fine.
+
+We use Kohls as the seller because, of these 5 manual feeds, they have the largest catalog of our items. [thoughts] Even though we might want to base this on who has better pricing, so we make more on the item.
+
+***
+**Clarification (automated vs manual):**
+
+We have way more customers than these. These are the only 5 that are manually built daily by Daniel. The rest are either fed via EDI with an 846 or have automatic emails with a standard inventory file being sent to them.
+
+***
+**Follow-up (Tina, on whether she adds dates to all of them):**
+
+Only for Amazon. I know Mason and Kohls would like to receive future dates, but we are not currently adding them. But we should add them to any automation we build.
+
+***
+**Follow-up answers (Tina and Daniel):**
+
+1. Daniel uses available stock, like Tina.
+2. (Who uploads Kohls: not answered yet.)
+3. The Amazon base list will be the catalog we have in F&O; it's the same. Vendo has their own sheet for reporting, so Daniel downloaded that and re-uses it.
+4. Reds only get updated when the item is obsolete in our system, meaning disco'd and no stock, but Amazon might still have inventory for them in their DCs.
+5. Tina clarified that sometimes she sends 1/2/3/4/5 based on our inventory, because we use Kohls to sell off.
+6. Daniel seems to know not to drop the line, because he sends Tina the list with these items still on it.
+7. Mason and Kohls need the next receive date and the next available qty, which will always be 24, as long as there is more than 24 on the next PO.
+8. These five don't have EDI capability for inventory; not all customers have EDI 846s.
