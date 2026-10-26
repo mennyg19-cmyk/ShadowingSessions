@@ -709,6 +709,8 @@ The Amazon file is one of six inventory feeds Daniel builds. From a conversation
 - **To check:** Lincoln Comfy wants an image URL (is it in F&O, and do they actually need it?); Sears has a variation group ID.
 - For a bot or report runner, Amazon and the daily feeds are the same job, scheduled differently.
 - **Kohls exception** (Tina): other customers' feeds are automated and zero an item once it gets to 6, so nobody else gets inventory for disco'd items under 6. Kohls is manual, so Tina puts a 5 on disco'd items we still have (from returns, or never sold off) to sell them off there. This is the reason behind Day 2's "under 5, send 0" note.
+- Kohls is the sell-off channel because, of the five daily feeds, it carries the largest catalog of our items. F&O already flags disco'd items and the on-hand sheet shows which still have stock, so the check can be automated. *(Observer's view: maybe pick the channel by best pricing instead.)*
+- **Main rule** (Tina): never send more than we have. Out-of-stock marked out, and numbers at or below real stock (have 30, send 24). Daniel's different cutoffs are fine.
 
 ---
 

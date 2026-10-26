@@ -550,3 +550,10 @@ Technically, for a bot or a report runner, for our purposes it's also the same; 
 **Follow-up (Tina, on Kohls):**
 
 All our other customers are automated, so when an item gets to 6 it's zeroed. So no customers are getting inventory for disco'd items that have less than 6. Since Kohls is manual, we have the opportunity to upload a piece here and there to get rid of extra stock for disco'd items. So for disco'd items, Tina adds in a 5 here and there when we have disco'd items in stock, so we can sell them off. They might come in here and there from returns, or were never sold off. So we use Kohls as the seller for that, since the others are automated.
+
+***
+**Follow-up (Tina, on Kohls, continued):**
+
+We have a flag when items are disco'd but still on the on-hand inventory sheet, so that can be automated to check both and add inventory when necessary. Tina said the main thing to be aware of with Kohls is that we're not sending them more than what we have. As long as OOS items are marked OOS and the stock levels are more than correct (if we have 30, we send 24), we're fine. So the fact that Daniel might be using different cutoffs is fine.
+
+We use Kohls as the seller because, of these 5 manual feeds, they have the largest catalog of our items. [thoughts] Even though we might want to base this on who has better pricing, so we make more on the item.
