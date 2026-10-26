@@ -877,7 +877,7 @@ add(
     "**Cutoffs:** under 24 is out of stock, 24 to 50 is low, above that is in stock. The daily customers get those as numbers: 0, 24 or 50. Tina had said 12, but confirmed 24 is fine as long as it's above the pack size.",
     "The daily feeds take about 10 to 15 minutes a day for all five.",
     "To check: whether Lincoln Comfy actually needs the image URL and whether it's in F&O; what Sears' variation group ID is.",
-    "*(Observer's view: for a bot or report runner, Amazon and the daily feeds are the same job, just scheduled differently. )*",
+    "*(Observer's view: for a bot or report runner, Amazon and the daily feeds are the same job, just scheduled differently.)*",
     "**Kohls exception** (Tina): other customers' feeds are automated and zero an item once it gets to 6, so nobody else gets inventory for disco'd items under 6. Kohls is manual, so Tina puts a 5 on disco'd items we still have (from returns, or never sold off) to sell them off there. This is the reason behind Day 2's \"under 5, send 0\" note.",
   ]),
 );
