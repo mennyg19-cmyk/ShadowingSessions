@@ -555,6 +555,20 @@ add(
   ]),
   h3("Wayfair deductions: CSV download"),
   p("After going through another deduction, she went back in to download the deductions. Wayfair offers a CSV download, so she gets a normal-looking list, unlike the Lowes list from Day 1. She then reviewed it."),
+  p("*(Follow-up after Day 7: Suzanne checks the amounts when she enters the payment; Charmaine checks the reason. See below.)*"),
+  h2("Follow-up with Charmaine: deductions and disputes"),
+  p("From a conversation with Charmaine after Day 7, not watched. The full write-up is the deductions and disputes process card."),
+  ...bullets([
+    "**Her customers (DS only):** Wayfair (portal, checked every day), Lowes, OJCommerce and a few others. VirVentures, UnbeatableSales and KartIt are handled entirely by email.",
+    "**Wayfair managed returns:** always accepted, as part of our policy.",
+    "**Misinformation or mis-shipped:** she checks that we actually sent the wrong item, usually from the customer's image. If it doesn't match, she disputes on the ticket; Wayfair replies by email if they accept, sometimes after a few rounds. If the customer says they never received it, she checks tracking.",
+    "**Return deductions (email customers):** she checks the item came back to the warehouse, as per our policy with that customer. If not, she doesn't approve it; we tell them we never received it, and it goes on next month's payment once they send tracking. UnbeatableSales sends a batch of emails once a week.",
+    "**Rules:** set per customer by Tina and Avi. Charmaine has them in her head and couldn't repeat them. Sometimes she checks with Tina before responding.",
+    "**Volume and time:** Oct 2 to 15, 70 deductions, 11 of which needed checking; the rest were auto-accepts. Gathering the info takes 5 to 10 minutes, and each dispute about 5 to 15 minutes of her time, though it can stay open a few days.",
+    "**Deadline:** only Wayfair has one, the settlement date on each deduction.",
+    "**Hand-off to Suzanne:** when Suzanne enters a payment, she asks Charmaine (next desk) whether the remittance matches what Charmaine accepted. There is no list; Charmaine searches her inbox or the portal. She tells Suzanne only when a dispute is finished: won means don't accept that deduction on the remittance, lost means accept it.",
+    "**Day 2 vs now:** on Day 2 she was seen accepting a wrong-item deduction; now she says she checks those against the image first. Both are kept; that one may have matched.",
+  ]),
 );
 
 /* ---------------- Part 8: Suzanne Day 3 ---------------- */

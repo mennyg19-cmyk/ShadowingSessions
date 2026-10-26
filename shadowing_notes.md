@@ -318,6 +318,7 @@ She listened to a voicemail, ran through emails and handled customer service iss
 - She works on this while answering customer service emails at the same time.
 - She also accepts returns to Wayfair. *(Observer: it must be part of our trade agreement with Wayfair that they take deductions for returns.)*
 - **Method difference, Charmaine vs Suzanne (observation only):** when Suzanne gets a deduction she checks the original invoice to see if the numbers match. Charmaine accepts Wayfair's deduction without that check. *(Observer: maybe she used to check and now trusts them. Not asked.)*
+- *(Follow-up after Day 7: Suzanne checks the amounts when she enters the payment, and Charmaine checks the reason; see "Follow-up with Charmaine" after Day 7.)*
 
 ### 20. Closing Mason orders by hand
 - Second part of what she did on Day 1 morning: she checks Mason a few times, and when orders close in our system she closes them in Mason manually. *(Grunt work.)* She says Mason orders don't close automatically like other customers' do.
@@ -721,6 +722,22 @@ The Amazon file is one of six inventory feeds Daniel builds. From a conversation
 - **Never drop the line:** Daniel seems to know it; he sends Tina the list with those items still on it.
 - **Why these five are manual:** they don't have EDI capability for inventory; not all customers take an 846.
 
+## Follow-up with Charmaine (after Day 7): deductions and disputes
+
+From a conversation with Charmaine, not watched. Process card: `processes/deductions-and-disputes.md`.
+
+- **Her customers (DS only):** Wayfair (portal, checked every day), Lowes, OJCommerce and a few others. VirVentures, UnbeatableSales and KartIt are handled entirely by email: a deduction arrives by email and she confirms or disputes it the same way.
+- **Wayfair managed returns:** always accepted; it's part of our policy.
+- **Misinformation or mis-shipped:** she checks that we actually sent the wrong item, usually from the image the customer sends. If it doesn't match, she files a dispute on the ticket; Wayfair replies by email if they accept, sometimes after a few comments back and forth.
+- **Never received:** she checks tracking.
+- **Return deductions (email customers):** she checks that the item came back to the warehouse, as per our policy with each customer. If it didn't, she doesn't approve it and we tell them we never received it; it goes on next month's payment once they send tracking. UnbeatableSales sends a batch of emails once a week with all their deductions.
+- **Rules:** set per customer by Tina and Avi. Charmaine has them in her head and couldn't repeat them; she just does it. Sometimes she goes through Tina before responding.
+- **Volume and time:** Oct 2 to 15, 70 deductions, of which 11 needed checking; the other 59 were auto-accepts. No exact running count. Gathering the info for a dispute takes 5 to 10 minutes; she's busy with each one for about 5 to 15 minutes, though the whole dispute can take a few days.
+- **Deadline:** only Wayfair has one, the settlement date on each deduction.
+- **Hand-off to Suzanne:** when Suzanne enters a payment in AR, she asks Charmaine (their desks are next to each other) whether the remittance matches the deductions Charmaine accepted. There is no list: Charmaine searches her inbox, or the portal for portal customers. She tells Suzanne nothing until a dispute is finished: if we won, Suzanne shouldn't accept that deduction on the remittance; if not, it's fine to accept.
+- **Amounts:** Suzanne checks the amounts when she enters the payment. Charmaine checks the reason. *(This explains Day 2's method difference: the amount check happens at payment entry, not in the portal.)*
+- **Day 2 vs now:** on Day 2 she was seen accepting a "customer received the wrong item" deduction on Wayfair; now she says she checks those against the image first. Both kept; that one may have matched, or been a different reason code. Day 2 also showed late receipt accepted, not mentioned this time.
+
 ---
 
 # Candidate pain-point modules (working list)
@@ -769,6 +786,7 @@ The Amazon file is one of six inventory feeds Daniel builds. From a conversation
 - OnePlatform (Vendo): beyond the weekly file and advertising decisions, what else do they do for us?
 - Day 7: Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
 - Daniel's feeds (answered: 24 is the cutoff; the Amazon file is the whole OnePlatform catalog). Does Lincoln Comfy need the image URL, and is it in F&O? What is Sears' variation group ID? (Answered: Daniel uses available.) (Answered: Daniel uploads Kohls daily; disco'd items keep their real quantity.)
+- Deductions (Charmaine): which "few others" besides Lowes and OJCommerce, and portal or email for each? Is DS-only because Baruch Salamander handles the warehouse deductions on SPS Commerce? Dollars per week, dispute win rate, each customer's return policy, where she confirms a return reached the warehouse. Still to shadow: Suzanne (short pays), Baruch Salamander (SPS Commerce), Tina or Avi G (Amazon dispute list).
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
 - Daniel: how many product lines a week does he build, and for which customers? Does each customer (Wayfair, Amazon, Home Depot, Kohls) need its own template?
 - Daniel: which attributes are missing from the main spec sheet and have to be read off the product images?
