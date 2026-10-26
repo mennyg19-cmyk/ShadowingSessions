@@ -517,3 +517,22 @@ When we started they were Vendo; now they are called OnePlatform.
 She uses available qty.
 The number of items on there is the number of items in Amazon's catalog. Don't have an exact number. I'm not sure about Daniel.
 The 30-day rule should probably be gone already. If she gets GIT dates first, and then looks up open POs for the items that still don't have dates, then that's fine. (Which I recommended already.)
+
+---
+
+## Follow-up with Daniel (after Day 7): the inventory feeds are more than Amazon
+
+Got more information from Daniel. This is more than Amazon. My notes from talking to him:
+
+Daniel's template is already on the server.
+Amazon dropship only (not Amazon warehouse).
+
+He goes into F&O and downloads inventory. He filters the Excel file by the stock columns: numbers under 24 for out of stock (not 12), low stock between 24 and 50, and then in stock. He does this manually: he filters the Excel file by the stock column, fills in "in", "low" or "out of stock" in another column next to the stock, copies it all the way down, and then does the next filter. He then does a VLOOKUP from his working inventory file to the Amazon file. He saves it in OneDrive as well as emailing it to Tina.
+
+He does this for 5 other customers too: Mason, Dealora, Kohls, Lincoln Comfy and Sears. They get 0, 24 or 50: no real numbers, but not in, low or out of stock either; they get numbers. They all have their own formats.
+Lincoln Comfy needs an image URL. Need to check if that's in the system and if they actually need it.
+Sears has a variation group ID. Need to check that out more.
+
+Amazon is once a week. The others are daily. It takes about 10 to 15 minutes to do all of them daily.
+
+He emails Dealora and Lincoln, and the rest get uploaded to portals.

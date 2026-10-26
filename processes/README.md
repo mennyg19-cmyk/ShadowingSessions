@@ -4,6 +4,6 @@ One file per recurring process, broken down from the shadowing notes so each can
 
 | Process | Who | How often | Bot |
 | --- | --- | --- | --- |
-| [Weekly Amazon inventory file for OnePlatform (Vendo)](amazon-inventory-file-oneplatform.md) | Daniel, Tina | Weekly, Friday | C |
+| [Customer inventory feeds (Amazon weekly for OnePlatform, 5 customers daily)](customer-inventory-feeds.md) | Daniel, Tina | Daily; Amazon weekly on Friday | C |
 
 Each file follows the same layout: At a Glance, The Flow, Step by Step, The Rules, Why It Works This Way, Pain Points, My Ideas, and The Bot.

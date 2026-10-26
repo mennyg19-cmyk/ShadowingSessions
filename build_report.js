@@ -134,7 +134,7 @@ add(
   table([400, 2000, 3760, 1500, 1700], ["#", "Opportunity", "What's at stake (from the notes)", "Fix type", "Suggested owner"], [
     ["1", "Spec sheet to channel file builder", "About 8 spec sheets a week at about 15 to 20 minutes each, roughly 2 to 2.5 hours of Daniel's week, then at least 3 reviews per file. A wrong curtain width on Wayfair reached a customer.", "Bot", "Peleg with Daniel and Tina"],
     ["2", "Payment to container release tracker", "Release depends on a chain through a supplier Excel, Allways, two shared Excels, F&O and an OceanFirst wire draft, with status by cc'd email and WhatsApp. Containers rarely go past free time; it happens at random, when cash flow is tight. Rule: once 4 working days of free time run out, demurrage is about $300 to $350 per container per day.", "Bot now; Allways API later", "Peleg with Moshe Aryeh Grossman"],
-    ["3", "Weekly Amazon inventory file for OnePlatform (Vendo)", "Every Friday Daniel rebuilds the file and marks each item in, low or out of stock, then Tina adds next available dates from open PO lines and Goods in Transit with VLOOKUPs. Her part is under 10 minutes; Daniel's isn't measured, and Tina says he may be leaving. Everything we send is already in F&O, so the whole file can be built from it. Out-of-stock items are not marked temporarily unavailable on Amazon.", "F&O report first, then bot", "Peleg with Tina"],
+    ["3", "Customer inventory feeds (Amazon weekly for OnePlatform, 5 customers daily)", "Daniel builds six inventory feeds by hand-filtering an F&O inventory download: Amazon weekly, and Mason, Dealora, Kohls, Lincoln Comfy and Sears daily, each in its own format. The daily ones take about 10 to 15 minutes a day, roughly 1 to 1.25 hours a week. For Amazon, Tina then adds next available dates from open PO lines and Goods in Transit with VLOOKUPs (under 10 minutes). Tina says Daniel may be leaving. Everything we send is already in F&O, so the whole file can be built from it. Out-of-stock items are not marked temporarily unavailable on Amazon.", "F&O report first, then bot", "Peleg with Daniel and Tina"],
     ["4", "Payment entry and posting", "Most of Suzanne's Day 1 afternoon (3:00 to 4:30). Two batches wouldn't post, one because the method defaulted to credit card, and the error didn't say why. She finds Chani's deposit email by searching for the total.", "Settings first, then bot", "Peleg with Suzanne"],
     ["5", "Money reports and notices on a schedule", "Recovery totals emailed by hand daily to six people (Avi G doesn't use them; Mordy ran reports on only two days). US Customs pulls forwarded to five people. Credit card due dates go Avi G to Chani to a desk calendar to Isaac Grossman.", "Scheduled reports + routing bot", "Peleg with Baruch Salamander and Chani"],
   ]),
@@ -170,12 +170,12 @@ add(
     ["Evidence", "Day 2: Daniel's Wayfair sheet, column-to-column copy and paste, info read off product images, 15 to 20 minutes per line; Tina's 3 reviews; the 55\" curtain width error. Day 4: Home Depot spec sheet. Follow-up: about 8 spec sheets a week, covering all our dropship customers."],
     ["Confirm first", "Which attributes are missing from the main sheet"],
   ]),
-  ...spec("C. Weekly Amazon inventory file for OnePlatform (opportunity 3)", [
-    ["Trigger", "Weekly, on Friday (OnePlatform, formerly Vendo, updates its file usually Thursday, sometimes Friday)"],
-    ["What it does", "Builds the whole file from F&O: ASIN, SKU, UPC, product name and status for every item. Status comes from available quantity in warehouse 1600: 11 pieces or fewer is out of stock, under 50 is low, 50 or more is in stock. For low and out-of-stock items it adds the next available date: the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither. Discontinued items are marked disco while we have stock and obsolete once we don't. No 30-day cutoff. Then it drafts the email to Matt and Reggie, cc Avi G and Tara. First step (my idea): an F&O report with the dates already coalesced, even before anything else changes."],
-    ["Data", "F&O items (ASIN, SKU, UPC, name, status), available quantity for 1600, open PO lines, Goods in Transit; OnePlatform's file only as a cross-check"],
-    ["Evidence", "Day 2: Tina's six-step download, filter and match. Day 7: the full weekly cycle. Daniel restarts the file every week and emails it to Tina as an attachment. Tina's part is under 10 minutes; when she used to do Daniel's part, a lookup formula wrote the status automatically. The only OnePlatform fields we don't have (Amazon product line, subcategory) aren't needed in what we send. The whole list, every item in our Amazon catalog, goes out every week. Follow-up: Tina uses available quantity; the 30-day cutoff should go (Goods in Transit first, then the earliest open PO). Out-of-stock items aren't marked temporarily unavailable with an in-stock date, by us or OnePlatform."],
-    ["Confirm first", "How many items need dates each week; how long Daniel's part takes; who should mark items temporarily unavailable"],
+  ...spec("C. Customer inventory feeds (opportunity 3)", [
+    ["Trigger", "Daily for Mason, Dealora, Kohls, Lincoln Comfy and Sears; weekly on Friday for Amazon (OnePlatform, formerly Vendo, updates its file usually Thursday, sometimes Friday)"],
+    ["What it does", "Builds every feed from one F&O inventory pull, in each customer's own format. Daily customers get a quantity of 0, 24 or 50; it uploads the Mason, Kohls and Sears files to their portals (or queues them) and drafts the Dealora and Lincoln emails. For Amazon it builds the whole file from F&O: ASIN, SKU, UPC, product name and status for every Amazon dropship item. Status comes from quantity in warehouse 1600 using one agreed set of cutoffs (Daniel uses under 24 out, 24 to 50 low; Tina described 11 or fewer out, under 50 low). For low and out-of-stock items it adds the next available date: the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither. Discontinued items are marked disco while we have stock and obsolete once we don't. No 30-day cutoff. Then it drafts the Amazon email to Matt and Reggie, cc Avi G and Tara, and saves the file to OneDrive. First step (my idea): an F&O report with the dates already coalesced, even before anything else changes."],
+    ["Data", "F&O items (ASIN, SKU, UPC, name, status), quantity for 1600, open PO lines, Goods in Transit; each customer's template; Lincoln Comfy image URLs and Sears variation group IDs if needed; OnePlatform's file only as a cross-check"],
+    ["Evidence", "Day 2: Tina's six-step download, filter and match. Day 7: the full weekly cycle. Daniel restarts the file every week and emails it to Tina as an attachment. Tina's part is under 10 minutes; when she used to do Daniel's part, a lookup formula wrote the status automatically. The only OnePlatform fields we don't have (Amazon product line, subcategory) aren't needed in what we send. The whole list, every item in our Amazon catalog, goes out every week. Follow-up: Tina uses available quantity; the 30-day cutoff should go (Goods in Transit first, then the earliest open PO). Out-of-stock items aren't marked temporarily unavailable with an in-stock date, by us or OnePlatform. Follow-up with Daniel: the same hand-filter and VLOOKUP runs daily for five more customers, about 10 to 15 minutes a day for all of them; the Amazon file is dropship only."],
+    ["Confirm first", "Which out-of-stock cutoff is right (24 or 12); whether Kohls is still \"under 5, send 0\" and who uploads it; whether Lincoln Comfy needs image URLs and where they live; what Sears' variation group ID is; who should mark items temporarily unavailable"],
   ]),
   ...spec("D. Remittance matching assistant (opportunity 4)", [
     ["Trigger", "A check arriving by mail or email, with the remittance attached; for mailed checks, Chani's deposit email with the scans and batch total"],
@@ -221,7 +221,7 @@ add(
 
   h1("What to Measure Next"),
   ...bullets([
-    "For each top-5 item: how often it happens and how many each time. Still open: how long Daniel's part of the OnePlatform file takes and how many items need dates; Suzanne's checks a week; how long Baruch Salamander's reports take.",
+    "For each top-5 item: how often it happens and how many each time. Still open: how many Amazon items need dates; Suzanne's checks a week; how long Baruch Salamander's reports take.",
     "Still to shadow: Justin, the warehouse and sales. Repeat sessions with Daniel, Moshe Aryeh Grossman and Avi Altman.",
   ]),
   p("**Next step:** pick which of bots A to H to build first, and have Peleg take the settings list.", { spacing: { before: 200, after: 120 } }),
@@ -255,7 +255,7 @@ add(
     ["Tue Oct 20", "From 11:00", "Baruch Salamander (deductions, reports, collections)"],
     ["Wed Oct 21", "~11:30 to 12:00", "Moshe Aryeh Grossman (first note says 11:15; a later note says about 11:30)"],
     ["", "12:22", "Moshe Aryeh Grossman, Achim side: wire, bill of lading, containers"],
-    ["Fri Oct 23", "Not given", "Tina (Daniel's part described): weekly Amazon inventory file for OnePlatform (Vendo)"],
+    ["Fri Oct 23", "Not given", "Tina (Daniel's part described): weekly Amazon inventory file for OnePlatform (Vendo); follow-up with Daniel on his daily feeds"],
   ]),
   gap(),
 
@@ -859,6 +859,25 @@ add(
     "*(Observer's idea: an F&O report with the due dates already coalesced would be an easy first step, even if nothing else in the flow changes. Since everything we send is already in F&O, the whole file could be built for her every week.)*",
     "*(Observer's view: the file should be one shared file updated every week, not an attachment emailed back and forth.)*",
     "Tina uses Teams well, and also a lot of email (relevant to the central channel idea).",
+  ]),
+  h2("Follow-up with Daniel: five more customers, daily"),
+  p("From a conversation with Daniel afterwards, not watched. The Amazon file is one of six inventory feeds he builds."),
+  table([1900, 1300, 2560, 3600], ["Customer", "How often", "What they get", "How it's sent"], [
+    ["Amazon (via OnePlatform)", "Weekly", "In, low or out of stock", "Emailed to Tina, saved in OneDrive"],
+    ["Mason", "Daily", "0, 24 or 50", "Portal upload"],
+    ["Dealora", "Daily", "0, 24 or 50", "Email"],
+    ["Kohls", "Daily", "0, 24 or 50", "Portal upload"],
+    ["Lincoln Comfy", "Daily", "0, 24 or 50, plus an image URL", "Email"],
+    ["Sears", "Daily", "0, 24 or 50, plus a variation group ID", "Portal upload"],
+  ]),
+  gap(),
+  ...bullets([
+    "The Amazon file covers Amazon dropship only, not Amazon warehouse. His template is already on the server.",
+    "He downloads inventory from F&O, filters the stock column for one band, types the status in the next column, copies it down, then filters the next band. Then he VLOOKUPs from his working inventory file into each customer's file. Every customer has its own format.",
+    "**His cutoffs:** under 24 is out of stock (not 12, as Tina described), 24 to 50 is low, above that is in stock. The daily customers get those as numbers: 0, 24 or 50.",
+    "The daily feeds take about 10 to 15 minutes a day for all five.",
+    "To check: whether Lincoln Comfy actually needs the image URL and whether it's in F&O; what Sears' variation group ID is.",
+    "*(Observer's note: on Day 2 Tina uploaded Kohls on DSCO with an \"under 5, send 0\" rule. That doesn't match Daniel's 0 / 24 / 50, so which rule is current, and who does Kohls now, needs checking.)*",
   ]),
 );
 

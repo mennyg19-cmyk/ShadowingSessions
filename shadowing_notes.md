@@ -697,6 +697,18 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 - *(Observer's note: the file should be one shared file updated weekly, not an attachment passed back and forth.)*
 - Tina uses Teams well and also a lot of email (relevant to the central channel idea).
 
+## Follow-up with Daniel (after Day 7): daily inventory feeds for 5 more customers
+
+The Amazon file is one of six inventory feeds Daniel builds. From a conversation with Daniel, not watched.
+
+- **Amazon:** weekly. Amazon dropship only, not Amazon warehouse. His template is already on the server. He saves the finished file in OneDrive as well as emailing it to Tina.
+- **Mason, Dealora, Kohls, Lincoln Comfy, Sears:** daily. Each gets a quantity of 0, 24 or 50 per item (numbers, not in/low/out), each in its own format. Dealora and Lincoln are emailed; Mason, Kohls and Sears are uploaded to portals.
+- **Time:** about 10 to 15 minutes a day for all the daily ones.
+- **How:** downloads inventory from F&O, filters the stock column for one band, types the status (or number) in the next column, copies it down, then filters the next band. Then a VLOOKUP from his working inventory file into each customer's file.
+- **Daniel's cutoffs:** under 24 is out of stock (not 12, as Tina described), 24 to 50 is low, above that is in stock.
+- **To check:** Lincoln Comfy wants an image URL (is it in F&O, and do they actually need it?); Sears has a variation group ID.
+- *(Observer: Day 2 had Tina uploading Kohls on DSCO with an "under 5, send 0" rule. Daniel's 0 / 24 / 50 bands don't match that; worth checking which is current and who does Kohls now.)*
+
 ---
 
 # Candidate pain-point modules (working list)
@@ -744,6 +756,7 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - OnePlatform (Vendo): beyond the weekly file and advertising decisions, what else do they do for us?
 - Day 7: does Daniel use on-hand or available quantity (Tina uses available)? Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
+- Daniel's feeds: which out-of-stock cutoff is right, under 24 (Daniel) or 11 and under (Tina)? Is Kohls still "under 5, send 0" (Day 2) or Daniel's 0 / 24 / 50, and who uploads it? Does Lincoln Comfy need the image URL, and is it in F&O? What is Sears' variation group ID? Does Daniel use on-hand or available?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
 - Daniel: how many product lines a week does he build, and for which customers? Does each customer (Wayfair, Amazon, Home Depot, Kohls) need its own template?
 - Daniel: which attributes are missing from the main spec sheet and have to be read off the product images?

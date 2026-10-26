@@ -1,0 +1,184 @@
+# Customer Inventory Feeds (Amazon weekly, 5 customers daily)
+
+> **In one line:** Daniel hand-filters an F&O inventory download into six customer feeds: a weekly in / low / out file for Amazon (which Tina finishes with next available dates for OnePlatform), and a daily 0 / 24 / 50 quantity file for Mason, Dealora, Kohls, Lincoln Comfy and Sears. Everything in them already lives in F&O.
+
+*Amazon: observed Friday, Oct 23, 2026 (Day 7), sitting with Tina; Daniel's part described by Tina. Daily feeds: from a follow-up conversation with Daniel, not watched. OnePlatform was called Vendo when we started working with them.*
+
+---
+
+## At a Glance
+
+| | |
+| --- | --- |
+| **What** | Inventory feeds telling six customers what we can ship: no exact quantities, just a stock band per item |
+| **Why** | Amazon: OnePlatform uses it to make advertising decisions. Daily customers: not asked (presumably so their sites don't sell what we can't ship) |
+| **When** | Amazon weekly, on Friday. The other five daily |
+| **Who** | Daniel builds all six. Tina adds dates to Amazon's and sends it |
+| **Volume** | Amazon: every Amazon dropship item, every week. Daily: each customer's full item list |
+| **Time** | Daily feeds: about 10 to 15 minutes a day for all five (roughly 1 to 1.25 hours a week). Amazon: Tina under 10 minutes; Daniel's part not timed |
+| **Systems** | F&O (inventory, open PO lines, Goods in Transit), Excel filters and VLOOKUPs, the server (Daniel's templates), OneDrive, OnePlatform SharePoint, customer portals, email |
+
+### The six feeds
+
+| Customer | How often | What they get | Extra fields | How it's sent |
+| --- | --- | --- | --- | --- |
+| Amazon (via OnePlatform) | Weekly, Friday | In stock, low stock or out of stock, plus next available date | ASIN, SKU, UPC, product name | Tina emails Matt and Reggie, cc Avi G and Tara; Daniel also saves it in OneDrive |
+| Mason | Daily | 0, 24 or 50 | Own format | Portal upload |
+| Dealora | Daily | 0, 24 or 50 | Own format | Email |
+| Kohls | Daily | 0, 24 or 50 | Own format | Portal upload (DSCO) |
+| Lincoln Comfy | Daily | 0, 24 or 50 | Image URL | Email |
+| Sears | Daily | 0, 24 or 50 | Variation group ID | Portal upload |
+
+---
+
+## The Flow
+
+### Daily feeds
+
+```mermaid
+flowchart TD
+    A["F&O inventory download"] --> B["Daniel filters the stock column<br/>one band at a time"]
+    B --> C["Types 0 / 24 / 50 next to it<br/>and copies it down"]
+    C --> D["VLOOKUP into each<br/>customer's own format"]
+    D --> E["Portal upload:<br/>Mason, Kohls, Sears"]
+    D --> F["Email:<br/>Dealora, Lincoln Comfy"]
+```
+
+### Amazon, weekly (as it runs today)
+
+```mermaid
+flowchart TD
+    A["OnePlatform SharePoint<br/>full Amazon report"] --> B["Daniel copies one sheet<br/>into his base sheet on the network"]
+    B --> C["Daniel marks each item<br/>in / low / out of stock"]
+    C -->|"email attachment"| D["Tina: VLOOKUP to F&O<br/>open PO lines"]
+    D --> E{"Date within 30 days<br/>or already past?"}
+    E -->|"yes"| F["Tina pulls Goods in Transit<br/>and uses that date"]
+    E -->|"no"| G["Keep the earliest<br/>open PO date"]
+    F --> H["Email to Matt and Reggie<br/>cc Avi G and Tara"]
+    G --> H
+```
+
+---
+
+## Step by Step
+
+| # | Who | Step | Where |
+| --- | --- | --- | --- |
+| 1 | Daniel | Downloads OnePlatform's Excel, a running report of everything we do with Amazon, with the full product list | OnePlatform SharePoint |
+| 2 | Daniel | Copies one sheet into his template and starts the week's file from scratch | Server |
+| 3 | Daniel | Downloads inventory from F&O. Filters the stock column for one band, types in / low / out in the next column, copies it down, then filters the next band | F&O, Excel |
+| 4 | Daniel | VLOOKUPs the statuses from his working inventory file into the Amazon file | Excel |
+| 5 | Daniel | Saves it in OneDrive and emails it to Tina as an attachment | OneDrive, email |
+| 6 | Tina | Downloads open PO lines and VLOOKUPs the low and out-of-stock items to them, taking the **earliest** open PO date | F&O, Excel |
+| 7 | Tina | For dates within 30 days of today, or already past, pulls Goods in Transit and uses its date instead | F&O, Excel |
+| 8 | Tina | Leaves the date blank when there's no open PO and nothing in transit | Excel |
+| 9 | Tina | Emails the file to Matt and Reggie, cc Avi G and Tara | Email |
+
+Daniel can't do steps 6 to 8 because he has no access to open PO lines or Goods in Transit.
+
+### Daily feeds (Daniel)
+
+| # | Step | Where |
+| --- | --- | --- |
+| 1 | Downloads inventory from F&O | F&O |
+| 2 | Filters the stock column one band at a time and types 0, 24 or 50 next to it, copying it down | Excel |
+| 3 | VLOOKUPs into each customer's template, each in its own format | Excel, server |
+| 4 | Uploads Mason, Kohls and Sears to their portals; emails Dealora and Lincoln Comfy | Portals, email |
+
+---
+
+## The Rules
+
+### Stock levels
+
+We don't send exact quantities because the warehouse is too fluid. Status is based on **pieces** in **warehouse 1600** (our only warehouse). Tina uses available quantity.
+
+**Tina and Daniel described different cutoffs.** Daniel is the one doing it, and he uses 24:
+
+| Status | Daniel (what's done) | Tina's description | Daily customers get |
+| --- | --- | --- | --- |
+| Out of stock | Under 24 | 11 or fewer (Amazon requires full packs; 12 is the most common pack size) | 0 |
+| Low stock | 24 to 50 | 12 to 49 (under 50 is arbitrary) | 24 |
+| In stock | Above 50 | 50 or more | 50 |
+
+On Day 2, Kohls had its own rule ("under 5, send 0", uploaded by Tina on DSCO), which doesn't match the 0 / 24 / 50 Daniel describes.
+
+### Next available date
+
+| Source | When it's set | Notes |
+| --- | --- | --- |
+| Open PO line | When the PO is created | Covers items not yet shipped, but often out of date |
+| Goods in Transit | When the goods ship, and updated as things change | More accurate, but only exists once the goods are on the water |
+
+The two have to be combined: Goods in Transit alone would leave out everything not yet shipped. A past date usually means the warehouse has already received the goods. The 30-day cutoff comes from Avi Altman's explanation of how he updates dates in the system.
+
+### Black and red items
+
+- **Black:** items we keep selling. This is most of the work.
+- **Red:** discontinued or obsolete. They stay on the file so Amazon can sell its own remaining stock and OnePlatform still gets information on them. Once a red item's Amazon inventory reaches 0, it's dead.
+- Reds are updated from F&O status: discontinued with stock left stays **disco**; discontinued with no stock becomes **obsolete**.
+
+### What we need to send (Amazon)
+
+ASIN, SKU, UPC, product name and inventory status, for every Amazon **dropship** item (not Amazon warehouse) every week, not only items that changed. OnePlatform's file and the current file we use also has Amazon's product line, subcategory and similar fields, but we don't *need* to send those. **Everything we send is already in F&O.**
+
+---
+
+## Why It Works This Way
+
+| Question | Answer |
+| --- | --- |
+| Why start from scratch every week? | By design. A full download plus a lookup is easier than finding only the items whose status changed |
+| Why send the whole list and not just changes? | It's needed every week |
+| Why does Tina do the dates and not Daniel? | Daniel has no access to open PO lines or Goods in Transit |
+| Why the earliest open PO date? | It's the next stock to arrive |
+| Why the 30-day cutoff? | It follows how Avi Altman updates dates in the system |
+| Is anything on OnePlatform's file missing from F&O? | Only Amazon's product line and subcategory, which we don't send |
+| Why numbers for the daily customers? | They take a quantity, not a status, so the bands become 0, 24 and 50 |
+| Why six different files? | Each customer has its own format and its own way of receiving it (portal or email) |
+
+---
+
+## Pain Points
+
+- **Six hand-filtered feeds.** The same F&O download is filtered band by band and typed in by hand, every day, then VLOOKUPed into six different formats.
+- **Two sets of cutoffs.** Daniel uses 24; Tina describes 12. Kohls had a third rule on Day 2. Nobody has one written rule.
+- **Unclear extra fields.** Lincoln Comfy's image URL may not be needed or may not be in F&O; Sears' variation group ID isn't understood yet.
+- **Two people, two hand-offs, one email attachment** (Amazon). The file moves Daniel → Tina → OnePlatform by email instead of living in one shared place.
+- **Rebuilt every week** from a fresh download, even though the inputs are all in F&O.
+- **Manual VLOOKUPs across three exports** (OnePlatform file, open PO lines, Goods in Transit).
+- **Out-of-stock items aren't marked temporarily unavailable** on Amazon with an in-stock date. Tina is fairly sure OnePlatform doesn't do it for us, and we don't either.
+- **Key-person risk:** all six feeds sit with Daniel, his Amazon part isn't timed, nothing is documented, and Tina says he may be leaving.
+
+---
+
+## My Ideas
+
+1. **Start with an F&O report that has the dates already combined.** Even if we don't change the rest of the flow, one report with every item's next date is a good starting point and an easy build.
+2. **Build the whole file for her.** Everything we send (ASIN, SKU, UPC, product name, status) is already in F&O, so the entire weekly file can be generated every week.
+3. **Drop the 30-day rule.** Take Goods in Transit dates first, then look up open POs only for items still without a date. I've already recommended this to Tina.
+4. **One shared file, updated every week,** not an attachment emailed back and forth and started from scratch.
+5. **Make the low-stock cutoff a multiple of 12,** like 48 or 60, to match the pack size. Not changing it now; I'm not reinventing her wheel.
+6. **Mark out-of-stock items temporarily unavailable with an in-stock date.** Decide whether OnePlatform or we own it.
+7. **One inventory pull, six outputs.** The daily feeds are the same bands in different layouts, so one F&O pull can feed all of them, not just Amazon.
+8. **Write down one set of cutoffs** for everyone (24 or 12, and what happens to Kohls), and keep it in the bot instead of in Daniel's head.
+9. **Check Lincoln Comfy's image URL and Sears' variation group ID** before building: whether they're needed and whether F&O has them.
+10. **Communication note:** Tina uses Teams well but also a lot of email, which supports the case for one central channel.
+
+---
+
+## The Bot: Customer Inventory Feeds (Bot C)
+
+| | |
+| --- | --- |
+| **Trigger** | Daily for Mason, Dealora, Kohls, Lincoln Comfy and Sears; weekly on Friday for Amazon |
+| **What it does** | Pulls inventory for warehouse 1600 from F&O once and builds every feed in its customer's format, using one agreed set of cutoffs. Daily customers get 0, 24 or 50; it uploads Mason, Kohls and Sears to their portals (or queues them for upload) and drafts the Dealora and Lincoln Comfy emails. For Amazon it builds the whole file: ASIN, SKU, UPC, product name and in / low / out for every dropship item, plus the next available date for low and out-of-stock items (the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither; no 30-day cutoff). Marks discontinued items disco while we have stock and obsolete once we don't. Saves to OneDrive and drafts the email to Matt and Reggie, cc Avi G and Tara |
+| **Data** | F&O items (ASIN, SKU, UPC, name, status), quantity for 1600, open PO lines, Goods in Transit; each customer's template; Lincoln Comfy image URLs and Sears variation group IDs if needed; OnePlatform's file only as a cross-check |
+| **First step** | An F&O report with the stock band and the next available date already worked out for every item |
+| **Human check** | Daniel (or whoever takes over) glances at the daily files before upload; Tina reviews the Amazon file and sends the email |
+| **Replaces** | Daniel's daily band-by-band filtering and six VLOOKUPs, his weekly Amazon rebuild, Tina's date VLOOKUPs, and the email hand-off between them. About 1 to 1.25 hours a week of daily feeds plus the Amazon file |
+| **Later** | Flag out-of-stock Amazon items to mark temporarily unavailable, once an owner is agreed |
+
+---
+
+*Sources: Day 7 and the follow-up with Daniel in [raw_notes.md](../raw_notes.md) and [shadowing_notes.md](../shadowing_notes.md); Part 13 and Bot C in the [v2 report](../Shadowing_Report_2026-10-22_v2.md). Day 2 (Part 4, episodes 1 and 5) has the first, partial view of the Kohls and Amazon feeds.*
