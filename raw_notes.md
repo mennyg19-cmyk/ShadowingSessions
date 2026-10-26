@@ -584,3 +584,28 @@ Only for Amazon. I know Mason and Kohls would like to receive future dates, but 
 **Follow-up (who uploads Kohls):**
 
 Daniel does the inventory upload for the disco'd items, and he does it every day. For active items on our file he uses the filters with the VLOOKUPs and does the 24, 50 or 0, but for the discontinued items he leaves the real quantities on there. Tina was only uploading a file on Day 2 because there was an issue she was trying to diagnose; she usually does not do them.
+
+---
+
+## Follow-up with Charmaine (after Day 7): deductions and disputes
+
+Charmaine checks Wayfair every day on their portal. Wayfair managed returns are part of our policy; we always accept. Misinformation or mis-shipped: she checks to make sure we actually sent the wrong item. They usually send an image with the issues. If it doesn't match, she files a dispute and they reply via email if they accept. This sometimes can take a few comments on the ticket back and forth.
+
+She does Lowes, OJCommerce and a few others, only DS. When Suzanne puts the payments into AR, she checks with Charmaine to make sure that their remittance matches the deductions Charmaine accepted. VirVentures, UnbeatableSales and KartIt are manual and handled through emails entirely. So Charmaine gets an email with a deduction and either confirms or disputes it the same way. She then saves the email, so when the check and remittance come in to Suzanne, she checks with her again. She also needs to make sure that the items were returned properly as per the policy we have with these customers.
+
+Suzanne checks the amounts when she puts in the payments (when asked if she checks the amounts against the order/invoice from the deductions).
+
+***
+**End of the observer's message. Follow-up (the assistant asked about volume, time, the checks, the hand-off to Suzanne and deadlines):**
+
+The rules for each customer are by Tina and Avi. Charmaine also has them in her head, which she cannot repeat right now; she just does it.
+
+To get the info for a dispute is 5 to 10 minutes. Sometimes she needs to go through Tina and then respond. The actual full process may take a few days, but she's busy with each dispute for about 5 to 15 minutes. From October 2 to 15 she had 70 deductions, and 11 of them were ones she needed to check, which take the time; the rest were auto-accept.
+
+She doesn't have an exact count of deductions. Unbeatable sends a load of emails once a week with all their deductions. She goes through each one to make sure we received the item back to the warehouse. If we did not, she won't approve the deduction, and we go back to them that we never received it, and it will go on next month's payment when we receive the tracking.
+
+She makes sure, usually by checking images from the customer. She also checks tracking if the customer says they never received it, and so on.
+
+Wayfair is the only one with a deadline for deductions. They have a settlement date on the deductions, so she needs to do it before then.
+
+The running list of accepted deductions is mainly Charmaine's inbox, which she searches when Suzanne asks her about it. Suzanne's and Charmaine's desks are right next to each other, so they talk to each other. She does not keep a list. For any customer that has a portal, she checks the portal when Suzanne asks her; for the ones that use email, she checks her emails. She also doesn't tell Suzanne anything until the process is done: if the dispute is accepted, she tells Suzanne not to accept the deduction on the remittance, and if it's not, she tells her it's good to accept.
