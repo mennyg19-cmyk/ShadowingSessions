@@ -676,7 +676,7 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 
 ### Stock levels (pieces in F&O, warehouse 1600, our only warehouse)
 - Quantity: Tina uses available quantity. Daniel was said to use on-hand (first answer); to confirm with him.
-- Out of stock: 11 or fewer. Amazon requires full packs and 12 is the most common pack size.
+- Out of stock: 11 or fewer, as Tina first described (Amazon requires full packs and 12 is the most common pack size). Daniel actually uses under 24, and Tina says that's fine: any cutoff above the pack size works.
 - Low stock: under 50. Arbitrary. *(Observer's view: should probably be a multiple of 12, like 48 or 60. Not changing it now.)*
 - In stock: 50 or more.
 - We don't give Amazon exact inventory because the warehouse is too fluid.
@@ -701,13 +701,14 @@ Observer sat with Tina. Daniel's part was described by Tina, not watched. No clo
 
 The Amazon file is one of six inventory feeds Daniel builds. From a conversation with Daniel, not watched.
 
-- **Amazon:** weekly. Amazon dropship only, not Amazon warehouse. His template is already on the server. He saves the finished file in OneDrive as well as emailing it to Tina.
+- **Amazon:** weekly. Daniel said dropship only, but Tina clarified it's OnePlatform's whole catalog, which is the entire Amazon catalog. He thought dropship because it's the same process as his other feeds, and he doesn't know what the file is used for (Tina: OnePlatform's advertising decisions for Amazon warehouse). His template is already on the server. He saves the finished file in OneDrive as well as emailing it to Tina.
 - **Mason, Dealora, Kohls, Lincoln Comfy, Sears:** daily. Each gets a quantity of 0, 24 or 50 per item (numbers, not in/low/out), each in its own format. Dealora and Lincoln are emailed; Mason, Kohls and Sears are uploaded to portals.
 - **Time:** about 10 to 15 minutes a day for all the daily ones.
 - **How:** downloads inventory from F&O, filters the stock column for one band, types the status (or number) in the next column, copies it down, then filters the next band. Then a VLOOKUP from his working inventory file into each customer's file.
-- **Daniel's cutoffs:** under 24 is out of stock (not 12, as Tina described), 24 to 50 is low, above that is in stock.
+- **Cutoffs:** under 24 is out of stock, 24 to 50 is low, above that is in stock. Tina had said 12, but confirmed 24 is fine as long as it's above the pack size, so 24 is the rule.
 - **To check:** Lincoln Comfy wants an image URL (is it in F&O, and do they actually need it?); Sears has a variation group ID.
-- *(Observer: Day 2 had Tina uploading Kohls on DSCO with an "under 5, send 0" rule. Daniel's 0 / 24 / 50 bands don't match that; worth checking which is current and who does Kohls now.)*
+- For a bot or report runner, Amazon and the daily feeds are the same job, scheduled differently.
+- *(Day 2 had Kohls on an "under 5, send 0" rule; Daniel's 0 / 24 / 50 is what's sent now.)*
 
 ---
 
@@ -756,7 +757,7 @@ The Amazon file is one of six inventory feeds Daniel builds. From a conversation
 - Wayfair listing with wrong curtain width: who maintains Wayfair product data, and has it been corrected? (Possible link to Daniel's Wayfair sheet.)
 - OnePlatform (Vendo): beyond the weekly file and advertising decisions, what else do they do for us?
 - Day 7: does Daniel use on-hand or available quantity (Tina uses available)? Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
-- Daniel's feeds: which out-of-stock cutoff is right, under 24 (Daniel) or 11 and under (Tina)? Is Kohls still "under 5, send 0" (Day 2) or Daniel's 0 / 24 / 50, and who uploads it? Does Lincoln Comfy need the image URL, and is it in F&O? What is Sears' variation group ID? Does Daniel use on-hand or available?
+- Daniel's feeds (answered: 24 is the cutoff; the Amazon file is the whole OnePlatform catalog). Does Lincoln Comfy need the image URL, and is it in F&O? What is Sears' variation group ID? Does Daniel use on-hand or available?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
 - Daniel: how many product lines a week does he build, and for which customers? Does each customer (Wayfair, Amazon, Home Depot, Kohls) need its own template?
 - Daniel: which attributes are missing from the main spec sheet and have to be read off the product images?

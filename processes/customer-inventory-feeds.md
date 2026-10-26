@@ -11,10 +11,10 @@
 | | |
 | --- | --- |
 | **What** | Inventory feeds telling six customers what we can ship: no exact quantities, just a stock band per item |
-| **Why** | Amazon: OnePlatform uses it to make advertising decisions. Daily customers: not asked (presumably so their sites don't sell what we can't ship) |
+| **Why** | Amazon: OnePlatform uses it to make advertising decisions for Amazon warehouse (Daniel didn't know what it was for). Daily customers: not asked (presumably so their sites don't sell what we can't ship) |
 | **When** | Amazon weekly, on Friday. The other five daily |
 | **Who** | Daniel builds all six. Tina adds dates to Amazon's and sends it |
-| **Volume** | Amazon: every Amazon dropship item, every week. Daily: each customer's full item list |
+| **Volume** | Amazon: OnePlatform's whole catalog (the entire Amazon catalog), every week. Daily: each customer's full item list |
 | **Time** | Daily feeds: about 10 to 15 minutes a day for all five (roughly 1 to 1.25 hours a week). Amazon: Tina under 10 minutes; Daniel's part not timed |
 | **Systems** | F&O (inventory, open PO lines, Goods in Transit), Excel filters and VLOOKUPs, the server (Daniel's templates), OneDrive, OnePlatform SharePoint, customer portals, email |
 
@@ -93,15 +93,13 @@ Daniel can't do steps 6 to 8 because he has no access to open PO lines or Goods 
 
 We don't send exact quantities because the warehouse is too fluid. Status is based on **pieces** in **warehouse 1600** (our only warehouse). Tina uses available quantity.
 
-**Tina and Daniel described different cutoffs.** Daniel is the one doing it, and he uses 24:
+| Status | Pieces | Daily customers get |
+| --- | --- | --- |
+| Out of stock | Under 24 | 0 |
+| Low stock | 24 to 50 | 24 |
+| In stock | Above 50 | 50 |
 
-| Status | Daniel (what's done) | Tina's description | Daily customers get |
-| --- | --- | --- | --- |
-| Out of stock | Under 24 | 11 or fewer (Amazon requires full packs; 12 is the most common pack size) | 0 |
-| Low stock | 24 to 50 | 12 to 49 (under 50 is arbitrary) | 24 |
-| In stock | Above 50 | 50 or more | 50 |
-
-On Day 2, Kohls had its own rule ("under 5, send 0", uploaded by Tina on DSCO), which doesn't match the 0 / 24 / 50 Daniel describes.
+Tina first described 11 or fewer as out of stock (Amazon requires full packs, and 12 is the most common pack size). Daniel uses 24, and Tina confirmed that's fine: any cutoff above the pack size works. On Day 2, Kohls had an "under 5, send 0" rule; it now gets 0 / 24 / 50 like the others.
 
 ### Next available date
 
@@ -120,7 +118,7 @@ The two have to be combined: Goods in Transit alone would leave out everything n
 
 ### What we need to send (Amazon)
 
-ASIN, SKU, UPC, product name and inventory status, for every Amazon **dropship** item (not Amazon warehouse) every week, not only items that changed. OnePlatform's file and the current file we use also has Amazon's product line, subcategory and similar fields, but we don't *need* to send those. **Everything we send is already in F&O.**
+ASIN, SKU, UPC, product name and inventory status, for every item in OnePlatform's catalog (the entire Amazon catalog) every week, not only items that changed. OnePlatform's file and the current file we use also has Amazon's product line, subcategory and similar fields, but we don't *need* to send those. **Everything we send is already in F&O.**
 
 ---
 
@@ -142,7 +140,8 @@ ASIN, SKU, UPC, product name and inventory status, for every Amazon **dropship**
 ## Pain Points
 
 - **Six hand-filtered feeds.** The same F&O download is filtered band by band and typed in by hand, every day, then VLOOKUPed into six different formats.
-- **Two sets of cutoffs.** Daniel uses 24; Tina describes 12. Kohls had a third rule on Day 2. Nobody has one written rule.
+- **The rules live in people's heads.** Tina described 12, Daniel uses 24, and Kohls had "under 5" on Day 2. 24 turned out to be fine, but nothing was written down.
+- **Daniel doesn't know what the Amazon file is for,** and thought it was dropship only. He runs it the same way as the others.
 - **Unclear extra fields.** Lincoln Comfy's image URL may not be needed or may not be in F&O; Sears' variation group ID isn't understood yet.
 - **Two people, two hand-offs, one email attachment** (Amazon). The file moves Daniel → Tina → OnePlatform by email instead of living in one shared place.
 - **Rebuilt every week** from a fresh download, even though the inputs are all in F&O.
@@ -161,9 +160,10 @@ ASIN, SKU, UPC, product name and inventory status, for every Amazon **dropship**
 5. **Make the low-stock cutoff a multiple of 12,** like 48 or 60, to match the pack size. Not changing it now; I'm not reinventing her wheel.
 6. **Mark out-of-stock items temporarily unavailable with an in-stock date.** Decide whether OnePlatform or we own it.
 7. **One inventory pull, six outputs.** The daily feeds are the same bands in different layouts, so one F&O pull can feed all of them, not just Amazon.
-8. **Write down one set of cutoffs** for everyone (24 or 12, and what happens to Kohls), and keep it in the bot instead of in Daniel's head.
-9. **Check Lincoln Comfy's image URL and Sears' variation group ID** before building: whether they're needed and whether F&O has them.
-10. **Communication note:** Tina uses Teams well but also a lot of email, which supports the case for one central channel.
+8. **Write the rules down** (under 24 out, 24 to 50 low, above 50 in) and keep them in the bot instead of in Daniel's head.
+9. **One job, different schedules.** For a bot or report runner, Amazon and the daily feeds are the same thing: same pull, same bands, a different format and schedule per customer.
+10. **Check Lincoln Comfy's image URL and Sears' variation group ID** before building: whether they're needed and whether F&O has them.
+11. **Communication note:** Tina uses Teams well but also a lot of email, which supports the case for one central channel.
 
 ---
 
@@ -172,7 +172,7 @@ ASIN, SKU, UPC, product name and inventory status, for every Amazon **dropship**
 | | |
 | --- | --- |
 | **Trigger** | Daily for Mason, Dealora, Kohls, Lincoln Comfy and Sears; weekly on Friday for Amazon |
-| **What it does** | Pulls inventory for warehouse 1600 from F&O once and builds every feed in its customer's format, using one agreed set of cutoffs. Daily customers get 0, 24 or 50; it uploads Mason, Kohls and Sears to their portals (or queues them for upload) and drafts the Dealora and Lincoln Comfy emails. For Amazon it builds the whole file: ASIN, SKU, UPC, product name and in / low / out for every dropship item, plus the next available date for low and out-of-stock items (the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither; no 30-day cutoff). Marks discontinued items disco while we have stock and obsolete once we don't. Saves to OneDrive and drafts the email to Matt and Reggie, cc Avi G and Tara |
+| **What it does** | Pulls inventory for warehouse 1600 from F&O once and builds every feed in its customer's format, using one set of cutoffs (under 24 out, 24 to 50 low, above that in), each on its own schedule. Daily customers get 0, 24 or 50; it uploads Mason, Kohls and Sears to their portals (or queues them for upload) and drafts the Dealora and Lincoln Comfy emails. For Amazon it builds the whole file: ASIN, SKU, UPC, product name and in / low / out for every item in OnePlatform's catalog, plus the next available date for low and out-of-stock items (the Goods in Transit date where there is one, otherwise the earliest open PO date, blank if neither; no 30-day cutoff). Marks discontinued items disco while we have stock and obsolete once we don't. Saves to OneDrive and drafts the email to Matt and Reggie, cc Avi G and Tara |
 | **Data** | F&O items (ASIN, SKU, UPC, name, status), quantity for 1600, open PO lines, Goods in Transit; each customer's template; Lincoln Comfy image URLs and Sears variation group IDs if needed; OnePlatform's file only as a cross-check |
 | **First step** | An F&O report with the stock band and the next available date already worked out for every item |
 | **Human check** | Daniel (or whoever takes over) glances at the daily files before upload; Tina reviews the Amazon file and sends the email |

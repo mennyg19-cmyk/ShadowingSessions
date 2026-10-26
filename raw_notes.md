@@ -536,3 +536,12 @@ Sears has a variation group ID. Need to check that out more.
 Amazon is once a week. The others are daily. It takes about 10 to 15 minutes to do all of them daily.
 
 He emails Dealora and Lincoln, and the rest get uploaded to portals.
+
+***
+**Follow-up (clarified with Tina, after talking to Daniel):**
+
+Tina described the process as only for Vendo to take care of advertising; Daniel describes it as an inventory file. According to Tina, Vendo is making advertising decisions for Amazon Warehouse. From Daniel's standpoint he's doing the same thing either way; what Tina does with it after he's done is not his problem.
+
+Tina says 24 is fine; it doesn't matter as long as it's more than the pack size. So whether or not he's doing exactly what she originally said, it's fine.
+So Daniel is doing this for the whole Vendo catalog and doesn't know what it's for. He is using their catalog, which is the entire Amazon catalog. He thinks it's dropship because for him it's the same process for Amazon and the others (besides switching in / out / low stock for 0 / 24 / 50).
+Technically, for a bot or a report runner, for our purposes it's also the same; we'll just schedule each one differently.
