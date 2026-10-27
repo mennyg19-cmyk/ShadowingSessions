@@ -58,6 +58,8 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 | Mordy Berman | Officially the CFO, per the observer. Most money decisions are made directly by Isaac Grossman, so Mordy works more as an assistant to the CEO on money decisions. Baruch Grossman (COO) calls him a controller. Works offsite and has not been shadowed. Receives Baruch Salamander's recovery reports | Day 4: Chani thought he tells Isaac Grossman when credit card payments are due |
 | Ken Kaplan | One of the longest-tenured employees. Easy to work with and open to new tools. Cc'd on Baruch Salamander's recovery reports | Day 4: sent Chani a list with "OFB" on it |
 | Zundel | On the payments team: applies payments to POs and voyages in F&O, per Moshe's description (Day 6); Moshe doesn't know exactly what he does. Not seen or shadowed, and the observer has had no contact since he was brought in. Cc'd on Baruch Salamander's recovery reports | Day 4: recipient of an email from Avi G with credit card bills |
+| Simon | Was CFO for a while; with his assistant Josh, given the goal of cleaning up Amazon. Moved our chargebacks from the first company to SupplyPike (now SPS) | Per Tina (Oct 27). Not met |
+| Josh | Simon's assistant on the Amazon clean-up | Per Tina (Oct 27). Not met |
 | Robert | Works in our warehouse. Also helps Isaac Grossman, so some bills go to his email and he forwards them | Day 4: forwarded a Contact Electric bill and a set of unpaid invoices |
 | Contact Electric; Chase Card Services | Vendors | Day 4 payments |
 | Dan Holland | In charge of IT and EDI. Works with Peleg | Day 4: copied on the OneDrive file-sharing email |
@@ -780,6 +782,14 @@ The observer asked him to walk through the whole deduction workflow. Described a
 
 **Next:** Tina set up our SPS Commerce access, so the observer is going to her next to understand our connection with them.
 
+### Tina: backstory on SPS Commerce (after Baruch Salamander, Oct 27)
+
+- **How we got here:** Simon, CFO for a while, and his assistant Josh were given the main goal of cleaning up Amazon. They looked at a couple of companies and quickly found that the first company handling our chargebacks wasn't delivering what we paid for: it was supposed to handle everything and didn't. Tina was the go-between because she knew the area. We moved to SupplyPike, which SPS has since bought.
+- **The market:** there were four major chargeback companies; they bought each other up and now there are two. They work with the main retailers.
+- **Why pay SPS instead of disputing in Vendor Central and the portals ourselves:** each retailer's portal is a tangle, different from the others and with its own terminology. SPS does the first review and funnels everything into one clean view.
+- **Findings:** SPS also investigates for us. We knew Amazon was taking too much in co-ops but didn't know how to investigate it; SPS did, and still does.
+- *Not covered yet:* how the connection works technically (what data SPS gets from us and how, e.g. the warehouse BOLs), what we pay, and who owns the account.
+
 ---
 
 # Candidate pain-point modules (working list)
@@ -837,7 +847,7 @@ The observer asked him to walk through the whole deduction workflow. Described a
 - Lunch window (12:15 to ~2:45 on Day 1) is blank by design (not shadowing).
 
 # Shadowing plan
-- Next (Oct 27): Tina, on our connection with SPS Commerce (she set up the access).
+- Oct 27: Tina gave the backstory on SPS Commerce. Still to learn: the technical connection, what we pay and who owns the account.
 - Next: Moshe Aryeh Grossman's PortPro cleanup. Baruch Salamander done (Day 5, first session). Done for now: Tina, Daniel, Moshe's ChatGPT use (#16), Charmaine's afternoon.
 - Final report: remove the "ask Suzanne" open item from the Day 1 content; the observer rule is to only ask WHAT.
 - Done: Suzanne's morning (Day 3), Charmaine's afternoon (#17 to #21), Chani's morning, Tina, Daniel and part of Suzanne's day (Day 4). Moshe Aryeh Grossman's second session (Day 6) is done.

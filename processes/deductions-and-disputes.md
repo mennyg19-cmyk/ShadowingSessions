@@ -2,7 +2,7 @@
 
 > **In one line:** when a customer takes money off a payment, someone decides whether to accept or dispute it. Charmaine does it by hand for the dropship customers (Wayfair portal and email). Baruch Salamander does it in SPS Commerce SupplyPike for Amazon, Lowes, Home Depot and Walmart, where most of it is one click and SPS runs the dispute. The exception is shortage proof for Lowes, Home Depot and Walmart, which he digs out of F&O and FedEx one tracking number at a time.
 
-*Charmaine: from a conversation after Day 7, not watched, plus Day 2 (Part 7), where she was seen working Wayfair deductions. Baruch Salamander: Day 8 (Oct 27), a walkthrough he gave on request, plus Day 5 (Part 11). Still to add: Suzanne's short pays, the Amazon dispute list from Avi G, and how we're connected to SPS Commerce (Tina set up the access).*
+*Charmaine: from a conversation after Day 7, not watched, plus Day 2 (Part 7), where she was seen working Wayfair deductions. Baruch Salamander: Day 8 (Oct 27), a walkthrough he gave on request, plus Day 5 (Part 11). Tina: backstory on why we use SPS Commerce, after Baruch Salamander on Oct 27. Still to add: Suzanne's short pays, the Amazon dispute list from Avi G, and the technical side of our SPS Commerce connection.*
 
 ---
 
@@ -41,6 +41,13 @@
 | Vendor returns | $10k | $0 | Usually can't be recovered; Matt tried |
 | Overages | New | n/a | Baruch Salamander submits invoices |
 | Advertising | About $75k a month | n/a | Not disputed; invoiced through Vendor Central since 8/1/26 (check or wire only) |
+
+### Why we use SPS Commerce (Tina's backstory)
+
+- **The first company didn't deliver.** Simon, CFO for a while, and his assistant Josh were tasked with cleaning up Amazon. They found that the company handling our chargebacks was supposed to handle everything and didn't. Tina was the go-between. We moved to **SupplyPike**, since bought by **SPS Commerce**.
+- **Only two players left.** There were four major chargeback companies; after buying each other up there are two, working with the main retailers.
+- **What we pay them for:** every retailer portal is tangled and uses its own terminology. SPS does the first review and funnels it all into one clean view, so Baruch Salamander can mostly select and click.
+- **Findings:** SPS also investigates. It found that Amazon was taking too much in co-ops, which we suspected but couldn't check ourselves, and keeps watching.
 
 ---
 
@@ -189,6 +196,8 @@ flowchart TD
 | Why is Lowes, Home Depot and Walmart by hand? | SPS needs proof of delivery for their shortages, and nobody sends it automatically, so he gets each POD from FedEx himself. Walmart is worse: many carriers, and each needs a POD and a BOL |
 | Why aren't freight violations disputed? | He was never given the information or documentation; SPS could do it if we supplied it |
 | Why can't co-ops be disputed now? | Amazon changed the rules in the past 8 months and put them on hold to study them, until at least April 2027 |
+| Why SPS and not the portals directly? | Each portal is a tangle with its own terminology; SPS reviews first and puts everything in one view. It also investigates, as it did with Amazon's co-op overcharges (Tina) |
+| Why SupplyPike / SPS and not the first company? | The first company was supposed to handle everything and didn't; Simon and Josh found it when cleaning up Amazon (Tina) |
 | Why the waived report? | To show how much SPS is saving us |
 
 ---
@@ -225,6 +234,7 @@ flowchart TD
 9. **Replace the "million different ways" with scheduled reports** for the people who actually use them (Bot E).
 10. **Look at why we lose chargebacks and shortages.** If on-time shipment or short-ship chargebacks keep coming back, the fix may be in the warehouse, not in disputing.
 11. **One deductions view for everyone:** Charmaine, Baruch Salamander and Suzanne's short pays, feeding remittance matching (Bot D).
+12. **Keep checking that SPS delivers what we pay for.** The first company didn't, and it took a CFO project to find out. The waived and recovery reports Baruch Salamander already pulls could become a simple monthly scorecard: charged, disputed, recovered, and SPS's fee.
 
 ---
 

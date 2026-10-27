@@ -187,7 +187,7 @@ Times marked \~ are estimates from the order of events. The original notes only 
 | Wed Oct 21 | \~11:30 to 12:00 | Moshe Aryeh Grossman (first note says 11:15; a later note says about 11:30) |
 |  | 12:22 | Moshe Aryeh Grossman, Achim side: wire, bill of lading, containers |
 | Fri Oct 23 | Not given | Tina (Daniel's part described): weekly Amazon inventory file for OnePlatform (Vendo); follow-up with Daniel on his daily feeds |
-| Tue Oct 27 | Not given | Baruch Salamander: walkthrough of the deduction workflow (SPS Commerce) |
+| Tue Oct 27 | Not given | Baruch Salamander: walkthrough of the deduction workflow (SPS Commerce); Tina: backstory on SPS |
 
 ## Who's who
 
@@ -984,6 +984,14 @@ The observer asked him to walk through the whole deduction workflow. Described a
 - **Walmart is harder** (his addition, later): Walmart uses many carriers, so he has to get both the POD and the BOL from each carrier, not just FedEx.
 - Besides that, he reports all the numbers in different ways.
 - **Next:** Tina set up our SPS Commerce access; the observer is going to her to understand our connection with them.
+
+## Tina: Why We Use SPS Commerce (backstory, Oct 27)
+
+- **How we got here:** Simon, CFO for a while, and his assistant Josh were given the main goal of cleaning up Amazon. They quickly found that the first company handling our chargebacks was supposed to handle everything and didn't, so we weren't getting what we paid for. Tina was the go-between because she knew the area. We moved to SupplyPike, which SPS has since bought.
+- **The market:** there were four major chargeback companies; they bought each other up and now there are two, working with the main retailers.
+- **Why not dispute in Vendor Central and the portals ourselves:** each retailer's portal is a tangle with its own terminology. SPS does the first review and funnels everything into one clean view.
+- **Findings:** SPS also investigates. We knew Amazon was taking too much in co-ops but didn't know how to check; SPS did, and still does.
+- *Not covered yet:* the technical connection (what data SPS gets from us and how), what we pay, and who owns the account.
 
 # Part 15: Observer's Own Work (not part of the process study)
 

@@ -649,3 +649,9 @@ He does the same thing with Home Depot and Walmart.
 Besides that, he reports all the numbers different ways.
 
 Tina set up access to SPS Commerce, so I will be going to her next to understand our connection with them.
+
+### Tina: backstory on SPS Commerce (after Baruch Salamander, Oct 27)
+
+Simon was CFO for a bit. He and his assistant (Josh) were given the primary goal of cleaning up Amazon. They started investigating a couple of companies. They took over a company we were using and discovered (it happened very fast) that we weren't getting what we were paying for from the first company that was handling chargebacks. There were four major ones; then they bought each other up and now there are two. They work with the main retailers. Tina was the go-between because she was knowledgeable. The original company was supposed to handle everything for us, but Simon and Josh discovered they didn't, so we moved to another company, SupplyPike, which has since been bought out by SPS.
+
+What do they do more than us going into Vendor Central and the other customer portals to dispute chargebacks? The customer portals are extremely spaghettied and different and use different terminology, so SPS Commerce does the first review for us and funnels them into neat and clean simplicity. They also do some findings for us. We knew that Amazon was taking too much in co-ops, but we needed to investigate and had no idea how to. SPS did that and continues to do that for us.
