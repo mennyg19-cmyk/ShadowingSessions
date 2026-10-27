@@ -609,3 +609,41 @@ She makes sure, usually by checking images from the customer. She also checks tr
 Wayfair is the only one with a deadline for deductions. They have a settlement date on the deductions, so she needs to do it before then.
 
 The running list of accepted deductions is mainly Charmaine's inbox, which she searches when Suzanne asks her about it. Suzanne's and Charmaine's desks are right next to each other, so they talk to each other. She does not keep a list. For any customer that has a portal, she checks the portal when Suzanne asks her; for the ones that use email, she checks her emails. She also doesn't tell Suzanne anything until the process is done: if the dispute is accepted, she tells Suzanne not to accept the deduction on the remittance, and if it's not, she tells her it's good to accept.
+
+---
+
+## Day 8, Tue Oct 27: Baruch Salamander, breakdown of the deduction workflow (asked him to walk me through it)
+
+Daily basis: he goes to SPS Commerce SupplyPike. They are a third-party funnel for Amazon, Walmart, Home Depot and Lowes. They segregate the deductions into groups.
+
+He checks if there are new overages. If there are, he selects them all and submits invoices.
+
+Then he goes to chargebacks. Most chargebacks we can't really win the dispute. Certain chargebacks we are able to dispute, and we are given 30 days to dispute them. He filters to the last 30 days, and by the types that we can't dispute. The ones we can dispute are on-time shipment (SPS Commerce also disputes on their own). Anything with an X, we can't dispute. So he selects all available and clicks create disputes. Many chargebacks are handled by SPS. Anything that is waived, SPS Commerce took care of already, so he downloads the reports of waived so we know how much SPS is saving us.
+
+Co-ops: costs to do business with Amazon on a monthly basis. It's about $150k a month, ballpark figure. Besides that, there are advertising charges. Before 8/1/26 we paid advertising by CC, and it was about $75k a month for advertising. After 8/1 they don't want to get paid by CC, only check or wire, so they invoice us through Vendor Central.
+
+Co-ops: during the past 8 months they changed their rules on how to dispute co-ops, so they put them on hold for a certain amount of time. The next co-op that's able to be disputed is not before April 2027. It's not that they can't be disputed at all, but not now. They do this because they want to study them. Co-ops can be valid or invalid. You can't dispute valid ones. On the invalid co-ops (Baruch needs to look into why it's invalid or valid; he just sees a list of invalid co-ops and clicks them all and disputes them. SPS handles the disputes, and they label them valid or invalid). We can only dispute co-ops for the past 2 years. We took care of last year's co-ops.
+
+Sounds like he so far goes into SPS, selects everything that is possible to dispute, disputes, and then SPS handles it. Last year he was able to recover $146k in co-ops. He recovered $127k in chargebacks out of $540k. Overages are new.
+
+Deductions are completely handled by SPS. They are shortage claims. SPS Commerce gets a copy of the BOLs straight from the warehouse, so they handle the shortage claims on their own. The amount they got back for us last year was $191k out of $917k.
+
+(SPS Commerce handles the disputes, but we tell them what to dispute, besides the ones that they can handle on their own.)
+
+[note] Baruch Salamander is hard to talk to.
+
+Vendor returns we usually cannot get money back on. They usually don't charge us on it, so it was only $10k last year, and Matt tried getting it back but didn't succeed.
+
+Summary: he comes into Amazon, disputes what he can with a click, allows SPS to dispute whatever they can, ignores the ones we can't, and then exports reports and summarises them a million different ways for Tatty and the money team.
+
+-- This was all for Amazon.
+
+Lowes: deductions and open invoices. He goes to New. The only ones we can dispute are shortages. Freight violations he doesn't dispute because he can't (shrugged his shoulders; he wasn't given the information or documentation to do so). SPS can handle them, but only if we give them the documentation.
+
+When he finds one that he can dispute, he takes the PO, goes to F&O, opens the order, goes to Warehouse, Shipment details, Pacejet shipment, and finds the tracking. If there are multiple tracking numbers, he needs to check each one. He takes the tracking, goes to FedEx, pastes the tracking; if it shows delivered, he obtains proof of delivery: he inputs our account number (which he saves in his email), downloads the POD PDF, names it, opens the dispute in SPS, copies a templated message to ask for a reversal, uploads the document and submits.
+
+He does the same thing with Home Depot and Walmart.
+
+Besides that, he reports all the numbers different ways.
+
+Tina set up access to SPS Commerce, so I will be going to her next to understand our connection with them.

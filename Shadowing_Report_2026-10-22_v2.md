@@ -1,6 +1,6 @@
 # Shadowing Report
 
-*Wednesday, October 14 to Friday, October 23, 2026 (seven shadowing days). Version 2: ranked summary up front, detail in the appendix*
+*Wednesday, October 14 to Tuesday, October 27, 2026 (eight shadowing days). Version 2: ranked summary up front, detail in the appendix*
 
 Prepared for Baruch Grossman (COO) and Peleg.
 
@@ -12,7 +12,7 @@ I came in with a clean view, so this report records what I saw people actually d
 
 # Summary
 
-Seven days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The clearest bot, and the most measured time, is **Daniel's channel files built from the spec sheet**. The **payment to container release chain** is the biggest money risk, but only when cash flow is tight. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate.
+Eight days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The clearest bot, and the most measured time, is **Daniel's channel files built from the spec sheet**. The **payment to container release chain** is the biggest money risk, but only when cash flow is tight. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate.
 
 # Act on Now
 
@@ -106,7 +106,7 @@ Each is written so it can be built or rejected. "Confirm first" is what I still 
 | Trigger | A schedule, instead of a manual daily email |
 | What it does | Sends recovery totals, the Amazon payments and deductions breakdown, and aging by salesman from the data, only to people who use them |
 | Data | SPS Commerce, Vendor Central, OceanFirst, F&O aging |
-| Evidence | Day 5: daily recovery emails to six people with MTD and YTD totals; SUMIF aging by salesman built by hand; about $146k recovered this year |
+| Evidence | Day 5: daily recovery emails to six people with MTD and YTD totals; SUMIF aging by salesman built by hand; about $146k recovered this year. Day 8: he exports the SPS reports and summarises them many ways for Isaac Grossman and the money team |
 | Confirm first | Which recipients use which report; how long each takes him |
 
 ### F. Notice router (opportunity 5)
@@ -160,7 +160,7 @@ Times marked \~ are estimates from the order of events. The original notes only 
 
 "Avi" with no surname means Avi Grossman (Avi G). Avi Altman is always written in full, as is Moshe Aryeh Grossman. Baruch Salamander is a different person from Baruch Grossman.
 
-# The Seven Days at a Glance
+# The Eight Days at a Glance
 
 | Day | Time | Activity |
 | --- | --- | --- |
@@ -187,6 +187,7 @@ Times marked \~ are estimates from the order of events. The original notes only 
 | Wed Oct 21 | \~11:30 to 12:00 | Moshe Aryeh Grossman (first note says 11:15; a later note says about 11:30) |
 |  | 12:22 | Moshe Aryeh Grossman, Achim side: wire, bill of lading, containers |
 | Fri Oct 23 | Not given | Tina (Daniel's part described): weekly Amazon inventory file for OnePlatform (Vendo); follow-up with Daniel on his daily feeds |
+| Tue Oct 27 | Not given | Baruch Salamander: walkthrough of the deduction workflow (SPS Commerce) |
 
 ## Who's who
 
@@ -751,7 +752,7 @@ She was going through emails, then went Customers → filter → Balance at the 
 ### Recovery report emails
 
 - The observer thinks he sends the file with the final recovery numbers to whoever needs it, with the totals in the body of the email and the summary files attached.
-- He has recovered about $146k in disputes this year so far.
+- He has recovered about $146k in disputes this year so far. *(On Day 8 he gave $146k as co-ops recovered last year; one of the two labels is probably wrong.)*
 - The emails go out daily, although the content is month-to-date or year-to-date totals.
 - Recipients: Mordy Berman, Avi G and Isaac Grossman, cc Ken Kaplan, Chani and Zundel. All deal with money at some level; their individual workflows are not known.
 - **Checked on Oct 21:** Avi G does not use any of these reports for anything (per the observer). The reporting tool's history shows Mordy Berman used it twice, on 9/14 and 9/22, running 5 reports in total, while he receives similar numbers daily from Baruch Salamander. The reporting tool can schedule and email reports automatically.
@@ -953,6 +954,36 @@ From a conversation with Daniel afterwards, not watched. The Amazon file is one 
 - **Why these five are manual:** they don't have EDI capability for inventory; not all customers take an 846.
 - **Who uploads Kohls** (Menny, after asking): Daniel, every day. Active items go through his filters and VLOOKUP as 0, 24 or 50; disco'd items keep their real quantity. Tina only uploaded it on Day 2 to diagnose an issue; she usually doesn't.
 
-# Part 14: Observer's Own Work (not part of the process study)
+# Part 14: Baruch Salamander, Deduction Workflow Breakdown, Day 8 (Tue Oct 27)
+
+The observer asked him to walk through the whole deduction workflow. Described and partly shown, not timed. *(Observer's note: Baruch Salamander is hard to talk to.)* The full write-up is the deductions and disputes process card.
+
+**Systems and tools:** SPS Commerce SupplyPike, F&O (Pacejet shipment), FedEx, Amazon Vendor Central, email.
+
+**SPS Commerce SupplyPike** is a third-party funnel for Amazon, Walmart, Home Depot and Lowes. It sorts deductions into groups and runs the disputes, but we tell it what to dispute, apart from the ones it handles on its own.
+
+## Amazon (daily)
+
+| Group | What he does | Last year |
+| --- | --- | --- |
+| Overages (new) | Selects all new overages and submits invoices | New, no figure |
+| Chargebacks | Most can't be won. Disputable ones (e.g. on-time shipment) have 30 days. He filters to the last 30 days and drops the types marked X, then selects all and clicks Create disputes. SPS disputes many itself; he downloads the waived report to show what SPS saves us | $127k recovered of $540k |
+| Co-ops | Selects all that SPS labels invalid and disputes them. He doesn't know what makes one valid or invalid. Amazon put co-op disputes on hold to study them: none disputable before April 2027. Two-year lookback; last year's are done | $146k recovered |
+| Shortages | Handled completely by SPS, which gets the BOLs straight from the warehouse | $191k recovered of $917k |
+| Vendor returns | Usually can't be recovered; Matt tried | $10k, none recovered |
+
+- **Co-ops** are the cost of doing business with Amazon: about $150k a month.
+- **Advertising** is on top: about $75k a month. Paid by credit card until 8/1/26; now Amazon invoices it through Vendor Central, by check or wire only.
+- **His summary:** disputes what he can with a click, lets SPS dispute what it can, ignores the rest, then exports reports and summarises them 'a million different ways' for Isaac Grossman and the money team.
+
+## Lowes, Home Depot and Walmart
+
+- Lowes: deductions and open invoices, starting from New. Only shortages can be disputed. **Freight violations aren't disputed at all:** he was never given the information or documentation. SPS could dispute them if we gave it the documentation.
+- **For each shortage:** PO → F&O order → Warehouse → Shipment details → Pacejet shipment → tracking (each one, if several) → FedEx → if delivered, request proof of delivery with our account number (kept in his email) → download and name the POD PDF → open the dispute in SPS → paste a templated reversal request → upload the POD → submit.
+- Home Depot and Walmart: the same.
+- Besides that, he reports all the numbers in different ways.
+- **Next:** Tina set up our SPS Commerce access; the observer is going to her to understand our connection with them.
+
+# Part 15: Observer's Own Work (not part of the process study)
 
 Around 4:30 on Day 1, Tina asked about the sales reporting app. After clearing it with Avi G and Baruch Grossman (COO), the observer turned off the daily jobs (so reports stop going to everyone every day) and turned off test mode, so users' own schedules now send. Tina and Isaac Grossman (CEO) can now get their reports.

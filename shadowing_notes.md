@@ -24,6 +24,7 @@ Conventions: times marked `~` are estimates from the order of events. *Italics i
 - Day 5: Tue Oct 20: Baruch Salamander (deductions, reporting, collections)
 - Day 6: Wed Oct 21: Moshe Aryeh Grossman (~11:30 on, including the Achim side from 12:22)
 - Day 7: Fri Oct 23: Tina (with Daniel's part described): weekly Amazon inventory file for OnePlatform (Vendo)
+- Day 8: Tue Oct 27: Baruch Salamander: walkthrough of the deduction workflow (SPS Commerce SupplyPike)
 - Candidate pain-point modules (working list)
 - Signals by module
 - Open questions
@@ -541,6 +542,7 @@ Observer started at 11:00. Only 11:00 is an exact time; the episodes are in the 
 ### 2. Recovery report emails
 - The observer thinks he sends the left-hand file, with the final recovery numbers, to whoever needs it. He puts the totals in the body of the email and attaches the summary files.
 - He has recovered about $146k in disputes this year so far.
+- *(Day 8: he gave $146k as co-ops recovered last year. Same figure, so one of the two labels is probably wrong; to confirm.)*
 - The emails go out daily, although the content is month-to-date or year-to-date totals. *(Observer isn't sure why they are sent daily.)*
 - Recipients: Mordy Berman, Avi G and Isaac Grossman (CEO), cc Ken, Chani and Zundel. All of them deal with money at some level; the observer doesn't know their individual workflows.
 - *(Observer, later: Avi G does not use any of these reports for anything. Mordy Berman could run the same reports from the observer's reporting tool, so it is unclear whether he does, and if not, what his role with these numbers is. Not asked: observer rule. Can be checked in the reporting tool's schedules and run history.)*
@@ -740,6 +742,45 @@ From a conversation with Charmaine, not watched. Process card: `processes/deduct
 
 ---
 
+# Day 8: Tuesday, Oct 27
+
+## Baruch Salamander: breakdown of the deduction workflow
+
+The observer asked him to walk through the whole deduction workflow. Described and partly shown, not timed. Process card: `processes/deductions-and-disputes.md`. *(Observer's note: Baruch Salamander is hard to talk to.)*
+
+**Systems:** SPS Commerce SupplyPike, F&O (sales order → Warehouse → Shipment details → Pacejet shipment), FedEx (tracking and proof of delivery), Amazon Vendor Central, email.
+
+**SPS Commerce SupplyPike** is a third-party funnel for Amazon, Walmart, Home Depot and Lowes. It sorts the deductions into groups. SPS runs the disputes, but we tell it what to dispute, apart from the ones it handles on its own.
+
+### Amazon (daily)
+
+| Group | What he does | Last year |
+| --- | --- | --- |
+| Overages (new) | Checks for new ones; selects them all and submits invoices | New, no figure |
+| Chargebacks | Most can't be won. The disputable ones (e.g. on-time shipment) have a 30-day window. He filters to the last 30 days and by type; anything with an X can't be disputed. Selects all available → Create disputes. SPS also disputes many on its own; "waived" means SPS already took care of it, and he downloads the waived report to show what SPS saves us | $127k recovered of $540k |
+| Co-ops | Selects all the ones SPS labels invalid and disputes them; SPS handles the dispute. Valid ones can't be disputed. He doesn't know why a co-op is valid or invalid (needs to look into it). Amazon changed the co-op dispute rules in the past 8 months and put them on hold to study them: the next disputable co-op is not before April 2027. Only the past 2 years can be disputed; last year's are done | $146k recovered |
+| Shortages ("deductions") | Handled completely by SPS, which gets copies of the BOLs straight from the warehouse | $191k recovered of $917k |
+| Vendor returns | Usually can't get money back; Amazon usually doesn't charge us for them. Matt tried to recover last year's and didn't succeed | $10k charged, nothing recovered |
+
+- **Co-ops** are the cost of doing business with Amazon: about $150k a month (ballpark).
+- **Advertising** is on top of that: about $75k a month. Paid by credit card until 8/1/26; since then Amazon won't take cards, only check or wire, and invoices us through Vendor Central.
+- **His summary:** disputes what he can with a click, lets SPS dispute what it can, ignores the ones we can't, then exports reports and summarises them "a million different ways" for Isaac Grossman (Tatty) and the money team.
+
+### Lowes, Home Depot and Walmart
+
+- Lowes: deductions and open invoices. He goes to New. Only shortages can be disputed. **Freight violations he doesn't dispute:** he shrugged; he was never given the information or documentation. SPS can dispute them, but only if we give it the documentation.
+- For each shortage he can dispute:
+  1. Takes the PO, opens the order in F&O → Warehouse → Shipment details → Pacejet shipment, and finds the tracking. Multiple tracking numbers: checks each one.
+  2. Pastes the tracking into FedEx. If it shows delivered, requests proof of delivery, entering our account number (which he keeps in his email).
+  3. Downloads the POD PDF and names it.
+  4. Opens the dispute in SPS, pastes a templated message asking for a reversal, uploads the POD and submits.
+- Home Depot and Walmart: the same.
+- Besides that, he reports all the numbers in different ways.
+
+**Next:** Tina set up our SPS Commerce access, so the observer is going to her next to understand our connection with them.
+
+---
+
 # Candidate pain-point modules (working list)
 
 | # | Module | What it would do |
@@ -787,6 +828,7 @@ From a conversation with Charmaine, not watched. Process card: `processes/deduct
 - Day 7: Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
 - Daniel's feeds (answered: 24 is the cutoff; the Amazon file is the whole OnePlatform catalog). Does Lincoln Comfy need the image URL, and is it in F&O? What is Sears' variation group ID? (Answered: Daniel uses available.) (Answered: Daniel uploads Kohls daily; disco'd items keep their real quantity.)
 - Deductions (Charmaine): which "few others" besides Lowes and OJCommerce, and portal or email for each? Is DS-only because Baruch Salamander handles the warehouse deductions on SPS Commerce? Dollars per week, dispute win rate, each customer's return policy, where she confirms a return reached the warehouse. Still to shadow: Suzanne (short pays), Baruch Salamander (SPS Commerce), Tina or Avi G (Amazon dispute list).
+- Day 8 (Baruch Salamander): was the $146k (Day 5) disputes this year or co-ops last year? What makes a co-op valid or invalid? How much are Lowes, Home Depot and Walmart freight violations a year, and what documentation would SPS need to dispute them? Shortage disputes per week for Lowes, Home Depot and Walmart, and minutes each? Is the warehouse's BOL feed to SPS Amazon-only, and could it cover the others? Which reports go to whom? What does SPS cost us? Does Charmaine's Lowes (DS) overlap with his Lowes?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
 - Daniel: how many product lines a week does he build, and for which customers? Does each customer (Wayfair, Amazon, Home Depot, Kohls) need its own template?
 - Daniel: which attributes are missing from the main spec sheet and have to be read off the product images?
@@ -794,6 +836,7 @@ From a conversation with Charmaine, not watched. Process card: `processes/deduct
 - Lunch window (12:15 to ~2:45 on Day 1) is blank by design (not shadowing).
 
 # Shadowing plan
+- Next (Oct 27): Tina, on our connection with SPS Commerce (she set up the access).
 - Next: Moshe Aryeh Grossman's PortPro cleanup. Baruch Salamander done (Day 5, first session). Done for now: Tina, Daniel, Moshe's ChatGPT use (#16), Charmaine's afternoon.
 - Final report: remove the "ask Suzanne" open item from the Day 1 content; the observer rule is to only ask WHAT.
 - Done: Suzanne's morning (Day 3), Charmaine's afternoon (#17 to #21), Chani's morning, Tina, Daniel and part of Suzanne's day (Day 4). Moshe Aryeh Grossman's second session (Day 6) is done.
