@@ -156,7 +156,7 @@ flowchart TD
 
 ## The Rules
 
-> **Who owns the rules:** for Charmaine's customers, Tina and Avi set them per customer; Charmaine knows them by heart but couldn't list them. For the SPS customers, SPS decides what can be disputed: the X marks, and co-op validity, which it marks automatically as part of its cleanup.
+> **Who owns the rules:** for Charmaine's customers, the rules come from each customer's contract, set by Tina and Avi; Charmaine knows them by heart but couldn't list them. The closest thing to a written version is **Tina's return-allowance spreadsheet** (returns and allowances per contract), which she gave to Peleg. It only covers customers whose contracts she had, and none of it is in F&O; Peleg was supposed to add it, so it may be there by now. For the SPS customers, SPS decides what can be disputed: the X marks, and co-op validity, which it marks automatically as part of its cleanup.
 
 ### Charmaine's customers
 
@@ -200,6 +200,7 @@ flowchart TD
 | Why can't co-ops be disputed now? | Amazon changed the rules in the past 8 months and put them on hold to study them, until at least April 2027 |
 | Why SPS and not the portals directly? | Each portal is a tangle with its own terminology; SPS reviews first and puts everything in one view. It also investigates, as it did with Amazon's co-op overcharges (Tina) |
 | Why SupplyPike / SPS and not the first company? | The first company was supposed to handle everything and didn't; Simon and Josh found it when cleaning up Amazon (Tina) |
+| Why aren't Wayfair and the other DS customers in SPS? | SPS charges for each connection, so for most of them it isn't worth it. Tina isn't sure they could be connected anyway |
 | Who covers when they're out? | Nobody |
 | Why the waived report? | To show how much SPS is saving us |
 
@@ -211,7 +212,7 @@ flowchart TD
 - **Walmart is the hardest.** It uses many carriers, so for each shortage he has to find the right carrier and get both the POD and the BOL from them, on top of the F&O steps.
 - **Freight violations are written off by default.** Nobody gave him the documentation, so none are disputed. We don't know how much that is a year.
 - **Charmaine's rules can't be checked.** She applies rules she can't put into words, so nobody can tell whether they're right. (For co-ops, SPS marks validity itself as part of its cleanup; that's part of what we pay it for.)
-- **The rules are in people's heads.** Tina and Avi set Charmaine's rules, but they aren't written down; if she's out, nobody else knows which reasons to accept.
+- **The rules are mostly in people's heads.** They're contractual, and Tina and Avi set them, but Charmaine works from memory. Tina's return-allowance spreadsheet is the only written version: it went to Peleg, leaves out customers whose contracts she didn't have, and isn't in F&O. If Charmaine is out, nobody else knows which reasons to accept.
 - **No backup.** Nobody covers deductions when Charmaine or Baruch Salamander is out.
 - **SPS results stay in Baruch Salamander's reports.** Nothing flows to F&O or to Suzanne's remittance matching, so Amazon, Lowes, Home Depot and Walmart remittances can't be checked against what was disputed and won without asking him.
 - **Charmaine's inbox is the deductions log.** There's no list of what was accepted, disputed, won or lost. Every remittance means Suzanne asking and Charmaine searching email or a portal. It works only because their desks are next to each other.
@@ -230,7 +231,7 @@ flowchart TD
 1. **Automate the proof-of-delivery chain.** Given a PO, pull every tracking number from the Pacejet shipment in F&O, fetch each POD from FedEx, name it, and attach it to the SPS dispute with the template text. This is the most mechanical part of the whole process.
 2. **Send the proof to SPS like we do for Amazon.** For Amazon, SPS gets BOLs straight from the warehouse and handles shortages on its own. If PODs or BOLs for Lowes, Home Depot and Walmart went to SPS the same way, it might dispute those shortages itself. Ask Tina when we look at the SPS connection.
 3. **Find out what freight violations cost us,** and what documentation SPS would need. If it's real money, get the documentation flowing.
-4. **Write the rules down.** One table per customer: reason → accept, check or dispute, and what proof is needed. Tina and Avi sign off on Charmaine's; Baruch Salamander and SPS fill in the SPS side.
+4. **Write the rules down, starting from Tina's spreadsheet.** Check whether Peleg already put it in F&O. Fill in the customers missing from it from their contracts, and add the reasons: reason → accept, check or dispute, and what proof is needed. Tina and Avi sign off on Charmaine's; Baruch Salamander and SPS fill in the SPS side.
 5. **One shared deductions log** for Charmaine's customers: customer, PO, invoice, amount, reason, decision, status, settlement date, link to the email or ticket. Suzanne reads it when she posts a payment instead of asking. A shared spreadsheet or SharePoint list would do as a start.
 6. **Auto-log the auto-accepts,** so Charmaine only sees the ~16% that need a check, with the evidence already gathered (what we shipped, tracking, whether the return reached the warehouse).
 7. **Watch the deadlines:** Wayfair settlement dates and Amazon's 30-day chargeback window.
@@ -249,7 +250,7 @@ flowchart TD
 | **Trigger** | New deductions in SPS Commerce; the daily Wayfair deductions CSV; deduction emails from Charmaine's email customers; a remittance being posted by Suzanne |
 | **What it does** | **Proof of delivery:** for each Lowes, Home Depot or Walmart shortage, finds the PO's tracking numbers in the F&O Pacejet shipment, fetches each FedEx POD (for Walmart, the POD and BOL from whichever carrier delivered), names it, and drafts the SPS dispute with the template text and the POD attached, for Baruch Salamander to submit. **DS log:** adds every Charmaine deduction to one log and marks policy reasons accepted; for the rest, gathers what we shipped, tracking and return status next to the customer's image. **Deadlines:** flags Wayfair settlement dates, Amazon chargebacks near 30 days, open disputes and refused returns due back. **Payments:** shows Suzanne which deductions on a remittance to accept |
 | **Data** | SPS Commerce, F&O sales orders and Pacejet shipments, FedEx tracking and POD, Wayfair portal, deduction emails, warehouse returns, the per-customer rules table |
-| **First step** | The POD fetcher: PO in, PODs out, ready to upload. Separately, a shared log for Charmaine's deductions, even by hand |
+| **First step** | The POD fetcher: PO in, PODs out, ready to upload. Separately, a shared log for Charmaine's deductions, even by hand, and Tina's return-allowance spreadsheet as the start of the rules table |
 | **Human check** | Baruch Salamander submits the disputes; Charmaine decides every deduction that needs a check; Suzanne still checks amounts |
 | **Replaces** | The F&O → FedEx → SPS chain for every shortage; searching Charmaine's inbox for Suzanne; gathering evidence by hand; tracking deadlines from memory |
 | **Later** | Feed PODs or BOLs to SPS automatically so it disputes Lowes, Home Depot and Walmart shortages on its own; supply freight-violation documentation; add Suzanne's short pays; feed Bot D (remittance matching) and Bot E (scheduled reports) |
