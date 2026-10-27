@@ -775,6 +775,7 @@ The observer asked him to walk through the whole deduction workflow. Described a
   3. Downloads the POD PDF and names it.
   4. Opens the dispute in SPS, pastes a templated message asking for a reversal, uploads the POD and submits.
 - Home Depot and Walmart: the same.
+- **Walmart is harder** (his addition, later): Walmart uses many carriers, so he has to get both the POD and the BOL from each carrier, not just FedEx.
 - Besides that, he reports all the numbers in different ways.
 
 **Next:** Tina set up our SPS Commerce access, so the observer is going to her next to understand our connection with them.

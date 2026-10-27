@@ -933,6 +933,7 @@ add(
     "Lowes: deductions and open invoices, starting from New. Only shortages can be disputed. **Freight violations aren't disputed at all:** he was never given the information or documentation. SPS could dispute them if we gave it the documentation.",
     "**For each shortage:** PO → F&O order → Warehouse → Shipment details → Pacejet shipment → tracking (each one, if several) → FedEx → if delivered, request proof of delivery with our account number (kept in his email) → download and name the POD PDF → open the dispute in SPS → paste a templated reversal request → upload the POD → submit.",
     "Home Depot and Walmart: the same.",
+    "**Walmart is harder** (his addition, later): Walmart uses many carriers, so he has to get both the POD and the BOL from each carrier, not just FedEx.",
     "Besides that, he reports all the numbers in different ways.",
     "**Next:** Tina set up our SPS Commerce access; the observer is going to her to understand our connection with them.",
   ]),

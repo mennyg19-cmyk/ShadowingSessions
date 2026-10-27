@@ -644,6 +644,8 @@ When he finds one that he can dispute, he takes the PO, goes to F&O, opens the o
 
 He does the same thing with Home Depot and Walmart.
 
+(Addition from Baruch S, later) Walmart is more difficult because they use a million carriers, and he needs to get the POD and the BOL from them.
+
 Besides that, he reports all the numbers different ways.
 
 Tina set up access to SPS Commerce, so I will be going to her next to understand our connection with them.

@@ -26,7 +26,7 @@
 | Amazon | Baruch Salamander | SPS Commerce SupplyPike | Mostly one-click; SPS handles shortages on its own with BOLs from the warehouse |
 | Lowes | Baruch Salamander (and Charmaine for DS) | SPS Commerce | Shortages disputed with a FedEx POD; freight violations never disputed |
 | Home Depot | Baruch Salamander | SPS Commerce | Same as Lowes |
-| Walmart | Baruch Salamander | SPS Commerce | Same as Lowes |
+| Walmart | Baruch Salamander | SPS Commerce | Like Lowes, but harder: many carriers, and he needs both the POD and the BOL from each |
 | Wayfair | Charmaine | Portal, daily | Managed returns always accepted; disputes on a ticket; settlement-date deadline |
 | OJCommerce and a few others | Charmaine | Not stated | DS |
 | VirVentures, UnbeatableSales, KartIt | Charmaine | Email | Fully manual; Unbeatable sends a weekly batch |
@@ -91,6 +91,8 @@ flowchart TD
     B -->|"Freight violation"| X["Not disputed:<br/>no documentation"]
     B -->|"Shortage"| C["PO → F&O order → Warehouse →<br/>Shipment details → Pacejet shipment"]
     C --> D["Each tracking number → FedEx"]
+    C -->|"Walmart"| W["Many carriers: get the POD<br/>and the BOL from each one"]
+    W --> G
     D -->|"Delivered"| E["Request POD with our account number<br/>(kept in his email)"]
     E --> F["Download and name the POD PDF"]
     F --> G["Open the dispute in SPS, paste the<br/>template reversal request, upload POD, submit"]
@@ -138,6 +140,7 @@ flowchart TD
 | 2 | Takes the PO, opens the order, then Warehouse → Shipment details → Pacejet shipment, and copies the tracking (each one, if there are several) | F&O |
 | 3 | Pastes the tracking into FedEx. If delivered, requests proof of delivery, entering our account number from his email | FedEx |
 | 4 | Downloads the POD PDF and names it | FedEx, file system |
+| 4a | Walmart only: Walmart uses many carriers, so he gets both the POD and the BOL from whichever carrier delivered (his later addition) | Each carrier |
 | 5 | Opens the dispute, pastes the templated reversal request, uploads the POD and submits | SPS Commerce |
 
 ---
@@ -166,7 +169,8 @@ flowchart TD
 | Chargebacks: 30 days | Only the disputable types (e.g. on-time shipment) can be disputed, within 30 days. Anything marked X can't be |
 | Co-ops: invalid only | Only co-ops SPS labels invalid can be disputed, and only from the past 2 years. Amazon has put co-op disputes on hold to study them: none before April 2027 |
 | Shortages, Amazon | SPS disputes them on its own, using BOLs sent straight from the warehouse |
-| Shortages, Lowes, Home Depot, Walmart | We have to supply the proof: a FedEx POD for every tracking number |
+| Shortages, Lowes and Home Depot | We have to supply the proof: a FedEx POD for every tracking number |
+| Shortages, Walmart | Same, but Walmart uses many carriers, and he needs both the POD and the BOL from whichever carrier delivered |
 | Freight violations | SPS could dispute them, but only with documentation we don't give it today |
 | Vendor returns | Usually can't be recovered |
 | What SPS disputes | Whatever it can on its own, plus what we tell it to |
@@ -182,7 +186,7 @@ flowchart TD
 | Why does Suzanne ask Charmaine? | The remittance shows deductions; only Charmaine knows which ones she accepted, and there's no list |
 | Why does Charmaine check the reason but not the amount? | Suzanne checks the amount when she posts the payment. This explains Day 2's "method difference" between them |
 | Why is Amazon mostly one click? | SPS sorts the deductions, marks what can't be disputed, and handles the disputes. For shortages it already has the BOLs from the warehouse |
-| Why is Lowes, Home Depot and Walmart by hand? | SPS needs proof of delivery for their shortages, and nobody sends it automatically, so he gets each POD from FedEx himself |
+| Why is Lowes, Home Depot and Walmart by hand? | SPS needs proof of delivery for their shortages, and nobody sends it automatically, so he gets each POD from FedEx himself. Walmart is worse: many carriers, and each needs a POD and a BOL |
 | Why aren't freight violations disputed? | He was never given the information or documentation; SPS could do it if we supplied it |
 | Why can't co-ops be disputed now? | Amazon changed the rules in the past 8 months and put them on hold to study them, until at least April 2027 |
 | Why the waived report? | To show how much SPS is saving us |
@@ -192,6 +196,7 @@ flowchart TD
 ## Pain Points
 
 - **The proof chain is all by hand.** For every Lowes, Home Depot and Walmart shortage: F&O → four screens → tracking → FedEx → POD → rename → upload, repeated for each tracking number. Our FedEx account number lives in his email.
+- **Walmart is the hardest.** It uses many carriers, so for each shortage he has to find the right carrier and get both the POD and the BOL from them, on top of the F&O steps.
 - **Freight violations are written off by default.** Nobody gave him the documentation, so none are disputed. We don't know how much that is a year.
 - **Disputing without knowing why.** Baruch Salamander clicks every co-op SPS labels invalid without knowing what makes one valid or invalid. Charmaine applies rules she can't put into words. Either way, nobody can tell whether the rules are right.
 - **The rules are in people's heads.** Tina and Avi set Charmaine's rules, but they aren't written down; if she's out, nobody else knows which reasons to accept.
@@ -228,7 +233,7 @@ flowchart TD
 | | |
 | --- | --- |
 | **Trigger** | New deductions in SPS Commerce; the daily Wayfair deductions CSV; deduction emails from Charmaine's email customers; a remittance being posted by Suzanne |
-| **What it does** | **Proof of delivery:** for each Lowes, Home Depot or Walmart shortage, finds the PO's tracking numbers in the F&O Pacejet shipment, fetches each FedEx POD, names it, and drafts the SPS dispute with the template text and the POD attached, for Baruch Salamander to submit. **DS log:** adds every Charmaine deduction to one log and marks policy reasons accepted; for the rest, gathers what we shipped, tracking and return status next to the customer's image. **Deadlines:** flags Wayfair settlement dates, Amazon chargebacks near 30 days, open disputes and refused returns due back. **Payments:** shows Suzanne which deductions on a remittance to accept |
+| **What it does** | **Proof of delivery:** for each Lowes, Home Depot or Walmart shortage, finds the PO's tracking numbers in the F&O Pacejet shipment, fetches each FedEx POD (for Walmart, the POD and BOL from whichever carrier delivered), names it, and drafts the SPS dispute with the template text and the POD attached, for Baruch Salamander to submit. **DS log:** adds every Charmaine deduction to one log and marks policy reasons accepted; for the rest, gathers what we shipped, tracking and return status next to the customer's image. **Deadlines:** flags Wayfair settlement dates, Amazon chargebacks near 30 days, open disputes and refused returns due back. **Payments:** shows Suzanne which deductions on a remittance to accept |
 | **Data** | SPS Commerce, F&O sales orders and Pacejet shipments, FedEx tracking and POD, Wayfair portal, deduction emails, warehouse returns, the per-customer rules table |
 | **First step** | The POD fetcher: PO in, PODs out, ready to upload. Separately, a shared log for Charmaine's deductions, even by hand |
 | **Human check** | Baruch Salamander submits the disputes; Charmaine decides every deduction that needs a check; Suzanne still checks amounts |
