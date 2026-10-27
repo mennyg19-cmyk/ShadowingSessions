@@ -242,7 +242,7 @@ flowchart TD
 
 ---
 
-## The Bot: Deductions Assistant (Bot I, proposed)
+## The Bot: Deductions Assistant (Bot I)
 
 | | |
 | --- | --- |

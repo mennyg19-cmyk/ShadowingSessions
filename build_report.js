@@ -112,10 +112,10 @@ add(
 
   h2("Why this shadowing, and what it is for"),
   p("This grew out of the Grok bot effort. Avi G started automating his own tasks with Claude, and after talking with Baruch Grossman and Peleg we decided to build on the Grok bots the company already pays for, which go straight to the data. I was asked to find out what else can be automated. My reporting site stays as a manual report runner and is not changing."),
-  p("I came in with a clean view, so this report records what I saw people actually doing, which is not always what their title says. The first pages are the decisions: what to act on now, the top five opportunities, the F&O settings fixes, and a spec for each bot. The appendix has the detailed notes from every session."),
+  p("I came in with a clean view, so this report records what I saw people actually doing, which is not always what their title says. The first pages are the decisions: what to act on now, the top six opportunities, the F&O settings fixes, and a spec for each bot. The appendix has the detailed notes from every session."),
 
   h1("Summary"),
-  p("Eight days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The clearest bot, and the most measured time, is **Daniel's channel files built from the spec sheet**. The **payment to container release chain** is the biggest money risk, but only when cash flow is tight. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate."),
+  p("Eight days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The clearest bot, and the most measured time, is **Daniel's channel files built from the spec sheet**. The **payment to container release chain** is the biggest money risk, but only when cash flow is tight. **Deductions** are mostly handled by SPS Commerce, which stays; the bot covers the hand work around it. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate."),
 
   h1("Act on Now"),
   box("Do these regardless of the bot work", [
@@ -129,7 +129,7 @@ add(
   ]),
   gap(),
 
-  h1("Top 5 Opportunities"),
+  h1("Top 6 Opportunities"),
   p("My ranking, by time and money at stake and how clearly the notes describe the work. Figures are only what the notes and follow-up answers support (see What to Measure Next)."),
   table([400, 2000, 3760, 1500, 1700], ["#", "Opportunity", "What's at stake (from the notes)", "Fix type", "Suggested owner"], [
     ["1", "Spec sheet to channel file builder", "About 8 spec sheets a week at about 15 to 20 minutes each, roughly 2 to 2.5 hours of Daniel's week, then at least 3 reviews per file. A wrong curtain width on Wayfair reached a customer.", "Bot", "Peleg with Daniel and Tina"],
@@ -137,6 +137,7 @@ add(
     ["3", "Customer inventory feeds (Amazon weekly for OnePlatform, 5 customers daily)", "Daniel builds six inventory feeds by hand-filtering an F&O inventory download: Amazon weekly, and Mason, Dealora, Kohls, Lincoln Comfy and Sears daily, each in its own format. The daily ones take about 10 to 15 minutes a day, roughly 1 to 1.25 hours a week. For Amazon, Tina then adds next available dates from open PO lines and Goods in Transit with VLOOKUPs (under 10 minutes). Tina says Daniel may be leaving. Everything we send is already in F&O, so the whole file can be built from it. Out-of-stock items are not marked temporarily unavailable on Amazon.", "F&O report first, then bot", "Peleg with Daniel and Tina"],
     ["4", "Payment entry and posting", "Most of Suzanne's Day 1 afternoon (3:00 to 4:30). Two batches wouldn't post, one because the method defaulted to credit card, and the error didn't say why. She finds Chani's deposit email by searching for the total.", "Settings first, then bot", "Peleg with Suzanne"],
     ["5", "Money reports and notices on a schedule", "Recovery totals emailed by hand daily to six people (Avi G doesn't use them; Mordy ran reports on only two days). US Customs pulls forwarded to five people. Credit card due dates go Avi G to Chani to a desk calendar to Isaac Grossman.", "Scheduled reports + routing bot", "Peleg with Baruch Salamander and Chani"],
+    ["6", "Deductions and disputes", "SPS Commerce recovered about $464k on Amazon last year and stays (required for now). The hand work is around it: for each Lowes, Home Depot and Walmart shortage, Baruch Salamander goes F&O → Pacejet → FedEx for the proof of delivery and uploads it to SPS (Walmart needs a POD and a BOL from whichever of many carriers delivered). Freight violations are never disputed. Charmaine had 70 DS deductions in Oct 2 to 15, 11 needing a 5 to 15 minute check, with her inbox as the only record and the contractual rules in her head. Nobody covers when either is out.", "Bot around SPS; rules table first", "Peleg with Baruch Salamander and Charmaine"],
   ]),
   gap(),
 
@@ -206,10 +207,18 @@ add(
 
   ...spec("H. Customer service email router", [
     ["Trigger", "Every new email in the customer service inbox (Charmaine's first; Evelyn's could follow)"],
-    ["What it does", "Sorts each email and routes or answers it: customers who bought through Amazon, Kohls or Wayfair get the standard \"contact the retailer\" reply; order and sample requests go to Justin; replacement-part requests go to Jhony; packaging and shipping questions go to the warehouse (Brandon, Keith); deductions go to Baruch Salamander; retailer cancellations are checked in F&O for whether the order is already invoiced and sent to the warehouse in time. Everything else stays with Charmaine, with the order, invoice and tracking pulled up next to it."],
+    ["What it does", "Sorts each email and routes or answers it: customers who bought through Amazon, Kohls or Wayfair get the standard \"contact the retailer\" reply; order and sample requests go to Justin; replacement-part requests go to Jhony; packaging and shipping questions go to the warehouse (Brandon, Keith); deductions go to Charmaine for DS customers and to Baruch Salamander for the SPS customers (Amazon, Lowes, Home Depot, Walmart); retailer cancellations are checked in F&O for whether the order is already invoiced and sent to the warehouse in time. Everything else stays with Charmaine, with the order, invoice and tracking pulled up next to it."],
     ["Data", "Customer service inbox, F&O sales orders and invoices, CHUB, FedEx and UPS tracking"],
     ["Evidence", "Day 1: three Amazon and Kohls customers sent back to the retailer; emails forwarded to Evelyn; the 4-minute sample order email to Justin; a replacement plug question to Jhony; a Lowes cancellation emailed to Keith with no response, which was missed and became a manual 810 invoice that Lowes may not pay; Teams down, so she called Brandon for packaging info. Day 2: a replacement-part request forwarded to Jhony; Evelyn forwards order emails to Justin; Charmaine reviews her emails several times. Days 3 and 4: order emails forwarded to Justin by hand."],
     ["Confirm first", "Customer service emails a day, and how many are forwarded"],
+  ]),
+  ...spec("I. Deductions assistant (opportunity 6)", [
+    ["Works with SPS", "Doesn't replace SPS Commerce (required for now). It covers what SPS doesn't do"],
+    ["Trigger", "A new Lowes, Home Depot or Walmart shortage in SPS; a new deduction in the Wayfair portal or in Charmaine's email (UnbeatableSales sends a weekly batch); Suzanne posting a remittance"],
+    ["What it does", "**Proof of delivery:** given a PO, finds every tracking number on the F&O Pacejet shipment, fetches each FedEx POD (for Walmart, the POD and BOL from whichever carrier delivered), names it and drafts the SPS dispute with the template text, for Baruch Salamander to submit. **DS log:** logs every Charmaine deduction, marks the policy ones (like Wayfair managed returns) accepted, and for the rest puts what we shipped, tracking and return status next to the customer's image. **Deadlines:** Wayfair settlement dates, Amazon chargebacks near 30 days, open disputes. **Payments:** shows Suzanne which deductions on a remittance to accept"],
+    ["Data", "SPS Commerce, F&O sales orders and Pacejet shipments, FedEx and other carriers, Wayfair portal, deduction emails, warehouse returns, Tina's return-allowance spreadsheet as the start of a per-customer rules table"],
+    ["Evidence", "Day 2: Charmaine working Wayfair deductions; Avi G's dispute list passed through Tina. Day 5: Baruch Salamander typing Excel figures into SPS. Charmaine follow-up: 70 deductions in Oct 2 to 15, 11 checked; no list, Suzanne asks her at each remittance. Day 8: the F&O → Pacejet → FedEx → SPS chain for every shortage; Walmart's many carriers; freight violations never disputed. Tina: rules are contractual; SPS charges per connection, so most DS customers aren't worth connecting"],
+    ["Confirm first", "Shortage disputes a week for Lowes, Home Depot and Walmart, and minutes each; what freight violations cost and what documentation SPS needs"],
   ]),
 
   h1("Bigger Projects (outside this scope)"),
@@ -221,10 +230,19 @@ add(
 
   h1("What to Measure Next"),
   ...bullets([
-    "For each top-5 item: how often it happens and how many each time. Still open: how many Amazon items need dates; Suzanne's checks a week; how long Baruch Salamander's reports take.",
-    "Still to shadow: Justin, the warehouse and sales. Repeat sessions with Daniel, Moshe Aryeh Grossman and Avi Altman.",
+    "For each top-6 item: how often it happens and how many each time. Still open: how many Amazon items need dates; Suzanne's checks a week; how long Baruch Salamander's reports take; his shortage disputes a week per retailer.",
+    "Still to shadow: Justin next (order entry, sample orders, where order emails go now that Evelyn is gone), then the warehouse (Brandon, Keith Hamby, Sal D'Rienzo) and sales. A conversation with Dan Holland (IT and EDI) for the technical SPS and EDI questions. Small gaps on deductions: Suzanne's short pays, and whether Avi G's dispute list is a regular handoff.",
   ]),
-  p("**Next step:** pick which of bots A to H to build first, and have Peleg take the settings list.", { spacing: { before: 200, after: 120 } }),
+
+  h1("Questions for Peleg"),
+  ...bullets([
+    "**Tina's return-allowance spreadsheet:** did it go into F&O? Who fills in the customers whose contracts Tina didn't have? It is the start of the rules table for Bot I.",
+    "**SPS Commerce cost and ownership:** what we pay (flat fee or a share of what it recovers) and who owns the account and logins. Needed to judge SPS against the $464k it recovered on Amazon last year.",
+    "**SPS connection:** what data SPS gets from us and how (the warehouse sends it BOLs for Amazon). Could proof of delivery and BOLs for Lowes, Home Depot and Walmart go the same way, so SPS disputes those shortages itself? (Or Dan Holland.)",
+    "**Freight violations:** what documentation SPS would need, who has it, and roughly what they cost a year. Today none are disputed.",
+    "**Backup for deductions:** nobody covers when Charmaine or Baruch Salamander is out. Who should?",
+  ]),
+  p("**Next step:** pick which of bots A to I to build first, and have Peleg take the settings list.", { spacing: { before: 200, after: 120 } }),
 
   rawP("---\n\n# Appendix: Detailed Observations", new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, children: [new TextRun({ text: "Appendix: Detailed Observations", bold: true, size: 40, font: FONT, color: "1F3864" })] })),
   p("Below are my detailed notes from each session, as in version 1. The old Key Findings, Open Items and candidate modules are left out, because the pages above replace them."),

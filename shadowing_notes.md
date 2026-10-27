@@ -857,6 +857,7 @@ The observer asked him to walk through the whole deduction workflow. Described a
 - Lunch window (12:15 to ~2:45 on Day 1) is blank by design (not shadowing).
 
 # Shadowing plan
+- Oct 27: deductions and disputes done (Charmaine, Baruch Salamander, Tina); remaining questions go to Peleg. Suggested next: Justin, then the warehouse (Brandon, Keith Hamby, Sal D'Rienzo), a conversation with Dan Holland on SPS and EDI, then sales.
 - Oct 27: Tina gave the backstory on SPS Commerce. The technical connection, what we pay and who owns the account are not hers to answer; still to find who can.
 - Next: Moshe Aryeh Grossman's PortPro cleanup. Baruch Salamander done (Day 5, first session). Done for now: Tina, Daniel, Moshe's ChatGPT use (#16), Charmaine's afternoon.
 - Final report: remove the "ask Suzanne" open item from the Day 1 content; the observer rule is to only ask WHAT.
