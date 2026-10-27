@@ -993,6 +993,7 @@ The observer asked him to walk through the whole deduction workflow. Described a
 - **Findings:** SPS also investigates. We knew Amazon was taking too much in co-ops but didn't know how to check; SPS did, and still does.
 - *Not Tina's to answer:* the technical connection (what data SPS gets from us and how), what we pay, and who owns the account. Who to ask is still open.
 - **Follow-up answers:** nobody covers deductions when Charmaine or Baruch Salamander is out. SPS results go only into Baruch Salamander's reports, not to F&O or Suzanne. Still to ask Tina: does SPS cover, or could it cover, Charmaine's customers like Wayfair?
+- **Observer's view, Oct 27: SPS is required for now.** In theory a bot could do SPS's whole job, since cleaning messy portal data is the easy part. But SPS already has the retailer data feeds and the warehouse BOLs, knows what each retailer will accept, finds things like the co-op overcharge by comparing across its clients, and follows each dispute until it closes. On Amazon alone it recovered about $464k last year, and we don't yet know what it costs. So the bots work around SPS: the proof-of-delivery chain, freight violations, Charmaine's DS customers and the SPS scorecard. Whether to replace SPS can be decided once we know its fee.
 
 # Part 15: Observer's Own Work (not part of the process study)
 

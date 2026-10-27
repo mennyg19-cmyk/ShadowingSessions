@@ -49,6 +49,8 @@
 - **What we pay them for:** every retailer portal is tangled and uses its own terminology. SPS does the first review and funnels it all into one clean view, so Baruch Salamander can mostly select and click.
 - **Findings:** SPS also investigates. It found that Amazon was taking too much in co-ops, which we suspected but couldn't check ourselves, and keeps watching.
 
+> **Decision (Oct 27): SPS is required for now.** In theory a bot could do SPS's whole job, since cleaning messy portal data is the easy part. But SPS already has the retailer data feeds and the warehouse BOLs, knows what each retailer will accept, finds things like the co-op overcharge by comparing across its clients, and follows each dispute until it closes. On Amazon alone it recovered about $464k last year, and we don't yet know what it costs. So the bots work around SPS: the proof-of-delivery chain, freight violations, Charmaine's DS customers and the SPS scorecard. Whether to replace SPS can be decided once we know its fee.
+
 ---
 
 ## The Flow
@@ -243,6 +245,7 @@ flowchart TD
 
 | | |
 | --- | --- |
+| **Works with SPS** | Doesn't replace SPS (required for now). It covers what SPS doesn't do |
 | **Trigger** | New deductions in SPS Commerce; the daily Wayfair deductions CSV; deduction emails from Charmaine's email customers; a remittance being posted by Suzanne |
 | **What it does** | **Proof of delivery:** for each Lowes, Home Depot or Walmart shortage, finds the PO's tracking numbers in the F&O Pacejet shipment, fetches each FedEx POD (for Walmart, the POD and BOL from whichever carrier delivered), names it, and drafts the SPS dispute with the template text and the POD attached, for Baruch Salamander to submit. **DS log:** adds every Charmaine deduction to one log and marks policy reasons accepted; for the rest, gathers what we shipped, tracking and return status next to the customer's image. **Deadlines:** flags Wayfair settlement dates, Amazon chargebacks near 30 days, open disputes and refused returns due back. **Payments:** shows Suzanne which deductions on a remittance to accept |
 | **Data** | SPS Commerce, F&O sales orders and Pacejet shipments, FedEx tracking and POD, Wayfair portal, deduction emails, warehouse returns, the per-customer rules table |

@@ -797,6 +797,7 @@ The observer asked him to walk through the whole deduction workflow. Described a
 - **$146k:** co-ops recovered last year. Day 5's "this year so far" was a mistake.
 - **Lowes:** in SPS for all connections, so every Lowes deduction is Baruch Salamander's. Charmaine doesn't do Lowes deductions (the observer's earlier note was wrong); her Lowes work is manual 810 invoicing.
 - **Still to ask Tina:** does SPS cover any of Charmaine's customers, like Wayfair? If not, could it?
+- **SPS is required for now (observer's decision, Oct 27):** In theory a bot could do SPS's whole job, since cleaning messy portal data is the easy part. But SPS already has the retailer data feeds and the warehouse BOLs, knows what each retailer will accept, finds things like the co-op overcharge by comparing across its clients, and follows each dispute until it closes. On Amazon alone it recovered about $464k last year, and we don't yet know what it costs. So the bots work around SPS: the proof-of-delivery chain, freight violations, Charmaine's DS customers and the SPS scorecard. Whether to replace SPS can be decided once we know its fee.
 
 ---
 
