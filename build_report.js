@@ -107,7 +107,7 @@ const spec = (title, rows) => [h3(title), table([1900, 7460], ["", "Detail"], ro
 
 add(
   rawP("# Shadowing Report", new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: "Shadowing Report", bold: true, size: 44, font: FONT })] })),
-  rawP("*Wednesday, October 14 to Friday, October 23, 2026 (seven shadowing days). Version 2: ranked summary up front, detail in the appendix*", new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: "Wednesday, October 14 to Friday, October 23, 2026 (seven shadowing days). Version 2: ranked summary up front, detail in the appendix", size: 26, font: FONT, color: "404040" })] })),
+  rawP("*Wednesday, October 14 to Tuesday, October 27, 2026 (eight shadowing days). Version 2: ranked summary up front, detail in the appendix*", new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: "Wednesday, October 14 to Tuesday, October 27, 2026 (eight shadowing days). Version 2: ranked summary up front, detail in the appendix", size: 26, font: FONT, color: "404040" })] })),
   p("Prepared for Baruch Grossman (COO) and Peleg."),
 
   h2("Why this shadowing, and what it is for"),
@@ -115,7 +115,7 @@ add(
   p("I came in with a clean view, so this report records what I saw people actually doing, which is not always what their title says. The first pages are the decisions: what to act on now, the top five opportunities, the F&O settings fixes, and a spec for each bot. The appendix has the detailed notes from every session."),
 
   h1("Summary"),
-  p("Seven days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The clearest bot, and the most measured time, is **Daniel's channel files built from the spec sheet**. The **payment to container release chain** is the biggest money risk, but only when cash flow is tight. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate."),
+  p("Eight days, eight people shadowed. Most of the work I saw is people reading one screen and typing into another, forwarding emails by hand, and keeping track of things on paper, in notebooks and in shared Excels. The clearest bot, and the most measured time, is **Daniel's channel files built from the spec sheet**. The **payment to container release chain** is the biggest money risk, but only when cash flow is tight. About eight problems are **F&O settings, not bots**, and are the fastest wins. A few card and check practices should be fixed now, whatever we automate."),
 
   h1("Act on Now"),
   box("Do these regardless of the bot work", [
@@ -188,7 +188,7 @@ add(
     ["Trigger", "A schedule, instead of a manual daily email"],
     ["What it does", "Sends recovery totals, the Amazon payments and deductions breakdown, and aging by salesman from the data, only to people who use them"],
     ["Data", "SPS Commerce, Vendor Central, OceanFirst, F&O aging"],
-    ["Evidence", "Day 5: daily recovery emails to six people with MTD and YTD totals; SUMIF aging by salesman built by hand; about $146k recovered this year"],
+    ["Evidence", "Day 5: daily recovery emails to six people with MTD and YTD totals; SUMIF aging by salesman built by hand; about $146k in co-ops recovered last year. Day 8: he exports the SPS reports and summarises them many ways for Isaac Grossman and the money team"],
     ["Confirm first", "Which recipients use which report; how long each takes him"],
   ]),
   ...spec("F. Notice router (opportunity 5)", [
@@ -231,7 +231,7 @@ add(
   p("Times marked ~ are estimates from the order of events. The original notes only have a few exact timestamps. Text in italics inside parentheses are the observer's own comments, kept from the notes. The observer did not interrupt or ask staff why they work the way they do; questions were limited to what they were doing when it wasn't clear. Differences in method between people are recorded as observed, not explained. Mistakes are recorded as things the systems and processes allowed, not as anyone's failing."),
   p("\"Avi\" with no surname means Avi Grossman (Avi G). Avi Altman is always written in full, as is Moshe Aryeh Grossman. Baruch Salamander is a different person from Baruch Grossman."),
 
-  h1("The Seven Days at a Glance"),
+  h1("The Eight Days at a Glance"),
   table([1500, 2100, 5760], ["Day", "Time", "Activity"], [
     ["Wed Oct 14", "9:45 to 12:15", "Shadowing Charmaine (Customer Service)"],
     ["", "12:15 to ~2:45", "Lunch and an online appointment (not shadowing)"],
@@ -256,6 +256,7 @@ add(
     ["Wed Oct 21", "~11:30 to 12:00", "Moshe Aryeh Grossman (first note says 11:15; a later note says about 11:30)"],
     ["", "12:22", "Moshe Aryeh Grossman, Achim side: wire, bill of lading, containers"],
     ["Fri Oct 23", "Not given", "Tina (Daniel's part described): weekly Amazon inventory file for OnePlatform (Vendo); follow-up with Daniel on his daily feeds"],
+    ["Tue Oct 27", "Not given", "Baruch Salamander: walkthrough of the deduction workflow (SPS Commerce); Tina: backstory on SPS"],
   ]),
   gap(),
 
@@ -559,7 +560,7 @@ add(
   h2("Follow-up with Charmaine: deductions and disputes"),
   p("From a conversation with Charmaine after Day 7, not watched. The full write-up is the deductions and disputes process card."),
   ...bullets([
-    "**Her customers (DS only):** Wayfair (portal, checked every day), Lowes, OJCommerce and a few others. VirVentures, UnbeatableSales and KartIt are handled entirely by email.",
+    "**Her customers (DS only):** Wayfair (portal, checked every day), OJCommerce and a few others. *(The observer first listed Lowes here too; corrected Oct 27: Lowes is in SPS for all connections, so its deductions are Baruch Salamander's. Her Lowes work is the manual 810 invoicing from Day 1.)* VirVentures, UnbeatableSales and KartIt are handled entirely by email.",
     "**Wayfair managed returns:** always accepted, as part of our policy.",
     "**Misinformation or mis-shipped:** she checks that we actually sent the wrong item, usually from the customer's image. If it doesn't match, she disputes on the ticket; Wayfair replies by email if they accept, sometimes after a few rounds. If the customer says they never received it, she checks tracking.",
     "**Return deductions (email customers):** she checks the item came back to the warehouse, as per our policy with that customer. If not, she doesn't approve it; we tell them we never received it, and it goes on next month's payment once they send tracking. UnbeatableSales sends a batch of emails once a week.",
@@ -728,7 +729,7 @@ add(
   h3("Recovery report emails"),
   ...bullets([
     "The observer thinks he sends the file with the final recovery numbers to whoever needs it, with the totals in the body of the email and the summary files attached.",
-    "He has recovered about $146k in disputes this year so far.",
+    "He has recovered about $146k in disputes this year so far. *(Correction: it was co-ops recovered last year; \"this year so far\" was a mistake in the observer's notes.)*",
     "The emails go out daily, although the content is month-to-date or year-to-date totals.",
     "Recipients: Mordy Berman, Avi G and Isaac Grossman, cc Ken Kaplan, Chani and Zundel. All deal with money at some level; their individual workflows are not known.",
     "**Checked on Oct 21:** Avi G does not use any of these reports for anything (per the observer). The reporting tool's history shows Mordy Berman used it twice, on 9/14 and 9/22, running 5 reports in total, while he receives similar numbers daily from Baruch Salamander. The reporting tool can schedule and email reports automatically.",
@@ -908,16 +909,55 @@ add(
   ]),
 );
 
-/* ---------------- Part 14: observer's own work ---------------- */
+/* ---------------- Part 14: Baruch Salamander Day 8 ---------------- */
 add(
-  h1("Part 14: Observer's Own Work (not part of the process study)"),
+  h1("Part 14: Baruch Salamander, Deduction Workflow Breakdown, Day 8 (Tue Oct 27)"),
+  p("The observer asked him to walk through the whole deduction workflow. Described and partly shown, not timed. *(Observer's note: Baruch Salamander is hard to talk to.)* The full write-up is the deductions and disputes process card."),
+  p("**Systems and tools:** SPS Commerce SupplyPike, F&O (Pacejet shipment), FedEx, Amazon Vendor Central, email."),
+  p("**SPS Commerce SupplyPike** is a third-party funnel for Amazon, Walmart, Home Depot and Lowes. It sorts deductions into groups and runs the disputes, but we tell it what to dispute, apart from the ones it handles on its own."),
+  h2("Amazon (daily)"),
+  table([1900, 5160, 2300], ["Group", "What he does", "Last year"], [
+    ["Overages (new)", "Selects all new overages and submits invoices", "New, no figure"],
+    ["Chargebacks", "Most can't be won. Disputable ones (e.g. on-time shipment) have 30 days. He filters to the last 30 days and drops the types marked X, then selects all and clicks Create disputes. SPS disputes many itself; he downloads the waived report to show what SPS saves us", "$127k recovered of $540k"],
+    ["Co-ops", "Selects all that SPS labels invalid and disputes them. SPS marks validity itself as part of its cleanup; he doesn't need to know why. Amazon put co-op disputes on hold to study them: none disputable before April 2027. Two-year lookback; last year's are done", "$146k recovered"],
+    ["Shortages", "Handled completely by SPS, which gets the BOLs straight from the warehouse", "$191k recovered of $917k"],
+    ["Vendor returns", "Usually can't be recovered; Matt tried", "$10k, none recovered"],
+  ]),
+  ...bullets([
+    "**Co-ops** are the cost of doing business with Amazon: about $150k a month.",
+    "**Advertising** is on top: about $75k a month. Paid by credit card until 8/1/26; now Amazon invoices it through Vendor Central, by check or wire only.",
+    "**His summary:** disputes what he can with a click, lets SPS dispute what it can, ignores the rest, then exports reports and summarises them 'a million different ways' for Isaac Grossman and the money team.",
+  ]),
+  h2("Lowes, Home Depot and Walmart"),
+  ...bullets([
+    "Lowes: deductions and open invoices, starting from New. Only shortages can be disputed. **Freight violations aren't disputed at all:** he was never given the information or documentation. SPS could dispute them if we gave it the documentation.",
+    "**For each shortage:** PO → F&O order → Warehouse → Shipment details → Pacejet shipment → tracking (each one, if several) → FedEx → if delivered, request proof of delivery with our account number (kept in his email) → download and name the POD PDF → open the dispute in SPS → paste a templated reversal request → upload the POD → submit.",
+    "Home Depot and Walmart: the same.",
+    "**Walmart is harder** (his addition, later): Walmart uses many carriers, so he has to get both the POD and the BOL from each carrier, not just FedEx.",
+    "Besides that, he reports all the numbers in different ways.",
+    "**Next:** Tina set up our SPS Commerce access; the observer is going to her to understand our connection with them.",
+  ]),
+  h2("Tina: Why We Use SPS Commerce (backstory, Oct 27)"),
+  ...bullets([
+    "**How we got here:** Simon, CFO for a while, and his assistant Josh were given the main goal of cleaning up Amazon. They quickly found that the first company handling our chargebacks was supposed to handle everything and didn't, so we weren't getting what we paid for. Tina was the go-between because she knew the area. We moved to SupplyPike, which SPS has since bought.",
+    "**The market:** there were four major chargeback companies; they bought each other up and now there are two, working with the main retailers.",
+    "**Why not dispute in Vendor Central and the portals ourselves:** each retailer's portal is a tangle with its own terminology. SPS does the first review and funnels everything into one clean view.",
+    "**Findings:** SPS also investigates. We knew Amazon was taking too much in co-ops but didn't know how to check; SPS did, and still does.",
+    "*Not Tina's to answer:* the technical connection (what data SPS gets from us and how), what we pay, and who owns the account. Who to ask is still open.",
+    "**Follow-up answers:** nobody covers deductions when Charmaine or Baruch Salamander is out. SPS results go only into Baruch Salamander's reports, not to F&O or Suzanne. Still to ask Tina: does SPS cover, or could it cover, Charmaine's customers like Wayfair?",
+  ]),
+);
+
+/* ---------------- Part 15: observer's own work ---------------- */
+add(
+  h1("Part 15: Observer's Own Work (not part of the process study)"),
   p("Around 4:30 on Day 1, Tina asked about the sales reporting app. After clearing it with Avi G and Baruch Grossman (COO), the observer turned off the daily jobs (so reports stop going to everyone every day) and turned off test mode, so users' own schedules now send. Tina and Isaac Grossman (CEO) can now get their reports."),
 );
 
 /* ---------------- Open items ---------------- */
 const doc = new Document({
   creator: "Shadowing notes",
-  title: "Shadowing Report v2, Oct 14 to 23, 2026",
+  title: "Shadowing Report v2, Oct 14 to 27, 2026",
   styles: {
     default: { document: { run: { font: FONT, size: 22 } } },
     paragraphStyles: [
@@ -945,7 +985,7 @@ const doc = new Document({
         children: [new Paragraph({
           alignment: AlignmentType.LEFT,
           children: [
-            new TextRun({ text: "Shadowing Report v2, Oct 14 to 23, 2026 | Page ", size: 18, color: "7F7F7F", font: FONT }),
+            new TextRun({ text: "Shadowing Report v2, Oct 14 to 27, 2026 | Page ", size: 18, color: "7F7F7F", font: FONT }),
             new TextRun({ children: [PageNumber.CURRENT], size: 18, color: "7F7F7F", font: FONT }),
           ],
         })],
