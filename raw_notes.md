@@ -665,3 +665,5 @@ What do they do more than us going into Vendor Central and the other customer po
 - The technical connection to SPS (what data it gets, e.g. the warehouse BOLs), sending PODs and BOLs for Lowes, Home Depot and Walmart, freight-violation documentation, and what we pay SPS and who owns the account: not answerable by Tina.
 - Whether SPS covers any of Charmaine's customers, like Wayfair: still need to ask Tina.
 - Correction to the Charmaine follow-up: Lowes is in SPS for all connections. Not sure why I said Charmaine does deductions for them; they are handled by Baruch.
+- Tina is not sure if Wayfair and the others can be connected to SPS Commerce, but for most of them it isn't worth it to connect to SPS because they charge for each connection.
+- The rules per customer are contractual agreements. Tina has a spreadsheet for return allowances that she gave to Peleg. She made it for whoever she has information on, specific to returns and allowances based on their contract; if she didn't have access to the contract she did not add it to the list. This information is nowhere in F&O. It was supposed to be added by Peleg, so it might have been added since then.

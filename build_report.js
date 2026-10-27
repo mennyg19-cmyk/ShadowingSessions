@@ -564,7 +564,7 @@ add(
     "**Wayfair managed returns:** always accepted, as part of our policy.",
     "**Misinformation or mis-shipped:** she checks that we actually sent the wrong item, usually from the customer's image. If it doesn't match, she disputes on the ticket; Wayfair replies by email if they accept, sometimes after a few rounds. If the customer says they never received it, she checks tracking.",
     "**Return deductions (email customers):** she checks the item came back to the warehouse, as per our policy with that customer. If not, she doesn't approve it; we tell them we never received it, and it goes on next month's payment once they send tracking. UnbeatableSales sends a batch of emails once a week.",
-    "**Rules:** set per customer by Tina and Avi. Charmaine has them in her head and couldn't repeat them. Sometimes she checks with Tina before responding.",
+    "**Rules:** set per customer by Tina and Avi. Charmaine has them in her head and couldn't repeat them. Sometimes she checks with Tina before responding. *(Later, from Tina: the rules are contractual; see her return-allowance spreadsheet in Part 14.)*",
     "**Volume and time:** Oct 2 to 15, 70 deductions, 11 of which needed checking; the rest were auto-accepts. Gathering the info takes 5 to 10 minutes, and each dispute about 5 to 15 minutes of her time, though it can stay open a few days.",
     "**Deadline:** only Wayfair has one, the settlement date on each deduction.",
     "**Hand-off to Suzanne:** when Suzanne enters a payment, she asks Charmaine (next desk) whether the remittance matches what Charmaine accepted. There is no list; Charmaine searches her inbox or the portal. She tells Suzanne only when a dispute is finished: won means don't accept that deduction on the remittance, lost means accept it.",
@@ -944,7 +944,10 @@ add(
     "**Why not dispute in Vendor Central and the portals ourselves:** each retailer's portal is a tangle with its own terminology. SPS does the first review and funnels everything into one clean view.",
     "**Findings:** SPS also investigates. We knew Amazon was taking too much in co-ops but didn't know how to check; SPS did, and still does.",
     "*Not Tina's to answer:* the technical connection (what data SPS gets from us and how), what we pay, and who owns the account. Who to ask is still open.",
-    "**Follow-up answers:** nobody covers deductions when Charmaine or Baruch Salamander is out. SPS results go only into Baruch Salamander's reports, not to F&O or Suzanne. Still to ask Tina: does SPS cover, or could it cover, Charmaine's customers like Wayfair?",
+    "**Follow-up answers:** nobody covers deductions when Charmaine or Baruch Salamander is out. SPS results go only into Baruch Salamander's reports, not to F&O or Suzanne.",
+    "**SPS for Charmaine's customers (Tina):** she isn't sure Wayfair and the others could be connected, but for most it isn't worth it, because SPS charges for each connection.",
+    "**Where the rules come from (Tina):** they are contractual. Tina made a return-allowance spreadsheet, covering returns and allowances per contract, for the customers whose contracts she had; customers without a contract she could see aren't on it. She gave it to Peleg. None of it is in F&O; Peleg was supposed to add it, so it may be there by now.",
+    "**Observer's view, Oct 27: SPS is required for now.** In theory a bot could do SPS's whole job, since cleaning messy portal data is the easy part. But SPS already has the retailer data feeds and the warehouse BOLs, knows what each retailer will accept, finds things like the co-op overcharge by comparing across its clients, and follows each dispute until it closes. On Amazon alone it recovered about $464k last year, and we don't yet know what it costs. So the bots work around SPS: the proof-of-delivery chain, freight violations, Charmaine's DS customers and the SPS scorecard. Whether to replace SPS can be decided once we know its fee.",
   ]),
 );
 
