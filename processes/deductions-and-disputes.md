@@ -24,7 +24,7 @@
 | Customer | Who | Where | Notes |
 | --- | --- | --- | --- |
 | Amazon | Baruch Salamander | SPS Commerce SupplyPike | Mostly one-click; SPS handles shortages on its own with BOLs from the warehouse |
-| Lowes | Baruch Salamander (and Charmaine for DS) | SPS Commerce | Shortages disputed with a FedEx POD; freight violations never disputed |
+| Lowes | Baruch Salamander | SPS Commerce (all connections, DS included) | Shortages disputed with a FedEx POD; freight violations never disputed. Charmaine's Lowes work is manual 810 invoices for missed cancellations (Day 1), not deductions |
 | Home Depot | Baruch Salamander | SPS Commerce | Same as Lowes |
 | Walmart | Baruch Salamander | SPS Commerce | Like Lowes, but harder: many carriers, and he needs both the POD and the BOL from each |
 | Wayfair | Charmaine | Portal, daily | Managed returns always accepted; disputes on a ticket; settlement-date deadline |
@@ -217,7 +217,7 @@ flowchart TD
 - **Low recovery on big numbers.** Amazon shortages: $191k back of $917k. Chargebacks: $127k of $540k. Most chargebacks "can't really be won", but nobody has asked whether the ones we lose point to something fixable (late shipments, short shipments).
 - **No counts or times** for Charmaine's or Baruch Salamander's work, apart from Charmaine's two-week tally.
 - **Open items aren't tracked.** Wayfair disputes can run for days, refused returns should come back next month, and Wayfair's settlement dates live only in the portal.
-- **Three people, three methods.** Charmaine (DS portals and email), Baruch Salamander (SPS Commerce) and Suzanne (short pays) each handle deductions their own way, with no shared view. Both Charmaine and Baruch Salamander touch Lowes.
+- **Three people, three methods.** Charmaine (DS portals and email), Baruch Salamander (SPS Commerce) and Suzanne (short pays) each handle deductions their own way, with no shared view.
 
 ---
 

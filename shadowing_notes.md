@@ -730,7 +730,7 @@ The Amazon file is one of six inventory feeds Daniel builds. From a conversation
 
 From a conversation with Charmaine, not watched. Process card: `processes/deductions-and-disputes.md`.
 
-- **Her customers (DS only):** Wayfair (portal, checked every day), Lowes, OJCommerce and a few others. VirVentures, UnbeatableSales and KartIt are handled entirely by email: a deduction arrives by email and she confirms or disputes it the same way.
+- **Her customers (DS only):** Wayfair (portal, checked every day), Lowes, OJCommerce and a few others. *(Correction, Oct 27: Lowes is in SPS for all connections, so Lowes deductions are Baruch Salamander's, not hers. Her Lowes work is the manual 810 invoicing seen on Day 1.)* VirVentures, UnbeatableSales and KartIt are handled entirely by email: a deduction arrives by email and she confirms or disputes it the same way.
 - **Wayfair managed returns:** always accepted; it's part of our policy.
 - **Misinformation or mis-shipped:** she checks that we actually sent the wrong item, usually from the image the customer sends. If it doesn't match, she files a dispute on the ticket; Wayfair replies by email if they accept, sometimes after a few comments back and forth.
 - **Never received:** she checks tracking.
@@ -795,6 +795,7 @@ The observer asked him to walk through the whole deduction workflow. Described a
 - **Where SPS results go:** only into Baruch Salamander's reports. Nothing flows to F&O or to Suzanne's remittance matching.
 - **Co-op validity, overages, findings:** marked automatically by SPS; it knows the validity as part of its cleanup.
 - **$146k:** co-ops recovered last year. Day 5's "this year so far" was a mistake.
+- **Lowes:** in SPS for all connections, so every Lowes deduction is Baruch Salamander's. Charmaine doesn't do Lowes deductions (the observer's earlier note was wrong); her Lowes work is manual 810 invoicing.
 - **Still to ask Tina:** does SPS cover any of Charmaine's customers, like Wayfair? If not, could it?
 
 ---
@@ -845,8 +846,8 @@ The observer asked him to walk through the whole deduction workflow. Described a
 - OnePlatform (Vendo): beyond the weekly file and advertising decisions, what else do they do for us?
 - Day 7: Is exactly 50 low or in stock? How many items need dates each week (the file is our whole Amazon catalog)? How long does Daniel's part take? Does Daniel download the file Thursday or Friday? Who should mark out-of-stock items temporarily unavailable on Amazon? (Answered Oct 23: the 30-day rule should go; Goods in Transit first, then the earliest open PO.)
 - Daniel's feeds (answered: 24 is the cutoff; the Amazon file is the whole OnePlatform catalog). Does Lincoln Comfy need the image URL, and is it in F&O? What is Sears' variation group ID? (Answered: Daniel uses available.) (Answered: Daniel uploads Kohls daily; disco'd items keep their real quantity.)
-- Deductions (Charmaine): which "few others" besides Lowes and OJCommerce, and portal or email for each? Is DS-only because Baruch Salamander handles the warehouse deductions on SPS Commerce? Dollars per week, dispute win rate, each customer's return policy, where she confirms a return reached the warehouse. Still to shadow: Suzanne (short pays), Baruch Salamander (SPS Commerce), Tina or Avi G (Amazon dispute list).
-- Day 8 (Baruch Salamander): How much are Lowes, Home Depot and Walmart freight violations a year, and what documentation would SPS need? Shortage disputes per week for Lowes, Home Depot and Walmart, and minutes each? Is the warehouse's BOL feed to SPS Amazon-only, and could it cover the others? What does SPS cost us, and who owns the account? (Not Tina's to answer; who to ask is open.) Which reports go to whom? Does SPS cover, or could it cover, Charmaine's customers like Wayfair (ask Tina)? Does Charmaine's Lowes (DS) overlap with his Lowes?
+- Deductions (Charmaine): which "few others" besides OJCommerce, and portal or email for each? Is DS-only because Baruch Salamander handles the warehouse deductions on SPS Commerce? Dollars per week, dispute win rate, each customer's return policy, where she confirms a return reached the warehouse. Still to shadow: Suzanne (short pays), Baruch Salamander (SPS Commerce), Tina or Avi G (Amazon dispute list).
+- Day 8 (Baruch Salamander): How much are Lowes, Home Depot and Walmart freight violations a year, and what documentation would SPS need? Shortage disputes per week for Lowes, Home Depot and Walmart, and minutes each? Is the warehouse's BOL feed to SPS Amazon-only, and could it cover the others? What does SPS cost us, and who owns the account? (Not Tina's to answer; who to ask is open.) Which reports go to whom? Does SPS cover, or could it cover, Charmaine's customers like Wayfair (ask Tina)?
 - Topics of Suzanne's call and David Dweck's call to Tina (not heard).
 - Daniel: how many product lines a week does he build, and for which customers? Does each customer (Wayfair, Amazon, Home Depot, Kohls) need its own template?
 - Daniel: which attributes are missing from the main spec sheet and have to be read off the product images?

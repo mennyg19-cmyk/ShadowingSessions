@@ -664,3 +664,4 @@ What do they do more than us going into Vendor Central and the other customer po
 - The $146k: it was co-ops last year. "This year so far" on the first shadow (Day 5) was a mistake.
 - The technical connection to SPS (what data it gets, e.g. the warehouse BOLs), sending PODs and BOLs for Lowes, Home Depot and Walmart, freight-violation documentation, and what we pay SPS and who owns the account: not answerable by Tina.
 - Whether SPS covers any of Charmaine's customers, like Wayfair: still need to ask Tina.
+- Correction to the Charmaine follow-up: Lowes is in SPS for all connections. Not sure why I said Charmaine does deductions for them; they are handled by Baruch.

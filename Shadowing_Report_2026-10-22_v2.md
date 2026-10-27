@@ -545,7 +545,7 @@ After going through another deduction, she went back in to download the deductio
 
 From a conversation with Charmaine after Day 7, not watched. The full write-up is the deductions and disputes process card.
 
-- **Her customers (DS only):** Wayfair (portal, checked every day), Lowes, OJCommerce and a few others. VirVentures, UnbeatableSales and KartIt are handled entirely by email.
+- **Her customers (DS only):** Wayfair (portal, checked every day), OJCommerce and a few others. *(The observer first listed Lowes here too; corrected Oct 27: Lowes is in SPS for all connections, so its deductions are Baruch Salamander's. Her Lowes work is the manual 810 invoicing from Day 1.)* VirVentures, UnbeatableSales and KartIt are handled entirely by email.
 - **Wayfair managed returns:** always accepted, as part of our policy.
 - **Misinformation or mis-shipped:** she checks that we actually sent the wrong item, usually from the customer's image. If it doesn't match, she disputes on the ticket; Wayfair replies by email if they accept, sometimes after a few rounds. If the customer says they never received it, she checks tracking.
 - **Return deductions (email customers):** she checks the item came back to the warehouse, as per our policy with that customer. If not, she doesn't approve it; we tell them we never received it, and it goes on next month's payment once they send tracking. UnbeatableSales sends a batch of emails once a week.
