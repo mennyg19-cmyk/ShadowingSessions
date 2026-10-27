@@ -201,4 +201,4 @@ ASIN, SKU, UPC, product name and inventory status, for every item in OnePlatform
 
 ---
 
-*Sources: Day 7 and the follow-up with Daniel in [raw_notes.md](../raw_notes.md) and [shadowing_notes.md](../shadowing_notes.md); Part 13 and Bot C in the [v2 report](../Shadowing_Report_2026-10-22_v2.md). Day 2 (Part 4, episodes 1 and 5) has the first, partial view of the Kohls and Amazon feeds.*
+*Sources: Day 7 and the follow-up with Daniel in [raw_notes.md](../raw_notes.md) and [shadowing_notes.md](../shadowing_notes.md); Part 13 and Bot C in the [v2 report](../Shadowing_Report_2026-10-27.md). Day 2 (Part 4, episodes 1 and 5) has the first, partial view of the Kohls and Amazon feeds.*

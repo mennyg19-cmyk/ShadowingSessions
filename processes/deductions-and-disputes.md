@@ -257,4 +257,4 @@ flowchart TD
 
 ---
 
-*Sources: Day 8 and "Follow-up with Charmaine" in [raw_notes.md](../raw_notes.md) and [shadowing_notes.md](../shadowing_notes.md); Parts 7, 11 and 14 in the [v2 report](../Shadowing_Report_2026-10-22_v2.md). Related: Suzanne's deductions and short pays (Part 2, Day 1 afternoon).*
+*Sources: Day 8 and "Follow-up with Charmaine" in [raw_notes.md](../raw_notes.md) and [shadowing_notes.md](../shadowing_notes.md); Parts 7, 11 and 14 in the [v2 report](../Shadowing_Report_2026-10-27.md). Related: Suzanne's deductions and short pays (Part 2, Day 1 afternoon).*
