@@ -188,7 +188,7 @@ add(
     ["Trigger", "A schedule, instead of a manual daily email"],
     ["What it does", "Sends recovery totals, the Amazon payments and deductions breakdown, and aging by salesman from the data, only to people who use them"],
     ["Data", "SPS Commerce, Vendor Central, OceanFirst, F&O aging"],
-    ["Evidence", "Day 5: daily recovery emails to six people with MTD and YTD totals; SUMIF aging by salesman built by hand; about $146k recovered this year. Day 8: he exports the SPS reports and summarises them many ways for Isaac Grossman and the money team"],
+    ["Evidence", "Day 5: daily recovery emails to six people with MTD and YTD totals; SUMIF aging by salesman built by hand; about $146k in co-ops recovered last year. Day 8: he exports the SPS reports and summarises them many ways for Isaac Grossman and the money team"],
     ["Confirm first", "Which recipients use which report; how long each takes him"],
   ]),
   ...spec("F. Notice router (opportunity 5)", [
@@ -729,7 +729,7 @@ add(
   h3("Recovery report emails"),
   ...bullets([
     "The observer thinks he sends the file with the final recovery numbers to whoever needs it, with the totals in the body of the email and the summary files attached.",
-    "He has recovered about $146k in disputes this year so far. *(On Day 8 he gave $146k as co-ops recovered last year; one of the two labels is probably wrong.)*",
+    "He has recovered about $146k in disputes this year so far. *(Correction: it was co-ops recovered last year; \"this year so far\" was a mistake in the observer's notes.)*",
     "The emails go out daily, although the content is month-to-date or year-to-date totals.",
     "Recipients: Mordy Berman, Avi G and Isaac Grossman, cc Ken Kaplan, Chani and Zundel. All deal with money at some level; their individual workflows are not known.",
     "**Checked on Oct 21:** Avi G does not use any of these reports for anything (per the observer). The reporting tool's history shows Mordy Berman used it twice, on 9/14 and 9/22, running 5 reports in total, while he receives similar numbers daily from Baruch Salamander. The reporting tool can schedule and email reports automatically.",
@@ -919,7 +919,7 @@ add(
   table([1900, 5160, 2300], ["Group", "What he does", "Last year"], [
     ["Overages (new)", "Selects all new overages and submits invoices", "New, no figure"],
     ["Chargebacks", "Most can't be won. Disputable ones (e.g. on-time shipment) have 30 days. He filters to the last 30 days and drops the types marked X, then selects all and clicks Create disputes. SPS disputes many itself; he downloads the waived report to show what SPS saves us", "$127k recovered of $540k"],
-    ["Co-ops", "Selects all that SPS labels invalid and disputes them. He doesn't know what makes one valid or invalid. Amazon put co-op disputes on hold to study them: none disputable before April 2027. Two-year lookback; last year's are done", "$146k recovered"],
+    ["Co-ops", "Selects all that SPS labels invalid and disputes them. SPS marks validity itself as part of its cleanup; he doesn't need to know why. Amazon put co-op disputes on hold to study them: none disputable before April 2027. Two-year lookback; last year's are done", "$146k recovered"],
     ["Shortages", "Handled completely by SPS, which gets the BOLs straight from the warehouse", "$191k recovered of $917k"],
     ["Vendor returns", "Usually can't be recovered; Matt tried", "$10k, none recovered"],
   ]),
@@ -943,7 +943,8 @@ add(
     "**The market:** there were four major chargeback companies; they bought each other up and now there are two, working with the main retailers.",
     "**Why not dispute in Vendor Central and the portals ourselves:** each retailer's portal is a tangle with its own terminology. SPS does the first review and funnels everything into one clean view.",
     "**Findings:** SPS also investigates. We knew Amazon was taking too much in co-ops but didn't know how to check; SPS did, and still does.",
-    "*Not covered yet:* the technical connection (what data SPS gets from us and how), what we pay, and who owns the account.",
+    "*Not Tina's to answer:* the technical connection (what data SPS gets from us and how), what we pay, and who owns the account. Who to ask is still open.",
+    "**Follow-up answers:** nobody covers deductions when Charmaine or Baruch Salamander is out. SPS results go only into Baruch Salamander's reports, not to F&O or Suzanne. Still to ask Tina: does SPS cover, or could it cover, Charmaine's customers like Wayfair?",
   ]),
 );
 

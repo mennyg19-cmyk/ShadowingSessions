@@ -2,7 +2,7 @@
 
 > **In one line:** when a customer takes money off a payment, someone decides whether to accept or dispute it. Charmaine does it by hand for the dropship customers (Wayfair portal and email). Baruch Salamander does it in SPS Commerce SupplyPike for Amazon, Lowes, Home Depot and Walmart, where most of it is one click and SPS runs the dispute. The exception is shortage proof for Lowes, Home Depot and Walmart, which he digs out of F&O and FedEx one tracking number at a time.
 
-*Charmaine: from a conversation after Day 7, not watched, plus Day 2 (Part 7), where she was seen working Wayfair deductions. Baruch Salamander: Day 8 (Oct 27), a walkthrough he gave on request, plus Day 5 (Part 11). Tina: backstory on why we use SPS Commerce, after Baruch Salamander on Oct 27. Still to add: Suzanne's short pays, the Amazon dispute list from Avi G, and the technical side of our SPS Commerce connection.*
+*Charmaine: from a conversation after Day 7, not watched, plus Day 2 (Part 7), where she was seen working Wayfair deductions. Baruch Salamander: Day 8 (Oct 27), a walkthrough he gave on request, plus Day 5 (Part 11). Tina: backstory on why we use SPS Commerce, after Baruch Salamander on Oct 27. Still to add: Suzanne's short pays, the Amazon dispute list from Avi G, and the technical side of our SPS Commerce connection (not Tina's to answer; who to ask is open).*
 
 ---
 
@@ -37,7 +37,7 @@
 | --- | --- | --- | --- |
 | Chargebacks | $540k | $127k | Baruch Salamander clicks the disputable ones; SPS disputes many itself ("waived") |
 | Shortages ("deductions") | $917k | $191k | SPS on its own, with BOLs from the warehouse |
-| Co-ops | About $150k a month (cost of doing business) | $146k | Baruch Salamander clicks the ones SPS labels invalid; on hold until April 2027 |
+| Co-ops | About $150k a month (cost of doing business) | $146k | SPS marks valid or invalid as part of its cleanup; Baruch Salamander disputes the invalid ones; on hold until April 2027 |
 | Vendor returns | $10k | $0 | Usually can't be recovered; Matt tried |
 | Overages | New | n/a | Baruch Salamander submits invoices |
 | Advertising | About $75k a month | n/a | Not disputed; invoiced through Vendor Central since 8/1/26 (check or wire only) |
@@ -154,7 +154,7 @@ flowchart TD
 
 ## The Rules
 
-> **Who owns the rules:** for Charmaine's customers, Tina and Avi set them per customer; Charmaine knows them by heart but couldn't list them. For Amazon, SPS decides what can be disputed (the X marks, valid or invalid co-ops), and Baruch Salamander doesn't know the reasons behind the labels.
+> **Who owns the rules:** for Charmaine's customers, Tina and Avi set them per customer; Charmaine knows them by heart but couldn't list them. For the SPS customers, SPS decides what can be disputed: the X marks, and co-op validity, which it marks automatically as part of its cleanup.
 
 ### Charmaine's customers
 
@@ -174,7 +174,7 @@ flowchart TD
 | Rule | Detail |
 | --- | --- |
 | Chargebacks: 30 days | Only the disputable types (e.g. on-time shipment) can be disputed, within 30 days. Anything marked X can't be |
-| Co-ops: invalid only | Only co-ops SPS labels invalid can be disputed, and only from the past 2 years. Amazon has put co-op disputes on hold to study them: none before April 2027 |
+| Co-ops: invalid only | SPS marks each co-op valid or invalid automatically, as part of its cleanup. Only invalid ones can be disputed, and only from the past 2 years. Amazon has put co-op disputes on hold to study them: none before April 2027 |
 | Shortages, Amazon | SPS disputes them on its own, using BOLs sent straight from the warehouse |
 | Shortages, Lowes and Home Depot | We have to supply the proof: a FedEx POD for every tracking number |
 | Shortages, Walmart | Same, but Walmart uses many carriers, and he needs both the POD and the BOL from whichever carrier delivered |
@@ -198,6 +198,7 @@ flowchart TD
 | Why can't co-ops be disputed now? | Amazon changed the rules in the past 8 months and put them on hold to study them, until at least April 2027 |
 | Why SPS and not the portals directly? | Each portal is a tangle with its own terminology; SPS reviews first and puts everything in one view. It also investigates, as it did with Amazon's co-op overcharges (Tina) |
 | Why SupplyPike / SPS and not the first company? | The first company was supposed to handle everything and didn't; Simon and Josh found it when cleaning up Amazon (Tina) |
+| Who covers when they're out? | Nobody |
 | Why the waived report? | To show how much SPS is saving us |
 
 ---
@@ -207,15 +208,16 @@ flowchart TD
 - **The proof chain is all by hand.** For every Lowes, Home Depot and Walmart shortage: F&O → four screens → tracking → FedEx → POD → rename → upload, repeated for each tracking number. Our FedEx account number lives in his email.
 - **Walmart is the hardest.** It uses many carriers, so for each shortage he has to find the right carrier and get both the POD and the BOL from them, on top of the F&O steps.
 - **Freight violations are written off by default.** Nobody gave him the documentation, so none are disputed. We don't know how much that is a year.
-- **Disputing without knowing why.** Baruch Salamander clicks every co-op SPS labels invalid without knowing what makes one valid or invalid. Charmaine applies rules she can't put into words. Either way, nobody can tell whether the rules are right.
+- **Charmaine's rules can't be checked.** She applies rules she can't put into words, so nobody can tell whether they're right. (For co-ops, SPS marks validity itself as part of its cleanup; that's part of what we pay it for.)
 - **The rules are in people's heads.** Tina and Avi set Charmaine's rules, but they aren't written down; if she's out, nobody else knows which reasons to accept.
+- **No backup.** Nobody covers deductions when Charmaine or Baruch Salamander is out.
+- **SPS results stay in Baruch Salamander's reports.** Nothing flows to F&O or to Suzanne's remittance matching, so Amazon, Lowes, Home Depot and Walmart remittances can't be checked against what was disputed and won without asking him.
 - **Charmaine's inbox is the deductions log.** There's no list of what was accepted, disputed, won or lost. Every remittance means Suzanne asking and Charmaine searching email or a portal. It works only because their desks are next to each other.
 - **Lots of reporting, unclear use.** He summarises the same SPS numbers "a million different ways" for Isaac Grossman and the money team. *Observer's view (Day 5): Avi G doesn't use any of these reports.*
 - **Low recovery on big numbers.** Amazon shortages: $191k back of $917k. Chargebacks: $127k of $540k. Most chargebacks "can't really be won", but nobody has asked whether the ones we lose point to something fixable (late shipments, short shipments).
 - **No counts or times** for Charmaine's or Baruch Salamander's work, apart from Charmaine's two-week tally.
 - **Open items aren't tracked.** Wayfair disputes can run for days, refused returns should come back next month, and Wayfair's settlement dates live only in the portal.
 - **Three people, three methods.** Charmaine (DS portals and email), Baruch Salamander (SPS Commerce) and Suzanne (short pays) each handle deductions their own way, with no shared view. Both Charmaine and Baruch Salamander touch Lowes.
-- **The $146k figure is unclear.** Day 5 noted it as disputes recovered this year so far; Day 8 gives it as co-ops recovered last year.
 
 ---
 
@@ -226,15 +228,14 @@ flowchart TD
 1. **Automate the proof-of-delivery chain.** Given a PO, pull every tracking number from the Pacejet shipment in F&O, fetch each POD from FedEx, name it, and attach it to the SPS dispute with the template text. This is the most mechanical part of the whole process.
 2. **Send the proof to SPS like we do for Amazon.** For Amazon, SPS gets BOLs straight from the warehouse and handles shortages on its own. If PODs or BOLs for Lowes, Home Depot and Walmart went to SPS the same way, it might dispute those shortages itself. Ask Tina when we look at the SPS connection.
 3. **Find out what freight violations cost us,** and what documentation SPS would need. If it's real money, get the documentation flowing.
-4. **Learn why co-ops are valid or invalid** before April 2027, when disputes reopen, so we're not just clicking SPS's list.
-5. **Write the rules down.** One table per customer: reason → accept, check or dispute, and what proof is needed. Tina and Avi sign off on Charmaine's; Baruch Salamander and SPS fill in the SPS side.
-6. **One shared deductions log** for Charmaine's customers: customer, PO, invoice, amount, reason, decision, status, settlement date, link to the email or ticket. Suzanne reads it when she posts a payment instead of asking. A shared spreadsheet or SharePoint list would do as a start.
-7. **Auto-log the auto-accepts,** so Charmaine only sees the ~16% that need a check, with the evidence already gathered (what we shipped, tracking, whether the return reached the warehouse).
-8. **Watch the deadlines:** Wayfair settlement dates and Amazon's 30-day chargeback window.
-9. **Replace the "million different ways" with scheduled reports** for the people who actually use them (Bot E).
-10. **Look at why we lose chargebacks and shortages.** If on-time shipment or short-ship chargebacks keep coming back, the fix may be in the warehouse, not in disputing.
-11. **One deductions view for everyone:** Charmaine, Baruch Salamander and Suzanne's short pays, feeding remittance matching (Bot D).
-12. **Keep checking that SPS delivers what we pay for.** The first company didn't, and it took a CFO project to find out. The waived and recovery reports Baruch Salamander already pulls could become a simple monthly scorecard: charged, disputed, recovered, and SPS's fee.
+4. **Write the rules down.** One table per customer: reason → accept, check or dispute, and what proof is needed. Tina and Avi sign off on Charmaine's; Baruch Salamander and SPS fill in the SPS side.
+5. **One shared deductions log** for Charmaine's customers: customer, PO, invoice, amount, reason, decision, status, settlement date, link to the email or ticket. Suzanne reads it when she posts a payment instead of asking. A shared spreadsheet or SharePoint list would do as a start.
+6. **Auto-log the auto-accepts,** so Charmaine only sees the ~16% that need a check, with the evidence already gathered (what we shipped, tracking, whether the return reached the warehouse).
+7. **Watch the deadlines:** Wayfair settlement dates and Amazon's 30-day chargeback window.
+8. **Replace the "million different ways" with scheduled reports** for the people who actually use them (Bot E).
+9. **Look at why we lose chargebacks and shortages.** If on-time shipment or short-ship chargebacks keep coming back, the fix may be in the warehouse, not in disputing.
+10. **One deductions view for everyone:** Charmaine, Baruch Salamander and Suzanne's short pays, feeding remittance matching (Bot D).
+11. **Keep checking that SPS delivers what we pay for.** The first company didn't, and it took a CFO project to find out. The waived and recovery reports Baruch Salamander already pulls could become a simple monthly scorecard: charged, disputed, recovered, and SPS's fee.
 
 ---
 

@@ -655,3 +655,12 @@ Tina set up access to SPS Commerce, so I will be going to her next to understand
 Simon was CFO for a bit. He and his assistant (Josh) were given the primary goal of cleaning up Amazon. They started investigating a couple of companies. They took over a company we were using and discovered (it happened very fast) that we weren't getting what we were paying for from the first company that was handling chargebacks. There were four major ones; then they bought each other up and now there are two. They work with the main retailers. Tina was the go-between because she was knowledgeable. The original company was supposed to handle everything for us, but Simon and Josh discovered they didn't, so we moved to another company, SupplyPike, which has since been bought out by SPS.
 
 What do they do more than us going into Vendor Central and the other customer portals to dispute chargebacks? The customer portals are extremely spaghettied and different and use different terminology, so SPS Commerce does the first review for us and funnels them into neat and clean simplicity. They also do some findings for us. We knew that Amazon was taking too much in co-ops, but we needed to investigate and had no idea how to. SPS did that and continues to do that for us.
+
+### Answers to follow-up questions (Oct 27)
+
+- Who covers deductions when Charmaine or Baruch Salamander is out: nobody.
+- Do SPS results flow back anywhere (F&O, Suzanne's remittance matching)? Only into Baruch's reports.
+- Co-op validity, overages and findings: these are marked automatically by SPS. They know the validity of them; it's part of their cleanup.
+- The $146k: it was co-ops last year. "This year so far" on the first shadow (Day 5) was a mistake.
+- The technical connection to SPS (what data it gets, e.g. the warehouse BOLs), sending PODs and BOLs for Lowes, Home Depot and Walmart, freight-violation documentation, and what we pay SPS and who owns the account: not answerable by Tina.
+- Whether SPS covers any of Charmaine's customers, like Wayfair: still need to ask Tina.
