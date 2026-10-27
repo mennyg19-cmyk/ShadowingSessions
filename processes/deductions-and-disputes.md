@@ -196,7 +196,7 @@ flowchart TD
 - **Disputing without knowing why.** Baruch Salamander clicks every co-op SPS labels invalid without knowing what makes one valid or invalid. Charmaine applies rules she can't put into words. Either way, nobody can tell whether the rules are right.
 - **The rules are in people's heads.** Tina and Avi set Charmaine's rules, but they aren't written down; if she's out, nobody else knows which reasons to accept.
 - **Charmaine's inbox is the deductions log.** There's no list of what was accepted, disputed, won or lost. Every remittance means Suzanne asking and Charmaine searching email or a portal. It works only because their desks are next to each other.
-- **Lots of reporting, unclear use.** He summarises the same SPS numbers "a million different ways" for Isaac Grossman and the money team, daily (Day 5). On Day 5, Avi G said he doesn't use them.
+- **Lots of reporting, unclear use.** He summarises the same SPS numbers "a million different ways" for Isaac Grossman and the money team. *Observer's view (Day 5): Avi G doesn't use any of these reports.*
 - **Low recovery on big numbers.** Amazon shortages: $191k back of $917k. Chargebacks: $127k of $540k. Most chargebacks "can't really be won", but nobody has asked whether the ones we lose point to something fixable (late shipments, short shipments).
 - **No counts or times** for Charmaine's or Baruch Salamander's work, apart from Charmaine's two-week tally.
 - **Open items aren't tracked.** Wayfair disputes can run for days, refused returns should come back next month, and Wayfair's settlement dates live only in the portal.
